@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 68697a0a5f686bb4fa70bcc946f7bb6b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - normal: {fileID: 21300000, guid: a91ebe187658c384b90862047cca5e1b, type: 3}
+  - normal2: {fileID: 21300000, guid: 8a1e678c2453fb2439d902e10039afc2, type: 3}
+  - leftPunch: {fileID: 21300000, guid: c49bf58b5e64fe543b8443a9c2ce162f, type: 3}
+  - leftPunchMid: {fileID: 21300000, guid: 9de430ce76a290b4cac649e66094d22b, type: 3}
+  - leftPunchStart: {fileID: 21300000, guid: ddb85350976feb4459356916393f22c5, type: 3}
+  - rightPunch: {fileID: 21300000, guid: a4c2ec5896d372640a5cc696202ed0a3, type: 3}
+  - rightPunchMid: {fileID: 21300000, guid: 0e9a44e11767be046a12d836cc83797a, type: 3}
+  - rightPunchStart: {fileID: 21300000, guid: 1152ef752b2733d4d93430655befaf32, type: 3}
+  - rightUppercutStart: {fileID: 21300000, guid: bcdaf04e613919b43b3826b1e8dec034,
+      type: 3}
+  - rightUppercutMid: {fileID: 21300000, guid: a4c2ec5896d372640a5cc696202ed0a3, type: 3}
+  - rightUppercutEnd: {fileID: 21300000, guid: 96f367043567614459302be66fbdfa1a, type: 3}
+  - leftUppercutStart: {fileID: 21300000, guid: 9de430ce76a290b4cac649e66094d22b,
+      type: 3}
+  - leftUppercutMid: {fileID: 21300000, guid: c49bf58b5e64fe543b8443a9c2ce162f, type: 3}
+  - leftUppercutEnd: {fileID: 21300000, guid: 496b909c871c5944e973cf5310549e18, type: 3}
+  - blockStart: {fileID: 21300000, guid: 317cbb2de6b7ab846afd23ce995a05c4, type: 3}
+  - block: {fileID: 21300000, guid: 6d31c3a2f0cf893408a5bf50e6640dc8, type: 3}
+  - blockBroken: {fileID: 21300000, guid: 3c0914429f7ceb44aaf4ca1196246388, type: 3}
+  - dodgeLeft: {fileID: 21300000, guid: 8713c0b0de73be64c8689a2f650a8647, type: 3}
+  - dodgeLeftStart: {fileID: 21300000, guid: 982d423eee19ad548836bcc414a7110f, type: 3}
+  - dodgeLeftEnd: {fileID: 21300000, guid: e0774b36996311d4c87bd661362bc9a1, type: 3}
+  - dodgeRight: {fileID: 21300000, guid: ae36d687fcfde694fbba853f76b1b5c4, type: 3}
+  - dodgeRightStart: {fileID: 21300000, guid: 8b748a19166e8d54fb21d43d1714ef0d, type: 3}
+  - dodgeRightEnd: {fileID: 21300000, guid: edd29238cd60d8a4ab7d9c8873fada7d, type: 3}
+  - rb: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
