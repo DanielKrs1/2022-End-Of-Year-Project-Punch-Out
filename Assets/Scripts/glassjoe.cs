@@ -91,7 +91,7 @@ public class glassjoe : MonoBehaviour
             blockinglow = false;
             highhits = 0;
         }
-        var rand = new Random();
+        var rand = new System.Random();
         moveSpeed = 1f;
         //lastPos = transform.position;
         if(frame == 119){
