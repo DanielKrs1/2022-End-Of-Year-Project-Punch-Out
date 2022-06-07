@@ -34,7 +34,7 @@ public class littlemac : MonoBehaviour
     public Sprite hit2;
     public Sprite knockedDown;
 
-    public glassjoe enemy;
+    public glassjoe en;
     public int health = 90;
 
     public Rigidbody2D rb;
@@ -57,11 +57,11 @@ public class littlemac : MonoBehaviour
         }
         fp = rb.position;
         moveSpeed = 1f;
-        enemy = GameObject.Find("tile00b").GetComponent("glassjoe") as glassjoe;
+        en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         moveSpeed = 1f;
         //lastPos = transform.position;
@@ -227,22 +227,22 @@ public class littlemac : MonoBehaviour
             movement.y = -1*moveSpeed;
             movement.x = 0f;
             punchhigh = false;
-            if(enemy.blockinghigh){
-                enemy.blockHigh();
-            }else if (!(enemy.specialing)){
-                enemy.health-=10;
-                if(enemy.onehit){
-                    enemy.health = 0;
-                    enemy.knockDown();
+            if(en.blockinghigh){
+                en.blockHigh();
+            }else if (!(en.specialing)){
+                en.health-=10;
+                if(en.onehit){
+                    en.health = 0;
+                    en.knockDown();
                 }else{
-                    if(enemy.counter){
-                        enemy.hitAfterDodge();
+                    if(en.counter){
+                        en.hitAfterDodge();
                     }else{
-                        enemy.leftHit();
+                        en.leftHit();
                     }
                 } 
-                if(enemy.health<=0){
-                    enemy.knockDown();
+                if(en.health<=0){
+                    en.knockDown();
                 }     
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
@@ -281,22 +281,22 @@ public class littlemac : MonoBehaviour
             movement.y = -1*moveSpeed;
             movement.x = 0f;
             punchhigh = false;
-            if(enemy.blockinghigh){
-                enemy.blockHigh();
-            }else if (!(enemy.specialing)){
-                enemy.health-=10;
-                if(enemy.onehit){
-                    enemy.health = 0;
-                    enemy.knockDown();
+            if(en.blockinghigh){
+                en.blockHigh();
+            }else if (!(en.specialing)){
+                en.health-=10;
+                if(en.onehit){
+                    en.health = 0;
+                    en.knockDown();
                 }else{
-                    if(enemy.counter){
-                        enemy.hitAfterDodge();
+                    if(en.counter){
+                        en.hitAfterDodge();
                     }else{
-                        enemy.rightHit();
+                        en.rightHit();
                     }
                 } 
-                if(enemy.health<=0){
-                    enemy.knockDown();
+                if(en.health<=0){
+                    en.knockDown();
                 }     
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
@@ -346,17 +346,17 @@ public class littlemac : MonoBehaviour
             back = true;
             spriteRenderer.sprite = leftPunchMid;
             punchlow = false;
-            if(enemy.blockinglow){
-                enemy.blockLow();
-            }else if (!(enemy.specialing)){
-                enemy.health-=10;
-                if(enemy.counter){
-                    enemy.hitAfterDodge();
+            if(en.blockinglow){
+                en.blockLow();
+            }else if (!(en.specialing)){
+                en.health-=10;
+                if(en.counter){
+                    en.hitAfterDodge();
                 }else{
-                    enemy.hitLow();
+                    en.hitLow();
                 }
-                if(enemy.health<=0){
-                    enemy.knockDown();
+                if(en.health<=0){
+                    en.knockDown();
                 }   
             }              
         }else{
@@ -384,17 +384,17 @@ public class littlemac : MonoBehaviour
             back = true;
             spriteRenderer.sprite = rightPunchMid;
             punchlow = false;
-            if(enemy.blockinglow){
-                enemy.blockLow();
-            }else if (!(enemy.specialing)){
-                enemy.health-=10;
-                if(enemy.counter){
-                    enemy.hitAfterDodge();
+            if(en.blockinglow){
+                en.blockLow();
+            }else if (!(en.specialing)){
+                en.health-=10;
+                if(en.counter){
+                    en.hitAfterDodge();
                 }else{
-                    enemy.hitLow();
+                    en.hitLow();
                 }
-                if(enemy.health<=0){
-                    enemy.knockDown();
+                if(en.health<=0){
+                    en.knockDown();
                 }   
             }
         }else{

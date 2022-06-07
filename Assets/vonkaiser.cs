@@ -2,48 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class glassjoe : MonoBehaviour
+public class vonkaiser : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
-    public Sprite normald;
-    public Sprite normald2;
-    public Sprite normald3;
-    public Sprite move;
-    public Sprite move2;
-    public Sprite move3;
-    public Sprite move4;
-    public Sprite move5;
-    public Sprite move6;
-    public Sprite prepunch;
-    public Sprite cluepunch;
-    public Sprite midpunch;
+    public Sprite normal4;
+    public Sprite normalup;
+    public Sprite normaulup2;
+    public Sprite normalup3;
+    public Sprite punchclue;
     public Sprite punch;
-    public Sprite upperStart;
+    public Sprite preupper;
     public Sprite upperclue;
-    public Sprite upperMid;
-    public Sprite upperEnd;
+    public Sprite midupper;
+    public Sprite upperend;
     public Sprite blocklow;
     public Sprite blocklow2;
     public Sprite blockhigh;
     public Sprite blockhigh2;
-    public Sprite blockhigh3;
-    public Sprite hitlow;
-    public Sprite hitlow2;
+    public Sprite stunned;
     public Sprite hithigh;
     public Sprite hithigh2;
-    public Sprite hithighr;
-    public Sprite hithighr2;
-    public Sprite dodgeHit;
-    public Sprite knockdown;
-    public Sprite knockdown2;
-    public Sprite knockdown3;
+    public Sprite hitlow;
+    public Sprite hitlow2;
+    public Sprite knockeddown;
+    public Sprite knockeddown2;
     public Sprite getup;
     public Sprite getup2;
-    public Sprite victory;
-    public Sprite victory2;
+    public Sprite dodge;
+    public Sprite dodge2;
     public bool punching = false;
     public bool blockinglow = true;
     public bool blockinghigh = false;
@@ -99,9 +88,9 @@ public class glassjoe : MonoBehaviour
         }
         if(frame%15==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(randint == 1){
+            /*if(randint == 1){
                 action = "special";
-            }else if(randint<2){
+            }else */if(randint<2){
                 action = "upper";
             }else if(randint<6){
                 action = "normalPunch";
@@ -135,18 +124,27 @@ public class glassjoe : MonoBehaviour
             }else if(action.Equals("win")){
                 win();
             }else{
-                if(blockinghigh){
-                    if(spriteRenderer.sprite == normal){
-                        spriteRenderer.sprite = normal2;
-                    }else{
-                        spriteRenderer.sprite = normal;
-                    }
+                // if(blockinghigh){
+                //     if(spriteRenderer.sprite == normal){
+                //         spriteRenderer.sprite = normal2;
+                //     }else{
+                //         spriteRenderer.sprite = normal;
+                //     }
+                // }else{
+                //     if(spriteRenderer.sprite == normald){
+                //         spriteRenderer.sprite = normald2;
+                //     }else{
+                //         spriteRenderer.sprite = normald;
+                //     }
+                // }
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
+                    spriteRenderer.sprite = normal3;
+                }else if(spriteRenderer.sprite = normal3){
+                    spriteRenderer.sprite = normal4;
                 }else{
-                    if(spriteRenderer.sprite == normald){
-                        spriteRenderer.sprite = normald2;
-                    }else{
-                        spriteRenderer.sprite = normald;
-                    }
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -159,19 +157,19 @@ public class glassjoe : MonoBehaviour
 
     void normalPunch(){
         if(count == 0){
-            spriteRenderer.sprite = prepunch;
+            spriteRenderer.sprite = normal;
             count++;
         }else if(count == 1){
-            spriteRenderer.sprite = cluepunch;
+            spriteRenderer.sprite = normal2;
             count++;
         }else if(count == 2){
-            spriteRenderer.sprite = prepunch;
+            spriteRenderer.sprite = normalup;
             count++;
         }else if(count == 3){
-            spriteRenderer.sprite = midpunch;
+            spriteRenderer.sprite = punchclue;
             count++;
         }else if (count == 4){
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = normalup3;
             count++;
         }else if( count == 5){
             punching = true;
@@ -198,17 +196,17 @@ public class glassjoe : MonoBehaviour
 
     void upper(){
         if(count == 0){
-            spriteRenderer.sprite = upperStart;
+            spriteRenderer.sprite = preupper;
             count++;
         }else if (count == 1){
             spriteRenderer.sprite = upperclue;
             count++;
         }else if (count == 2){
-            spriteRenderer.sprite = upperMid;
+            spriteRenderer.sprite = midupper;
             count++;
         }else if (count ==3 ){
             punching = true;
-            spriteRenderer.sprite = upperEnd;
+            spriteRenderer.sprite = upperend;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -230,57 +228,57 @@ public class glassjoe : MonoBehaviour
     }
 
     void special(){
-        specialing = true;
-        if(count == 0){
-            movement.x = 0f;
-            movement.y = 1*moveSpeed;
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 1){
-            movement.y = 0f;
-            spriteRenderer.sprite = normal;
-            count++;
-        }else if (count ==2){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 3){
-            spriteRenderer.sprite = move6;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 5){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if(count == 6){
-            spriteRenderer.sprite = midpunch;
-            count++;
-        }else if (count == 7){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if (count ==8){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 9){
-            specialing = false;
-            onehit = true;
-            spriteRenderer.sprite = normald;
-            count++;
-            movement.x = 0f;
-            movement.y = -1*moveSpeed;
-            rb.position  = fp;
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else{
-            specialing = false;
-            movement.y = 0f;
-            onehit = false;
-            count-=10;
-            upper();
-            if(count!=0){
-                count+=10;
-            }
-        }
+        // specialing = true;
+        // if(count == 0){
+        //     movement.x = 0f;
+        //     movement.y = 1*moveSpeed;
+        //     spriteRenderer.sprite = normal3;
+        //     count++;
+        // }else if (count == 1){
+        //     movement.y = 0f;
+        //     spriteRenderer.sprite = normal;
+        //     count++;
+        // }else if (count ==2){
+        //     spriteRenderer.sprite = normal3;
+        //     count++;
+        // }else if (count == 3){
+        //     spriteRenderer.sprite = move6;
+        //     count++;
+        // }else if (count == 4){
+        //     spriteRenderer.sprite = normal3;
+        //     count++;
+        // }else if (count == 5){
+        //     spriteRenderer.sprite = prepunch;
+        //     count++;
+        // }else if(count == 6){
+        //     spriteRenderer.sprite = midpunch;
+        //     count++;
+        // }else if (count == 7){
+        //     spriteRenderer.sprite = prepunch;
+        //     count++;
+        // }else if (count ==8){
+        //     spriteRenderer.sprite = normal3;
+        //     count++;
+        // }else if (count == 9){
+        //     specialing = false;
+        //     onehit = true;
+        //     spriteRenderer.sprite = normald;
+        //     count++;
+        //     movement.x = 0f;
+        //     movement.y = -1*moveSpeed;
+        //     rb.position  = fp;
+        //     spriteRenderer.sprite = normal3;
+        //     count++;
+        // }else{
+        //     specialing = false;
+        //     movement.y = 0f;
+        //     onehit = false;
+        //     count-=10;
+        //     upper();
+        //     if(count!=0){
+        //         count+=10;
+        //     }
+        // }
     }
 
     public void blockLow(){
@@ -306,8 +304,6 @@ public class glassjoe : MonoBehaviour
         }if(count == 1){
             spriteRenderer.sprite = blockhigh2;
             count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = blockhigh3; 
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -318,8 +314,11 @@ public class glassjoe : MonoBehaviour
     public void hitLow(){
         lowhits++;
         action = "hitLow";
-        if(count <= 2){
+        if(count == 1){
             spriteRenderer.sprite = hitlow;
+            count++;
+        }else if (count==2){
+            spriteRenderer.sprite = hitlow2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -331,14 +330,16 @@ public class glassjoe : MonoBehaviour
     public void rightHit(){
         highhits++;
         action = "rightHit";
+        spriteRenderer.flipX = true;
         if(count == 0){
-            spriteRenderer.sprite = hithighr;
+            spriteRenderer.sprite = hithigh;
             count++;
         }if(count == 1){
-            spriteRenderer.sprite = hithighr2;
+            spriteRenderer.sprite = hithigh2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
+            spriteRenderer.flipX = false;
             count = 0;
             action = "";
         }
@@ -364,7 +365,7 @@ public class glassjoe : MonoBehaviour
     public void hitAfterDodge(){
         action = "hitAfterDodge";
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            spriteRenderer.sprite = stunned;
         }else{
             action = "";
             spriteRenderer.sprite = normal;
@@ -375,13 +376,10 @@ public class glassjoe : MonoBehaviour
     public void knockDown(){
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = knockdown;
-            count++;
-        }else if (count <=5){
-            spriteRenderer.sprite = knockdown2;
+            spriteRenderer.sprite = knockeddown;
             count++;
         }else{
-            spriteRenderer.sprite = knockdown3;
+            spriteRenderer.sprite = knockeddown2;
         }
     }
 
@@ -402,12 +400,12 @@ public class glassjoe : MonoBehaviour
 
     public void win(){
         action = "win";
-        if(count <= 3){
-            spriteRenderer.sprite = victory;
-            count++;
-        }else{
-            spriteRenderer.sprite = victory2;
-        }
+        // if(count <= 3){
+        //     spriteRenderer.sprite = victory;
+        //     count++;
+        // }else{
+        //     spriteRenderer.sprite = victory2;
+        // }
     }
 
     public void redo(){
