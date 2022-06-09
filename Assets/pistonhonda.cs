@@ -206,7 +206,7 @@ public class pistonhonda : MonoBehaviour
             spriteRenderer.sprite = preright;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = clureright;
+            spriteRenderer.sprite = clueright;
             count++;
         }else if (count == 2){
             spriteRenderer.sprite = punchright;
