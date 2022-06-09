@@ -68,7 +68,8 @@ public class littlemac : MonoBehaviour
         if(frame == 119){
             frame = 0;
         }
-        if(frame%15==0&&action.Length<2){
+        
+        if(action.Length<2){
             
             if (Input.GetKey(KeyCode.RightArrow))
             {
@@ -93,7 +94,7 @@ public class littlemac : MonoBehaviour
             }
         }
 
-        if(frame%15==0){
+        if(frame%10==0){
             if(action.Equals("dodgeLeft")){
                 leftDodge();
             }else if(action.Equals("dodgeRight")){

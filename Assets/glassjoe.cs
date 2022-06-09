@@ -97,7 +97,7 @@ public class glassjoe : MonoBehaviour
         if(frame == 119){
             frame = 0;
         }
-        if(frame%15==0&&action.Length<2){
+        if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
             if(randint == 1){
                 action = "special";
@@ -108,7 +108,7 @@ public class glassjoe : MonoBehaviour
             }
         }
 
-        if(frame%15==0){
+        if(frame%10==0){
             if(action.Equals("normalPunch")){
                 normalPunch();
             }else if(action.Equals("upper")){
@@ -128,7 +128,7 @@ public class glassjoe : MonoBehaviour
                 leftHit();
             }else if(action.Equals("hitAfterDodge")){
                 hitAfterDodge();
-            }else if(action.Equals("knockdown")){
+            }else if(action.Equals("knockDown")){
                 knockDown();
             }else if(action.Equals("getUp")){
                 getUp();
@@ -382,23 +382,28 @@ public class glassjoe : MonoBehaviour
             count++;
         }else{
             spriteRenderer.sprite = knockdown3;
+            action = "getup";
         }
     }
 
     public void getUp(){
-        action = "getUp";
-        if(count <=2){
+        var randint = Random.Range(0, 100);
+        if(spriteRenderer.sprite == knockdown3&&randint<40){
+            action = "getUp";
             spriteRenderer.sprite = getup;
-            count++;
-        }else if (count <=5){
+        }else if (spriteRenderer.sprite == getup&&randint<80){
             spriteRenderer.sprite = getup2;
-            count++;
-        }else{
+        }else if(spriteRenderer.sprite == getup2){
+            health = 210;
             spriteRenderer.sprite = normal;
             count = 0;
             action = "";
+        }else{
+            action = "getUp";
+            spriteRenderer.sprite = knockdown3;
         }
     }
+        
 
     public void win(){
         action = "win";
