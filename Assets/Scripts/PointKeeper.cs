@@ -12,8 +12,8 @@ public class PointKeeper : MonoBehaviour
     }
 
     // Update is called once per frame
-    void updatePoints(){
-        points+=1;
+    void updatePoints(int number){
+        points+=number;
         
     }
 }

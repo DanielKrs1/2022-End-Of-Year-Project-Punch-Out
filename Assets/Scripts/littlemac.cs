@@ -299,6 +299,7 @@ public class littlemac : MonoBehaviour
                     en.knockDown();
                     en.timesdown++;
                 }     
+                
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
         }else{
