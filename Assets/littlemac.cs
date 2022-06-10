@@ -33,21 +33,27 @@ public class littlemac : MonoBehaviour
     public Sprite hit1;
     public Sprite hit2;
     public Sprite knockedDown;
+    public Sprite win1;
+    public Sprite win2;
 
     public glassjoe en;
+    public mario mar;
     public int health = 90;
 
     public Rigidbody2D rb;
     Vector2 movement;
     public int frame = 0;
-    public string action = "";
+    public string action = "wait";
     private SpriteRenderer spriteRenderer;
-    Vector2 fp;
+    public Vector2 fp;
 
     public bool punchlow = false;
     public bool punchhigh = false;
     public bool dodging = false;
     public bool blocking = false;
+    
+    public int knockdowned;
+    public int countzx;
 
     void Start()
     {
@@ -58,9 +64,11 @@ public class littlemac : MonoBehaviour
         fp = rb.position;
         moveSpeed = 1f;
         en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
+        mar = GameObject.Find("mario").GetComponent("mario") as mario;
     }
 
     // Update is called once per frame
+    public int fram2;
     void FixedUpdate()
     {
         moveSpeed = 1f;
@@ -68,29 +76,45 @@ public class littlemac : MonoBehaviour
         if(frame == 119){
             frame = 0;
         }
+        if(fram2 == 119){
+            fram2 = 0;
+        }
         
         if(action.Length<2){
-            
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 action = "dodgeRight";
+                rightDodge();
+                frame = 11;
             }else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                action = "dodgeLeft";       
+                action = "dodgeLeft";  
+                leftDodge();
+                frame = 11;     
             }else if (Input.GetKey(KeyCode.UpArrow))
             {
                 if(Input.GetKey(KeyCode.Z)){
                     action = "upPunchLeft";
+                    uppercutLeft();
+                    frame = 11;
                 }else if(Input.GetKey(KeyCode.X)){
                     action = "upPunchRight";
+                    uppercutRight();
+                    frame = 11;
                 }
             }else if (Input.GetKey(KeyCode.DownArrow))
             {
                 action = "block";
+                bloc();
+                frame = 11;
             }else if(Input.GetKey(KeyCode.Z)){
                 action = "punchLeft";
+                punchLeft();
+                frame = 11;
             }else if(Input.GetKey(KeyCode.X)){
                 action = "punchRight";
+                punchRight();
+                frame = 11;
             }
         }
 
@@ -111,6 +135,21 @@ public class littlemac : MonoBehaviour
                 punchRight();
             }else if (action.Equals("hit")){
                 hit();
+            }else if (action.Equals("knockeddown")){
+                knockeddown();
+            }else if (action.Equals("win")){
+                win();
+            }else if (action.Equals("knockedout")){
+
+            }else if (en.timesdown>=3){
+                win();
+                en.spriteRenderer.sprite = en.knockdown3;
+                en.action = "wait";
+                mar.action = "tko";
+            }else if (health <= 0){
+                 knockeddown();
+            }else if (action.Equals("wait")){
+
             }else{
                 if(spriteRenderer.sprite == normal){
                     spriteRenderer.sprite = normal2;
@@ -121,9 +160,21 @@ public class littlemac : MonoBehaviour
                 movement.y = 0f;
             }  
             rb.MovePosition(rb.position+movement);//*Time.deltaTime);   
+            
         }
-         
+        if(en.stunned && fram2%75==0){
+            en.hits--;
+            if(en.hits<=0){
+                en.action = "";
+                en.spriteRenderer.sprite = en.normal;
+                en.hits = 7;
+                en.stunned = false;
+                en.counter = false;
+                fram2 = 0;
+            }
+        }
         frame++;  
+        fram2++;
     }
 
     public bool back = false;
@@ -210,11 +261,11 @@ public class littlemac : MonoBehaviour
     }
 
     void uppercutLeft(){
+        movement.x = 0;
+        movement.y = 0;
         if(spriteRenderer.sprite == leftUppercutMid){
             if(back){
                 spriteRenderer.sprite = leftUppercutStart;
-                movement.x = 0;
-                movement.y = 0;
             }else{
                 punchhigh = true;
                 spriteRenderer.sprite = leftUppercutEnd;
@@ -235,26 +286,29 @@ public class littlemac : MonoBehaviour
                 if(en.onehit){
                     en.health = 0;
                     en.knockDown();
+                    en.timesdown++;
                 }else{
                     if(en.counter){
                         en.hitAfterDodge();
+                        en.hits--;
                     }else{
                         en.leftHit();
                     }
                 } 
                 if(en.health<=0){
                     en.knockDown();
+                    en.timesdown++;
                 }     
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
         }else{
+            movement.x = 0;
+            movement.y = 0;
             if(back){
                 back = false;
                 spriteRenderer.sprite = normal;
                 action = "";
-                rb.position = fp;
-                movement.x = 0;
-                movement.y = 0;
+                rb.position = fp; 
             }else if(spriteRenderer.sprite == leftUppercutStart){
                 spriteRenderer.sprite = leftUppercutMid;
             }else{
@@ -264,11 +318,11 @@ public class littlemac : MonoBehaviour
     }
 
     void uppercutRight(){
+        movement.x = 0;
+                movement.y = 0;
         if(spriteRenderer.sprite == rightUppercutMid){
             if(back){
                 spriteRenderer.sprite = rightUppercutStart;
-                movement.x = 0;
-                movement.y = 0;
             }else{
                 punchhigh = true;
                 spriteRenderer.sprite = rightUppercutEnd;
@@ -289,26 +343,29 @@ public class littlemac : MonoBehaviour
                 if(en.onehit){
                     en.health = 0;
                     en.knockDown();
+                    en.timesdown++;
                 }else{
                     if(en.counter){
                         en.hitAfterDodge();
+                        en.hits--;
                     }else{
                         en.rightHit();
                     }
                 } 
                 if(en.health<=0){
                     en.knockDown();
+                    en.timesdown++;
                 }     
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
         }else{
+            movement.x = 0;
+            movement.y = 0;
             if(back){
                 back = false;
                 spriteRenderer.sprite = normal;
                 action = "";
                 rb.position = fp;
-                movement.x = 0;
-                movement.y = 0;
             }else if(spriteRenderer.sprite == rightUppercutStart){
                 spriteRenderer.sprite = rightUppercutMid;
             }else{
@@ -353,11 +410,13 @@ public class littlemac : MonoBehaviour
                 en.health-=10;
                 if(en.counter){
                     en.hitAfterDodge();
+                    en.hits--;
                 }else{
                     en.hitLow();
                 }
                 if(en.health<=0){
                     en.knockDown();
+                    en.timesdown++;
                 }   
             }              
         }else{
@@ -391,11 +450,13 @@ public class littlemac : MonoBehaviour
                 en.health-=10;
                 if(en.counter){
                     en.hitAfterDodge();
+                    en.hits--;
                 }else{
                     en.hitLow();
                 }
                 if(en.health<=0){
                     en.knockDown();
+                    en.timesdown++;
                 }   
             }
         }else{
@@ -410,31 +471,80 @@ public class littlemac : MonoBehaviour
             }
         }
     }
-
+    public int count;
     public void hit(){
+        rb.position = fp;
         action = "hit";
-        if(spriteRenderer.sprite == hit1){
+        en.counter = false;
+        if(count<2){
+            spriteRenderer.sprite = hit1;
+            count++;
+        }else if(count < 4){
             spriteRenderer.sprite = hit2;
-        }else{
-            if(spriteRenderer.sprite = hit2){
-                spriteRenderer.sprite = normal;
-                action = "";
-            }else{
-                spriteRenderer.sprite = hit1;
-            }
+            count++;
+        }else if (count == 4){
+            count = 0;
+            spriteRenderer.sprite = normal;
+            action = "";
         }
+        // if(spriteRenderer.sprite == hit1){
+        //     spriteRenderer.sprite = hit2;
+        // }else{
+        //     if(spriteRenderer.sprite = hit2){
+        //         spriteRenderer.sprite = normal;
+        //         action = "";
+        //     }else{
+        //         spriteRenderer.sprite = hit1;
+        //     }
+        // }
     }
-
+    
     public void knockeddown(){
-        if(spriteRenderer.sprite == hit1){
-            spriteRenderer.sprite = hit2;
-        }else{
-            if(spriteRenderer.sprite = hit2){
-                spriteRenderer.sprite = knockedDown;
-            }else{
-                spriteRenderer.sprite = hit1;
+        action = "knockeddown";
+        if (count == 0){
+            knockdowned++;
+            spriteRenderer.sprite = hit1;
+            en.action = "asfasdfadfafa";
+            count++;
+        }else if (count == 1){
+           spriteRenderer.sprite = hit2; 
+           count++;
+        }else if (count == 2){
+            mar.action = "lcount";
+            if(Input.GetKey(KeyCode.Z)||Input.GetKey(KeyCode.X)){
+                countzx++;
             }
-        }
+            spriteRenderer.sprite = knockedDown;
+            if(countzx >= 10){
+                mar.action = "";
+                mar.count = 0;
+                health = 90;
+                action = "";
+                en.action = "";
+                countzx = 0;
+            }
+            if(knockdowned >= 3){
+                health = 0;
+                countzx = 0;
+                action = "knockedout";
+                mar.tkod();
+                en.win();
+            }
+        }        
     }
 
+    public void win(){
+        action = "win";
+        en.action = "wait";
+        //en.knockDown();
+        //en.spriteRenderer.sprite = normal;
+        //en.hits = 7;
+        //en.stunned = false;
+        if(spriteRenderer.sprite == win1){
+            spriteRenderer.sprite = win2;
+        }else{
+            spriteRenderer.sprite = win1;
+        }
+    }
+    
 }
