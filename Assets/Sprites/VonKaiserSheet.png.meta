@@ -1,0 +1,1278 @@
+fileFormatVersion: 2
+guid: a0f9336bf9c03b24a9dcfba86a699814
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VonKaiserSheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1573
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c5d2c5d84970046b50698b0933f160
+      internalID: 2140251890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1573
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39a12d1230c15f439ac5cb3a7ce0b05
+      internalID: -1820797749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1472
+        width: 31
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5c6d23dfef6fe4caab47692b6abe12
+      internalID: -273113387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1472
+        width: 30
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2990ec1122cfb8e40a0da67814664de7
+      internalID: -2081430487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1472
+        width: 31
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7d883085a3ba0489f9cc0ed91c5d2f
+      internalID: 1081287638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1472
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3519eb370972b4cbef57b71df0521c
+      internalID: -70470024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1370
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a007b52b42a9f45a1219c7fef46be1
+      internalID: 1065899394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_7
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1370
+        width: 31
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e652e358b8ef64b9bcb650f535532b
+      internalID: 44326214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1370
+        width: 31
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c18fdde190a3574e8fe84cc31be4a10
+      internalID: 695754787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1268
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda8c8b813c2ae94e83737e45bc0dd28
+      internalID: -440123183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1268
+        width: 31
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d0354d6a953f5459d67a5eb8513cf2
+      internalID: -1476653634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1268
+        width: 30
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1399cf3d3ed1f3c45b4a1c6679a9be69
+      internalID: 2037136512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1161
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b28ecabe4dc5d47be9bf61ee38fa1d
+      internalID: 434773444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1161
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236e854b0ea4edc44bc556871b7d0ab8
+      internalID: 1858859887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1161
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e92899e42cc95489c1c57ddb95958f
+      internalID: 2142511777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_15
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1161
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371ab728505499b47ae6f2111b1a6081
+      internalID: -245191656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1161
+        width: 31
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8816db4a5038c7e4591def3a3f35a6c1
+      internalID: 1858936479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1161
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e351f8f7c1bf94093312ae8d1c4abf
+      internalID: -1529062693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1046
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a5c917c264a38419b06c45afa9bccf
+      internalID: -1087863984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1046
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08d357fd17e21e49b0956ee172604e8
+      internalID: 1795278319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1046
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defce2701e145eb4e9784e5d32ad0777
+      internalID: 2026775805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1046
+        width: 29
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4c375ea570cdd4eb260dae6f9e544c
+      internalID: 713615216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 928
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b878adc08c49e1f4eb5afe216c884b42
+      internalID: -220451801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 928
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b948678ab4fc210459115032307bf407
+      internalID: 1925792990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 928
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f1a371fbaa030468e198a1a4339f27
+      internalID: 525377498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_25
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 928
+        width: 46
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f60a382eccd93c42a1b473d2d31e4b4
+      internalID: -1839000840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_26
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 819
+        width: 31
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b5d8f5c3eeb55439a331cda039d687
+      internalID: 631195170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_27
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 819
+        width: 31
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f940b24a8f72dcc448ba921c3df58ee7
+      internalID: -1616438980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_28
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 819
+        width: 34
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b08146511cab0849b38f100bcca87c9
+      internalID: 584393700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_29
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 819
+        width: 35
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc062fd4f494eb942afa10b9c74c35ef
+      internalID: -2021647674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 710
+        width: 35
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05baea6173fe8af40adbc63e23b5c006
+      internalID: 2009147309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_31
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 710
+        width: 37
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f7e7abd1a15224ca50dfc993fabc1f
+      internalID: -915047021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_32
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 710
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b004d6b845fa1444b2006c72687ceb2
+      internalID: 1171821205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_33
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 710
+        width: 40
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f181343c99b53e647aa9ba9eb6187d31
+      internalID: 1399393162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_34
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 620
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c194474cdf12141b4d46453a40d0b3
+      internalID: 246636817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_35
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 620
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c3d1fc1a0142940ad2eb93d29d4a88
+      internalID: -1195795397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_36
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 620
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4826aff5edb08d4aa6f9e313e50060a
+      internalID: 1683313376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_37
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 620
+        width: 32
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbd4b7ad23a7e244b738a8ce9f79787
+      internalID: -1242764987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_38
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 528
+        width: 40
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a30ff73765462045b5d33dfde288934
+      internalID: 640600237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_39
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 528
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a4f3d85a7e3b44e93d6071472ab24e
+      internalID: 1115309738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_40
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 411
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c62cb255aa45d84382bc295f64dd41a
+      internalID: -314329494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_41
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 411
+        width: 29
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b135800d6d9daf748bbf685ad62e6e14
+      internalID: -147976700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_42
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 411
+        width: 29
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf3bdbb9e5478d4aa22fc9b9844cf29
+      internalID: 893609812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_43
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 411
+        width: 29
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cc1631337f1554b9a923a9d683b261
+      internalID: 384742303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_44
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 310
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684b78def9d55f148aa69dd18f8a218f
+      internalID: -1906696247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_45
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 310
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17675b7a021194b4e89c08f4e53f8ce6
+      internalID: 100075221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 220
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c551c0f143b1f4e9d00cef8328d393
+      internalID: -228793309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_47
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 220
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e0706400fab64fa2c8fb5a56fb215
+      internalID: 985459646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_48
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 140
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04412bde859b0474cb902457c2e1ba40
+      internalID: 386979992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_49
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 140
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29af8bc08e7f7f24eb957252da84d61d
+      internalID: 1103717497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 60
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bbbd2c5165d1c4fba885fb4db81750
+      internalID: -86614527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VonKaiserSheet_51
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 60
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b54a85e7bdb05b4b8ba4ef1ff266e7e
+      internalID: 1642885968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VonKaiserSheet_31: -915047021
+      VonKaiserSheet_49: 1103717497
+      VonKaiserSheet_12: 434773444
+      VonKaiserSheet_14: 2142511777
+      VonKaiserSheet_41: -147976700
+      VonKaiserSheet_24: 525377498
+      VonKaiserSheet_37: -1242764987
+      VonKaiserSheet_1: -1820797749
+      VonKaiserSheet_34: 246636817
+      VonKaiserSheet_51: 1642885968
+      VonKaiserSheet_38: 640600237
+      VonKaiserSheet_40: -314329494
+      VonKaiserSheet_42: 893609812
+      VonKaiserSheet_23: 1925792990
+      VonKaiserSheet_4: 1081287638
+      VonKaiserSheet_25: -1839000840
+      VonKaiserSheet_44: -1906696247
+      VonKaiserSheet_46: -228793309
+      VonKaiserSheet_7: 44326214
+      VonKaiserSheet_9: -440123183
+      VonKaiserSheet_8: 695754787
+      VonKaiserSheet_15: -245191656
+      VonKaiserSheet_17: -1529062693
+      VonKaiserSheet_22: -220451801
+      VonKaiserSheet_32: 1171821205
+      VonKaiserSheet_16: 1858936479
+      VonKaiserSheet_29: -2021647674
+      VonKaiserSheet_0: 2140251890
+      VonKaiserSheet_19: 1795278319
+      VonKaiserSheet_47: 985459646
+      VonKaiserSheet_3: -2081430487
+      VonKaiserSheet_36: 1683313376
+      VonKaiserSheet_20: 2026775805
+      VonKaiserSheet_18: -1087863984
+      VonKaiserSheet_21: 713615216
+      VonKaiserSheet_13: 1858859887
+      VonKaiserSheet_50: -86614527
+      VonKaiserSheet_11: 2037136512
+      VonKaiserSheet_28: 584393700
+      VonKaiserSheet_43: 384742303
+      VonKaiserSheet_30: 2009147309
+      VonKaiserSheet_26: 631195170
+      VonKaiserSheet_27: -1616438980
+      VonKaiserSheet_2: -273113387
+      VonKaiserSheet_5: -70470024
+      VonKaiserSheet_6: 1065899394
+      VonKaiserSheet_45: 100075221
+      VonKaiserSheet_10: -1476653634
+      VonKaiserSheet_33: 1399393162
+      VonKaiserSheet_48: 386979992
+      VonKaiserSheet_35: -1195795397
+      VonKaiserSheet_39: 1115309738
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

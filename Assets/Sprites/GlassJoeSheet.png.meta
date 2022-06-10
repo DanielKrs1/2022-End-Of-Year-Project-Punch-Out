@@ -1,0 +1,1366 @@
+fileFormatVersion: 2
+guid: b8813dc49ff1975478b9f1d9b728a7c4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GlassJoeSheet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 783
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6244791985d258543a7c96a7977dacc9
+      internalID: -69593600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 783
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad155d98c1617346ac02c3ce572a7cd
+      internalID: -2014900151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 783
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8eb599328b119042b7eacff13131955
+      internalID: 94379029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 783
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a79df3405119247937d067cae7007c
+      internalID: -786242551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 783
+        width: 29
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fad86bd10bac24bbc8a6405dd6ac5f
+      internalID: 1851395261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 783
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121f07e07d756534a8041eac31edfafa
+      internalID: -1602379061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 783
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dc6a7a5fb648d4c95a2f7ba3e7aefe
+      internalID: -535201674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_7
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 783
+        width: 29
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4017693d516dd43a8cf08aeb6f703b
+      internalID: 1658619025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_8
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 783
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d2cd695f41b194bb11f999ac2cc76a
+      internalID: 1073839118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 783
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af29b5028d7bc6449a7b899aed199231
+      internalID: 1712510481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_10
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 783
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef4e55bba2a04246ba2df58e2484fc1
+      internalID: -1975321098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_11
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 783
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131f4c5fac927804d9632fde6515e980
+      internalID: 646987400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 670
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58c6e29f5e21684a8b9f5d0fce8950b
+      internalID: -1343099832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_13
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 670
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a17c732a080fa46bed87f4236164da
+      internalID: 1416805354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 670
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc4bc11b18f12e4ab147094b0462e7e
+      internalID: 1183870119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 670
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7766e017177d46b713a1ac4274fb9
+      internalID: -996572991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_16
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 670
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b129c9a936fe04db6829ca2473c5ac
+      internalID: -1339539598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_17
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 670
+        width: 30
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb6a03fb6fae2844a5d6b27ecc09f81
+      internalID: -551656732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 566
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bf96b6072e11948948f70f37c27293
+      internalID: 126320053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_19
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 566
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d50e009d7445144a9e869d7c315deef
+      internalID: 2143807695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_20
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 566
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5a6be3ca816da4f9dbeaf362bd903b
+      internalID: 498277316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_21
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 566
+        width: 39
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdb2dc93f2477c4ebd4027d368cbc1c
+      internalID: -1052634465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_22
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5a2a68a5eb688428b7ef23ac84b23f
+      internalID: 983991004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 454
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb90ce6f3477394fb4752b10a5aaa2a
+      internalID: -413282966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_24
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83ea7e56e6af9146a4965cbe9dffaf0
+      internalID: -807322625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_25
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 454
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588ae5ddfe353d240a762c3aae006fd8
+      internalID: 576113428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_26
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263845fa83ee5bb4583428873c4862c5
+      internalID: 1525154448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_27
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da3aec4458d7b1468ab319ba75b2f22
+      internalID: -2012678837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_28
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 454
+        width: 29
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8041db46e043e7b4a872af36cce46a8d
+      internalID: -164200040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_29
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcd4ac65a36ef240b1c130877a35c17
+      internalID: -1430220522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_30
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 454
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400a4cdc268fef148bfb4fb1f80d81c0
+      internalID: 1558943777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_31
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 454
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1918cb87a3c63384883165cbcb25d83d
+      internalID: -843929813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 454
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bca779272393614fa9ae22d96dc76d8
+      internalID: 1254512641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_33
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 454
+        width: 35
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a944af69c1e788e4d9b50f057107ff62
+      internalID: 1196092536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_34
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 453
+        width: 34
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfe1833fce8a434eaf5ef205dca54cc
+      internalID: 122629895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_35
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 453
+        width: 39
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e9b5640dcd8454d81180305936e169
+      internalID: -589384744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_36
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 345
+        width: 32
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb59299344556e44b8b1126326a5eb2
+      internalID: 183787849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_37
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 345
+        width: 32
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24ad571c0ff3f149afe5ea5185fb116
+      internalID: 1007343619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 345
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3bbda1af0eedf4abc84d372116091b
+      internalID: 477272593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_39
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 345
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dfc9ad8d411b845b237344ed3177e0
+      internalID: -1532812060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_40
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 345
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95c34255fd331d42b1fa9e0c46b7802
+      internalID: -1657764153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_41
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 276
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65f9d431059ac046ac4a87f68510758
+      internalID: -995119382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_42
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 276
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510a118a218fad4458cf611660b3b453
+      internalID: -1389431492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_43
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 230
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1bd13efcde5624cae50d68b02bde56
+      internalID: -788903533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_44
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 230
+        width: 31
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07d0a80b14de9f46811fd33f3a05727
+      internalID: -1561367674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_45
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 230
+        width: 35
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c3974e6065fee45b6fb5ff2b1ea969
+      internalID: -658720668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 230
+        width: 45
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc7aff344e28a242bee0112503d9bb5
+      internalID: -724178793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_47
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 196
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064572b86b86a5c4aadc67f30f45fe15
+      internalID: -809531756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_48
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 196
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597bcd8eea41eb04c825ecbbc4487d45
+      internalID: -1175414657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_49
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 132
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5833f07cddf96478de7e7b1c320c5c
+      internalID: 755259696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_50
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 132
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12ce380ace66c84fa785d89bad29be4
+      internalID: 2042717577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_51
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 132
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3576eddd5df95564cafe7f2409c163a2
+      internalID: 1429644750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_52
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 132
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b53ee7f5efdda845af588bfd0b82f94
+      internalID: -818952914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_53
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 132
+        width: 40
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b10fa1ee7eb4cd47b109d1e7ffe8ffb
+      internalID: -2137850884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_54
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 11
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cc5779f64ec24418227e0a7da3cf3c
+      internalID: -828372128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlassJoeSheet_55
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 11
+        width: 32
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e759a4eef6ad4f4891edbd832a3ecf1
+      internalID: 810552940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GlassJoeSheet_48: -1175414657
+      GlassJoeSheet_27: -2012678837
+      GlassJoeSheet_15: -996572991
+      GlassJoeSheet_14: 1183870119
+      GlassJoeSheet_6: -535201674
+      GlassJoeSheet_23: -413282966
+      GlassJoeSheet_25: 576113428
+      GlassJoeSheet_51: 1429644750
+      GlassJoeSheet_5: -1602379061
+      GlassJoeSheet_9: 1712510481
+      GlassJoeSheet_26: 1525154448
+      GlassJoeSheet_19: 2143807695
+      GlassJoeSheet_54: -828372128
+      GlassJoeSheet_53: -2137850884
+      GlassJoeSheet_44: -1561367674
+      GlassJoeSheet_35: -589384744
+      GlassJoeSheet_4: 1851395261
+      GlassJoeSheet_43: -788903533
+      GlassJoeSheet_18: 126320053
+      GlassJoeSheet_46: -724178793
+      GlassJoeSheet_49: 755259696
+      GlassJoeSheet_24: -807322625
+      GlassJoeSheet_21: -1052634465
+      GlassJoeSheet_7: 1658619025
+      GlassJoeSheet_16: -1339539598
+      GlassJoeSheet_36: 183787849
+      GlassJoeSheet_50: 2042717577
+      GlassJoeSheet_45: -658720668
+      GlassJoeSheet_0: -69593600
+      GlassJoeSheet_55: 810552940
+      GlassJoeSheet_30: 1558943777
+      GlassJoeSheet_28: -164200040
+      GlassJoeSheet_47: -809531756
+      GlassJoeSheet_10: -1975321098
+      GlassJoeSheet_29: -1430220522
+      GlassJoeSheet_1: -2014900151
+      GlassJoeSheet_13: 1416805354
+      GlassJoeSheet_38: 477272593
+      GlassJoeSheet_39: -1532812060
+      GlassJoeSheet_20: 498277316
+      GlassJoeSheet_40: -1657764153
+      GlassJoeSheet_42: -1389431492
+      GlassJoeSheet_2: 94379029
+      GlassJoeSheet_11: 646987400
+      GlassJoeSheet_34: 122629895
+      GlassJoeSheet_32: 1254512641
+      GlassJoeSheet_33: 1196092536
+      GlassJoeSheet_12: -1343099832
+      GlassJoeSheet_22: 983991004
+      GlassJoeSheet_3: -786242551
+      GlassJoeSheet_17: -551656732
+      GlassJoeSheet_41: -995119382
+      GlassJoeSheet_52: -818952914
+      GlassJoeSheet_31: -843929813
+      GlassJoeSheet_37: 1007343619
+      GlassJoeSheet_8: 1073839118
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
