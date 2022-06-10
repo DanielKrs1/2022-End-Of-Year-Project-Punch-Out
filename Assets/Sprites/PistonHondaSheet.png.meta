@@ -1,0 +1,1278 @@
+fileFormatVersion: 2
+guid: 513821b9d32596441a530c113a11a8b5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PistonHondaSheet_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1270
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178d171512ba092409371d975cb511b1
+      internalID: -1603604215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1270
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cd64b618383dc4fa9b45aa374015a3
+      internalID: -266591063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1270
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898a615203e840648acd7677756d4a68
+      internalID: 950188055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1270
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5b2989e94e1fe4998ea028a4c758e0
+      internalID: -1008190771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1148
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533d7055630967d409cf0f9b152c4b2b
+      internalID: 1821722910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1148
+        width: 39
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47555ef7c5c8b49459db46375b476f9d
+      internalID: -1601871524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1148
+        width: 39
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c720e3e1eb3f5b6458ee6eb31aaf84f8
+      internalID: 1583759778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1148
+        width: 40
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b89cbf871ad7524181b08cccbd31175
+      internalID: 584003790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_8
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1148
+        width: 40
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ae63e7c6909ef4092a1f4516e297c0
+      internalID: -1865464640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1148
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a26eb1af4341c42a5e834874970d14
+      internalID: -431407215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1026
+        width: 43
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a14e52df939ca842805f05a27870ef3
+      internalID: 338532326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1026
+        width: 43
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c444dd88d81134d8b652c214c228f1
+      internalID: -153040447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1026
+        width: 45
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82dde081221d904a974f18b85eaf7c3
+      internalID: 2119435685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 903
+        width: 42
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c9e57cd2aef7e4d9aeaf09676ddbc3
+      internalID: 66986552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_14
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 903
+        width: 40
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858ed24496dfa204eb26ab2a81f64c7e
+      internalID: -1420066273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_15
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 903
+        width: 51
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9132e321421638d4ab03912c548aecfb
+      internalID: -1251539282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 780
+        width: 52
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a9bd5c57649a84da00c34b788f69fa
+      internalID: -110344084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 780
+        width: 55
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52c81c45e9658d41b575409ed0c5b96
+      internalID: 541345324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_18
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 780
+        width: 39
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2795f42c65460f4bb634000c5e8ca85
+      internalID: 85489717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 780
+        width: 53
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183cbc165b242bd4bbfa7f88739d50f9
+      internalID: 1545014320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_20
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 658
+        width: 53
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5a425d5bb2b814ca871bb7f775d49d
+      internalID: 1192057695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_21
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 658
+        width: 53
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622b6a28819bab0448040225476a8a2f
+      internalID: -1323333690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_22
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 658
+        width: 36
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50e0c31b27515342a1726200c32fce3
+      internalID: -1028137617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_23
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 658
+        width: 46
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a179ea3bc783e254c92407cb18875022
+      internalID: 1679058371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 528
+        width: 41
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fe2a66292d2e44087b71899564f882
+      internalID: -395661557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_25
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 528
+        width: 41
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043db65c8ad1d6741a949eac2e88f880
+      internalID: 1352644919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 528
+        width: 44
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a523b8f4577a04f8be81edbc679d94
+      internalID: 1194388959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_27
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 528
+        width: 48
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1fdc72b25f45d47bc0ab759f352295
+      internalID: -79742391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_28
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 528
+        width: 48
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9fd2ef8b6fff445929148e39a17412
+      internalID: -1263283111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_29
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 407
+        width: 45
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb3b72f1a9f303428fac87ed8b32c7c
+      internalID: 1204168153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 407
+        width: 36
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b43f289f3715b4695c036abe8f3668
+      internalID: -1908053999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_31
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 407
+        width: 45
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35714a6f514189a43b0deedd62728693
+      internalID: 6823251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_32
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 407
+        width: 36
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd36cf67fa7f564abd78b3c4879bfb6
+      internalID: -1596369618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_33
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 286
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb446fac28fc304f820267f58af7f79
+      internalID: 1978125307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_34
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 286
+        width: 41
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7236a8eb5434bd14aafeb4639847ca06
+      internalID: 640510101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_35
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 286
+        width: 45
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e771fc6c9255f94a9c6f61c164105ef
+      internalID: 295037314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_36
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 286
+        width: 45
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41ba1ae55ed65c4d9068d7054db0c90
+      internalID: 1231507096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_37
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 286
+        width: 41
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851d45dfb2aaa4f45b665126047fac0f
+      internalID: -547810470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_38
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 171
+        width: 60
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d183e2b114289cf4092a5004ae554738
+      internalID: 1311456962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_39
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 171
+        width: 51
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1873b63f3787b14e8dc4662dc02cce5
+      internalID: -1124309354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_40
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 171
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f6910c2fefee44b96f0662b1e3b993
+      internalID: -1447314770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_41
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 171
+        width: 48
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0cb9c43eccb4947af83feea6e2f8a2
+      internalID: -1245531103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_42
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 87
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3c59a0e0db3dc4a821e2a27cf979e4
+      internalID: -1808459101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_43
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 87
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b4a44897111b74b82be6d9684f410a
+      internalID: 1201490881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_44
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3224c6555a8ab884091182da997196f9
+      internalID: 848818811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_45
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 8
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018bfff4ea13dd54e93a069a7a00e688
+      internalID: -699885761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_46
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 21
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cbb928a77e8bf4ea6f8f0dcf0f5f65
+      internalID: -551849318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_47
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 21
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c008d6c1f0f01774aa6fbc699be2750f
+      internalID: -370008960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_48
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 23
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a54720049a1d9045a25f17a59d90ab7
+      internalID: -235147905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_49
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 11
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33a36ce3b2414e429496f416b8e9a56
+      internalID: 379730715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_50
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 11
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325f8fb027b1df444863fca81a8e16e4
+      internalID: 2082113552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistonHondaSheet_51
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 9
+        width: 59
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c0f1d7bb35cb446b11750cd4a51956
+      internalID: -1586697450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PistonHondaSheet_42: -1808459101
+      PistonHondaSheet_15: -1251539282
+      PistonHondaSheet_26: 1194388959
+      PistonHondaSheet_16: -110344084
+      PistonHondaSheet_43: 1201490881
+      PistonHondaSheet_30: -1908053999
+      PistonHondaSheet_4: 1821722910
+      PistonHondaSheet_14: -1420066273
+      PistonHondaSheet_10: 338532326
+      PistonHondaSheet_28: -1263283111
+      PistonHondaSheet_51: -1586697450
+      PistonHondaSheet_41: -1245531103
+      PistonHondaSheet_0: -1603604215
+      PistonHondaSheet_44: 848818811
+      PistonHondaSheet_45: -699885761
+      PistonHondaSheet_29: 1204168153
+      PistonHondaSheet_25: 1352644919
+      PistonHondaSheet_47: -370008960
+      PistonHondaSheet_50: 2082113552
+      PistonHondaSheet_7: 584003790
+      PistonHondaSheet_33: 1978125307
+      PistonHondaSheet_19: 1545014320
+      PistonHondaSheet_32: -1596369618
+      PistonHondaSheet_40: -1447314770
+      PistonHondaSheet_37: -547810470
+      PistonHondaSheet_22: -1028137617
+      PistonHondaSheet_48: -235147905
+      PistonHondaSheet_46: -551849318
+      PistonHondaSheet_11: -153040447
+      PistonHondaSheet_3: -1008190771
+      PistonHondaSheet_13: 66986552
+      PistonHondaSheet_23: 1679058371
+      PistonHondaSheet_21: -1323333690
+      PistonHondaSheet_6: 1583759778
+      PistonHondaSheet_38: 1311456962
+      PistonHondaSheet_1: -266591063
+      PistonHondaSheet_34: 640510101
+      PistonHondaSheet_49: 379730715
+      PistonHondaSheet_24: -395661557
+      PistonHondaSheet_17: 541345324
+      PistonHondaSheet_36: 1231507096
+      PistonHondaSheet_12: 2119435685
+      PistonHondaSheet_5: -1601871524
+      PistonHondaSheet_8: -1865464640
+      PistonHondaSheet_35: 295037314
+      PistonHondaSheet_39: -1124309354
+      PistonHondaSheet_31: 6823251
+      PistonHondaSheet_18: 85489717
+      PistonHondaSheet_9: -431407215
+      PistonHondaSheet_2: 950188055
+      PistonHondaSheet_27: -79742391
+      PistonHondaSheet_20: 1192057695
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
