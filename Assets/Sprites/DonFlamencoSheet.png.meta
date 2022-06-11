@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 513821b9d32596441a530c113a11a8b5
+guid: 270ea4fa0b721dc4c903d573d4d7db41
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,138 +116,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PistonHondaSheet_0
+      name: DonFlamencoSheet_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1270
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 178d171512ba092409371d975cb511b1
-      internalID: -1603604215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_1
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 1270
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06cd64b618383dc4fa9b45aa374015a3
-      internalID: -266591063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_2
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 1270
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 898a615203e840648acd7677756d4a68
-      internalID: 950188055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_3
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 1270
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce5b2989e94e1fe4998ea028a4c758e0
-      internalID: -1008190771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_4
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 1148
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 533d7055630967d409cf0f9b152c4b2b
-      internalID: 1821722910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_5
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 1148
-        width: 39
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47555ef7c5c8b49459db46375b476f9d
-      internalID: -1601871524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_6
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 1148
-        width: 39
+        x: 15
+        y: 1293
+        width: 25
         height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c720e3e1eb3f5b6458ee6eb31aaf84f8
-      internalID: 1583759778
+      spriteID: 568f128e7016caa47a736552e63456b1
+      internalID: 1357454299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_7
+      name: DonFlamencoSheet_1
       rect:
         serializedVersion: 2
-        x: 166
-        y: 1148
-        width: 40
+        x: 51
+        y: 1293
+        width: 27
         height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -277,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b89cbf871ad7524181b08cccbd31175
-      internalID: 584003790
+      spriteID: 4492c3ddcaade034b9db96ce82e781b7
+      internalID: 1790333615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_8
+      name: DonFlamencoSheet_2
       rect:
         serializedVersion: 2
-        x: 219
-        y: 1148
-        width: 40
-        height: 107
+        x: 91
+        y: 1293
+        width: 35
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ae63e7c6909ef4092a1f4516e297c0
-      internalID: -1865464640
+      spriteID: 9f453f9097f801845ba3489050d85479
+      internalID: -234305856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_9
+      name: DonFlamencoSheet_3
       rect:
         serializedVersion: 2
-        x: 273
-        y: 1148
-        width: 41
-        height: 110
+        x: 144
+        y: 1293
+        width: 31
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,607 +193,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a26eb1af4341c42a5e834874970d14
-      internalID: -431407215
+      spriteID: 5e2d89a5a83f16a4192f4f196367bc45
+      internalID: -24548976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_10
+      name: DonFlamencoSheet_4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1026
-        width: 43
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a14e52df939ca842805f05a27870ef3
-      internalID: 338532326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_11
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 1026
-        width: 43
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6c444dd88d81134d8b652c214c228f1
-      internalID: -153040447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_12
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 1026
-        width: 45
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e82dde081221d904a974f18b85eaf7c3
-      internalID: 2119435685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_13
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 903
-        width: 42
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21c9e57cd2aef7e4d9aeaf09676ddbc3
-      internalID: 66986552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_14
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 903
-        width: 40
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 858ed24496dfa204eb26ab2a81f64c7e
-      internalID: -1420066273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_15
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 903
-        width: 51
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9132e321421638d4ab03912c548aecfb
-      internalID: -1251539282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_16
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 780
-        width: 52
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33a9bd5c57649a84da00c34b788f69fa
-      internalID: -110344084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_17
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 780
-        width: 55
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a52c81c45e9658d41b575409ed0c5b96
-      internalID: 541345324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_18
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 780
-        width: 39
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2795f42c65460f4bb634000c5e8ca85
-      internalID: 85489717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_19
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 780
-        width: 53
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 183cbc165b242bd4bbfa7f88739d50f9
-      internalID: 1545014320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_20
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 658
-        width: 53
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de5a425d5bb2b814ca871bb7f775d49d
-      internalID: 1192057695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_21
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 658
-        width: 53
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 622b6a28819bab0448040225476a8a2f
-      internalID: -1323333690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_22
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 658
-        width: 36
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e50e0c31b27515342a1726200c32fce3
-      internalID: -1028137617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_23
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 658
-        width: 46
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a179ea3bc783e254c92407cb18875022
-      internalID: 1679058371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_24
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 528
-        width: 41
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05fe2a66292d2e44087b71899564f882
-      internalID: -395661557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_25
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 528
-        width: 41
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 043db65c8ad1d6741a949eac2e88f880
-      internalID: 1352644919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_26
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 528
-        width: 44
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87a523b8f4577a04f8be81edbc679d94
-      internalID: 1194388959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_27
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 528
-        width: 48
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a1fdc72b25f45d47bc0ab759f352295
-      internalID: -79742391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_28
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 528
-        width: 48
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a9fd2ef8b6fff445929148e39a17412
-      internalID: -1263283111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_29
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 407
-        width: 45
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdb3b72f1a9f303428fac87ed8b32c7c
-      internalID: 1204168153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_30
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 407
-        width: 36
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17b43f289f3715b4695c036abe8f3668
-      internalID: -1908053999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_31
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 407
-        width: 45
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35714a6f514189a43b0deedd62728693
-      internalID: 6823251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_32
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 407
-        width: 36
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbd36cf67fa7f564abd78b3c4879bfb6
-      internalID: -1596369618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_33
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 286
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bb446fac28fc304f820267f58af7f79
-      internalID: 1978125307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_34
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 286
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7236a8eb5434bd14aafeb4639847ca06
-      internalID: 640510101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_35
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 286
-        width: 45
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e771fc6c9255f94a9c6f61c164105ef
-      internalID: 295037314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_36
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 286
-        width: 45
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d41ba1ae55ed65c4d9068d7054db0c90
-      internalID: 1231507096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_37
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 286
-        width: 41
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851d45dfb2aaa4f45b665126047fac0f
-      internalID: -547810470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_38
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 171
-        width: 60
+        x: 189
+        y: 1293
+        width: 30
         height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -928,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d183e2b114289cf4092a5004ae554738
-      internalID: 1311456962
+      spriteID: 57981aac41a32ae42b40a69b4ac5654e
+      internalID: 1166948819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_39
+      name: DonFlamencoSheet_5
       rect:
         serializedVersion: 2
-        x: 81
-        y: 171
-        width: 51
-        height: 106
+        x: 15
+        y: 1179
+        width: 29
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -949,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1873b63f3787b14e8dc4662dc02cce5
-      internalID: -1124309354
+      spriteID: 6b23d8d05eaf4974e8df5c621013c140
+      internalID: 1730715484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_40
+      name: DonFlamencoSheet_6
       rect:
         serializedVersion: 2
-        x: 147
-        y: 171
-        width: 59
-        height: 75
+        x: 59
+        y: 1179
+        width: 29
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -970,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88f6910c2fefee44b96f0662b1e3b993
-      internalID: -1447314770
+      spriteID: aa3527d07913bfe4ab250ab8f0e0016b
+      internalID: -2028667776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_41
+      name: DonFlamencoSheet_7
       rect:
         serializedVersion: 2
-        x: 221
-        y: 171
-        width: 48
-        height: 72
+        x: 103
+        y: 1179
+        width: 29
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -991,19 +277,355 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb0cb9c43eccb4947af83feea6e2f8a2
-      internalID: -1245531103
+      spriteID: c74b287f3a9b1834da91ecd546109db0
+      internalID: 1842224850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_42
+      name: DonFlamencoSheet_8
       rect:
         serializedVersion: 2
-        x: 9
-        y: 87
-        width: 80
+        x: 152
+        y: 1179
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbc242e100e38a45876bc13f1b333a6
+      internalID: 1229285432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1179
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e82c35128610a242aaf200d52bad31a
+      internalID: -981900994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1179
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcf851360561414a841de3d27543822
+      internalID: -1968695016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_11
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1065
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d52b520f5e566459cd08825d3b25be
+      internalID: 1377949110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1065
+        width: 29
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d399577c7046154c86696f74068d9a6
+      internalID: 1196375139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_13
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1065
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d74c9a6fe6c40841924f4b8876d5361
+      internalID: -1419717459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1065
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b260530474b4141816861e576e145a
+      internalID: -787166035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1065
+        width: 31
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cd90f81ddc55f47b73b7f33c17a31f
+      internalID: 1493640147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_16
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1065
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd46aa6e0a2aabf4691cc97e26e98340
+      internalID: 1203909984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 951
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20945a2804df5440938ea73e248d8f9
+      internalID: 1782880449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 951
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe6f248b76a59849986cd575e9abe96
+      internalID: 392868253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_19
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 951
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf41bfc7cd7d14e41ac8a97e59f80966
+      internalID: 1575217064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 829
+        width: 25
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb749e384723a84b9d7bcf0095d2851
+      internalID: 736318570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_21
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 829
+        width: 27
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468deb157a89f6e4499681551a3ed872
+      internalID: 1338936838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_22
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 829
+        width: 27
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d492b6ab2793b914f82f04ca3c782071
+      internalID: 1405191123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 829
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812e33f55afb33e44b0cbca70488e813
+      internalID: -450986839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_24
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 829
+        width: 31
         height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1012,19 +634,82 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d3c59a0e0db3dc4a821e2a27cf979e4
-      internalID: -1808459101
+      spriteID: ac441f5c15243e04b819b08a3ac1edb2
+      internalID: -967426193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_43
+      name: DonFlamencoSheet_25
       rect:
         serializedVersion: 2
-        x: 91
-        y: 87
-        width: 80
+        x: 226
+        y: 829
+        width: 30
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3539ed66c7ffbbc45b4c307f80e8448d
+      internalID: -399776454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_26
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 726
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504e8aa4a9a7acb45882cc17c3635b94
+      internalID: 310193902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_27
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 726
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ce5c66fe097ac4492c190f85ed922a
+      internalID: -947005056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_28
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 726
+        width: 31
         height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1033,20 +718,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b4a44897111b74b82be6d9684f410a
-      internalID: 1201490881
+      spriteID: 35ee82ca686f93546a4d484f3715b47d
+      internalID: 258101612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_44
+      name: DonFlamencoSheet_29
       rect:
         serializedVersion: 2
-        x: 9
-        y: 8
-        width: 80
-        height: 77
+        x: 161
+        y: 726
+        width: 38
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1054,20 +739,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3224c6555a8ab884091182da997196f9
-      internalID: 848818811
+      spriteID: e283e92f038e48f418bb1d1e67b5d844
+      internalID: 367043093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_45
+      name: DonFlamencoSheet_30
       rect:
         serializedVersion: 2
-        x: 91
-        y: 8
-        width: 80
-        height: 77
+        x: 230
+        y: 722
+        width: 30
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1075,20 +760,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 018bfff4ea13dd54e93a069a7a00e688
-      internalID: -699885761
+      spriteID: 2c2c15b1a4ac85443a2f61c138fe3b54
+      internalID: 910213716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_46
+      name: DonFlamencoSheet_31
       rect:
         serializedVersion: 2
-        x: 210
-        y: 21
+        x: 15
+        y: 612
+        width: 32
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f6f2c8aefee7c4db4bb0c5e5a6fb62
+      internalID: 474643680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_32
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 612
         width: 34
-        height: 10
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1096,41 +802,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29cbb928a77e8bf4ea6f8f0dcf0f5f65
-      internalID: -551849318
+      spriteID: 34114f8304e51614bafddc6574c10562
+      internalID: 21272407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_47
+      name: DonFlamencoSheet_33
       rect:
         serializedVersion: 2
-        x: 247
-        y: 21
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c008d6c1f0f01774aa6fbc699be2750f
-      internalID: -370008960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_48
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 23
+        x: 237
+        y: 586
         width: 32
-        height: 8
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1138,20 +823,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a54720049a1d9045a25f17a59d90ab7
-      internalID: -235147905
+      spriteID: 204e13658bed58648bac0ade2c92b02a
+      internalID: 638210648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_49
+      name: DonFlamencoSheet_34
       rect:
         serializedVersion: 2
-        x: 210
-        y: 11
+        x: 15
+        y: 494
         width: 32
-        height: 8
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1159,20 +844,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c33a36ce3b2414e429496f416b8e9a56
-      internalID: 379730715
+      spriteID: 45a411916424cd848a9874aba8399916
+      internalID: -615276672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_50
+      name: DonFlamencoSheet_35
       rect:
         serializedVersion: 2
-        x: 244
-        y: 11
-        width: 9
-        height: 7
+        x: 62
+        y: 494
+        width: 31
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1180,20 +865,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 325f8fb027b1df444863fca81a8e16e4
-      internalID: 2082113552
+      spriteID: 2e2fcdc6b66e92e4c8b94f0d1be79adc
+      internalID: 975154604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_51
+      name: DonFlamencoSheet_36
       rect:
         serializedVersion: 2
-        x: 256
-        y: 9
-        width: 59
-        height: 10
+        x: 106
+        y: 494
+        width: 35
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1201,8 +886,323 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64c0f1d7bb35cb446b11750cd4a51956
-      internalID: -1586697450
+      spriteID: 3879c5788e2e00b42951446850c5ebc7
+      internalID: -2020561704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_37
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 494
+        width: 45
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb587137bef33704cb03c1cca02eaa28
+      internalID: -284706946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_38
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 390
+        width: 39
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26c80a05c4386042a1ebed68aa1bce2
+      internalID: 1679504488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_39
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 390
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1869cb3ec9edaf4cab8eddfe540f670
+      internalID: -2038399261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 390
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c221f8e362e567b4380d79515ea80ced
+      internalID: 1545479928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_41
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 390
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea480e84f28a9c64ba85054e1d511695
+      internalID: 1073810151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_42
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 390
+        width: 37
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b191446614bfd84dacdf881bc17239c
+      internalID: -1329968647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 263
+        width: 31
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0331a0f2080f14eb185c16247a2f49
+      internalID: -611531386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_44
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 263
+        width: 32
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b98ae5a51bf2a4984dd6d9d674dbe9
+      internalID: -977634197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_45
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 175
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524412de006872842878ed3ad3b86d86
+      internalID: -396179554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_46
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 175
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203c8583b2d66924ab6b2c5e0d49087f
+      internalID: -196859189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_47
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 96
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce49fc3ef906364392a231a6d1f4be4
+      internalID: 417031488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 95
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a34a8691df8344981089146355dfc7
+      internalID: 1981398476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_49
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 95
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24730b01feacce94f8b6473515e2f036
+      internalID: -783498633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8ff5f6d2eda9748a7c69bed7891ac9
+      internalID: -1843467285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DonFlamencoSheet_51
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 15
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21b1fff4b704d440a913994a0eb2659
+      internalID: 154180140
       vertices: []
       indices: 
       edges: []
@@ -1218,58 +1218,58 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PistonHondaSheet_42: -1808459101
-      PistonHondaSheet_15: -1251539282
-      PistonHondaSheet_26: 1194388959
-      PistonHondaSheet_16: -110344084
-      PistonHondaSheet_43: 1201490881
-      PistonHondaSheet_30: -1908053999
-      PistonHondaSheet_4: 1821722910
-      PistonHondaSheet_14: -1420066273
-      PistonHondaSheet_10: 338532326
-      PistonHondaSheet_28: -1263283111
-      PistonHondaSheet_51: -1586697450
-      PistonHondaSheet_41: -1245531103
-      PistonHondaSheet_0: -1603604215
-      PistonHondaSheet_44: 848818811
-      PistonHondaSheet_45: -699885761
-      PistonHondaSheet_50: 2082113552
-      PistonHondaSheet_29: 1204168153
-      PistonHondaSheet_48: -235147905
-      PistonHondaSheet_47: -370008960
-      PistonHondaSheet_25: 1352644919
-      PistonHondaSheet_33: 1978125307
-      PistonHondaSheet_19: 1545014320
-      PistonHondaSheet_32: -1596369618
-      PistonHondaSheet_40: -1447314770
-      PistonHondaSheet_7: 584003790
-      PistonHondaSheet_37: -547810470
-      PistonHondaSheet_22: -1028137617
-      PistonHondaSheet_46: -551849318
-      PistonHondaSheet_11: -153040447
-      PistonHondaSheet_3: -1008190771
-      PistonHondaSheet_13: 66986552
-      PistonHondaSheet_23: 1679058371
-      PistonHondaSheet_21: -1323333690
-      PistonHondaSheet_6: 1583759778
-      PistonHondaSheet_38: 1311456962
-      PistonHondaSheet_1: -266591063
-      PistonHondaSheet_34: 640510101
-      PistonHondaSheet_49: 379730715
-      PistonHondaSheet_24: -395661557
-      PistonHondaSheet_17: 541345324
-      PistonHondaSheet_36: 1231507096
-      PistonHondaSheet_12: 2119435685
-      PistonHondaSheet_5: -1601871524
-      PistonHondaSheet_8: -1865464640
-      PistonHondaSheet_35: 295037314
-      PistonHondaSheet_39: -1124309354
-      PistonHondaSheet_31: 6823251
-      PistonHondaSheet_18: 85489717
-      PistonHondaSheet_9: -431407215
-      PistonHondaSheet_2: 950188055
-      PistonHondaSheet_27: -79742391
-      PistonHondaSheet_20: 1192057695
+      DonFlamencoSheet_35: 975154604
+      DonFlamencoSheet_30: 910213716
+      DonFlamencoSheet_26: 310193902
+      DonFlamencoSheet_8: 1229285432
+      DonFlamencoSheet_17: 1782880449
+      DonFlamencoSheet_40: 1545479928
+      DonFlamencoSheet_18: 392868253
+      DonFlamencoSheet_15: 1493640147
+      DonFlamencoSheet_31: 474643680
+      DonFlamencoSheet_51: 154180140
+      DonFlamencoSheet_19: 1575217064
+      DonFlamencoSheet_12: 1196375139
+      DonFlamencoSheet_34: -615276672
+      DonFlamencoSheet_16: 1203909984
+      DonFlamencoSheet_22: 1405191123
+      DonFlamencoSheet_4: 1166948819
+      DonFlamencoSheet_43: -611531386
+      DonFlamencoSheet_11: 1377949110
+      DonFlamencoSheet_47: 417031488
+      DonFlamencoSheet_5: 1730715484
+      DonFlamencoSheet_29: 367043093
+      DonFlamencoSheet_39: -2038399261
+      DonFlamencoSheet_38: 1679504488
+      DonFlamencoSheet_42: -1329968647
+      DonFlamencoSheet_49: -783498633
+      DonFlamencoSheet_6: -2028667776
+      DonFlamencoSheet_20: 736318570
+      DonFlamencoSheet_10: -1968695016
+      DonFlamencoSheet_2: -234305856
+      DonFlamencoSheet_0: 1357454299
+      DonFlamencoSheet_44: -977634197
+      DonFlamencoSheet_7: 1842224850
+      DonFlamencoSheet_25: -399776454
+      DonFlamencoSheet_14: -787166035
+      DonFlamencoSheet_9: -981900994
+      DonFlamencoSheet_45: -396179554
+      DonFlamencoSheet_21: 1338936838
+      DonFlamencoSheet_50: -1843467285
+      DonFlamencoSheet_37: -284706946
+      DonFlamencoSheet_41: 1073810151
+      DonFlamencoSheet_28: 258101612
+      DonFlamencoSheet_13: -1419717459
+      DonFlamencoSheet_46: -196859189
+      DonFlamencoSheet_36: -2020561704
+      DonFlamencoSheet_24: -967426193
+      DonFlamencoSheet_3: -24548976
+      DonFlamencoSheet_32: 21272407
+      DonFlamencoSheet_1: 1790333615
+      DonFlamencoSheet_33: 638210648
+      DonFlamencoSheet_48: 1981398476
+      DonFlamencoSheet_23: -450986839
+      DonFlamencoSheet_27: -947005056
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
