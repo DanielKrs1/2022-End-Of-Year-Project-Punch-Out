@@ -267,7 +267,7 @@ MonoBehaviour:
   knockedDown: {fileID: 21300000, guid: 6ad503b5b068ec941ac337e1b70c8a73, type: 3}
   win1: {fileID: 21300000, guid: faf23b1be493df74b80d7718389ebc2c, type: 3}
   win2: {fileID: 21300000, guid: 00c509e3f06412f478a4ba337e0bc6d4, type: 3}
-  en: {fileID: 1278779607}
+  en: {fileID: 0}
   mar: {fileID: 0}
   health: 90
   rb: {fileID: 1270028638}
@@ -334,7 +334,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1270028637
 Transform:
   m_ObjectHideFlags: 0
@@ -381,9 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278779609}
   - component: {fileID: 1278779608}
-  - component: {fileID: 1278779607}
   - component: {fileID: 1278779610}
-  - component: {fileID: 1278779612}
   - component: {fileID: 1278779611}
   m_Layer: 0
   m_Name: enemy
@@ -392,90 +390,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1278779607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278779606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad154a73ef571d43b46fc98332322cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  punching: 0
-  blockinglow: 1
-  blockinghigh: 0
-  specialing: 0
-  onehit: 0
-  counter: 0
-  health: 30
-  timesdown: 0
-  spriteRenderer: {fileID: 0}
-  action: 
-  hits: 7
-  stunned: 0
-  lm: {fileID: 1270028635}
-  normal: {fileID: 21300000, guid: 8216d9591e5680c4db789f7167929cad, type: 3}
-  normal2: {fileID: 21300000, guid: 0e83b85536c28624e9bb9e2361162c1a, type: 3}
-  normal3: {fileID: 21300000, guid: ce91a87781f18bf49a01cd7a1e191b4a, type: 3}
-  normald: {fileID: 21300000, guid: 885808733d636ef4db0e01d7d2a24abb, type: 3}
-  normald2: {fileID: 21300000, guid: 7bdff9a6035f44745b1642b7f63565af, type: 3}
-  normald3: {fileID: 21300000, guid: ce91a87781f18bf49a01cd7a1e191b4a, type: 3}
-  move: {fileID: 21300000, guid: 78ab4841f61da924c900b2d73be37891, type: 3}
-  move2: {fileID: 21300000, guid: 7e536ac9398ddd143ab81eabd7a6a13f, type: 3}
-  move3: {fileID: 21300000, guid: d60eb35248ea83e44a43bada60456234, type: 3}
-  move4: {fileID: 21300000, guid: 0661cf1822ed72544a2e80a53d3e0fd6, type: 3}
-  move5: {fileID: 21300000, guid: 03c8e0a8a6278f4498992c421dab671e, type: 3}
-  move6: {fileID: 21300000, guid: f86ff7ed4dff0ad43b6a8e200dce3f9d, type: 3}
-  prepunch: {fileID: 21300000, guid: 2223f0b1e9cfce0428757528cc01422f, type: 3}
-  cluepunch: {fileID: 21300000, guid: 636f4cf2bf52b8749a4be39462d432e8, type: 3}
-  midpunch: {fileID: 21300000, guid: 6abdb523a30946a47965b0de65d3bc9a, type: 3}
-  punch: {fileID: 21300000, guid: a3d4d1870325eb84fb7750ba6cc4d067, type: 3}
-  upperStart: {fileID: 21300000, guid: a6c0c01a5e604b449a8c186b127c4bf8, type: 3}
-  upperclue: {fileID: 21300000, guid: 11b578ec57cd73f47a7402945b9cf735, type: 3}
-  upperMid: {fileID: 21300000, guid: 9ec94bc8378774a40ac91a3169dbf6f1, type: 3}
-  upperEnd: {fileID: 21300000, guid: ca55dac4e07431e4bad5721a3b4a0249, type: 3}
-  blocklow: {fileID: 21300000, guid: b939c849abc81d64ea7f68328e5371ca, type: 3}
-  blocklow2: {fileID: 21300000, guid: 6a84531963c44ae4b946c54155810ea5, type: 3}
-  blockhigh: {fileID: 21300000, guid: b58b69a8645b0f740895476fe11cacc7, type: 3}
-  blockhigh2: {fileID: 21300000, guid: f5c3017e1c83d78409e59c07d995b84a, type: 3}
-  blockhigh3: {fileID: 21300000, guid: edcb55a2cafab3749b469b7426c5f192, type: 3}
-  hitlow: {fileID: 21300000, guid: f7852d82d89b1754aa6a09c7b93f12f6, type: 3}
-  hitlow2: {fileID: 0}
-  hithigh: {fileID: 21300000, guid: bce666e1e1f0ef247905d706974e09d3, type: 3}
-  hithigh2: {fileID: 21300000, guid: eddccff0847e97647baa14e44ba9e2e7, type: 3}
-  hithighr: {fileID: 21300000, guid: 0dcdb88ae6594e044acae342419702d4, type: 3}
-  hithighr2: {fileID: 21300000, guid: fb2afe6677827b549aa41298a059f2e5, type: 3}
-  dodgeHit: {fileID: 21300000, guid: d56fe06bf960d8a43aac85fb19f90589, type: 3}
-  knockdown: {fileID: 21300000, guid: 1b2048e7c2633ed468700792c68f6af0, type: 3}
-  knockdown2: {fileID: 21300000, guid: 47018dbb668a4cf40aa783cc305eeec3, type: 3}
-  knockdown3: {fileID: 21300000, guid: c722899b27f36d145b57d3f1b1af65b9, type: 3}
-  getup: {fileID: 21300000, guid: b66a3eaa2b0cb424faf784d558598a57, type: 3}
-  getup2: {fileID: 21300000, guid: ee4ff75559aa70941bc2cbb4d3bc0ffd, type: 3}
-  victory: {fileID: 21300000, guid: 456476b2695ef65408185fb014aff249, type: 3}
-  victory2: {fileID: 21300000, guid: cf238493010d7c34ead7b741c1ef565f, type: 3}
-  punching: 0
-  blockinglow: 1
-  blockinghigh: 0
-  specialing: 0
-  onehit: 0
-  counter: 0
-  lm: {fileID: 1270028635}
-  mar: {fileID: 0}
-  moveSpeed: 1
-  rb: {fileID: 1278779610}
-  frame: 0
-  action: 
-  spriteRenderer: {fileID: 0}
-  health: 30
-  lowhits: 0
-  highhits: 0
-  timesdown: 0
-  count: 0
-  hits: 7
-  stunned: 0
 --- !u!212 &1278779608
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -527,7 +441,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1278779609
 Transform:
   m_ObjectHideFlags: 0
@@ -571,88 +485,59 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278779606}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c222f85aad1493eae1e7cd105d8779, type: 3}
+  m_Script: {fileID: 11500000, guid: 91914e7d742eac041a049d5907a6ce68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointLoader: {fileID: 0}
-  firstDigit: {fileID: 0}
-  digit2: {fileID: 0}
-  digit3: {fileID: 0}
-  digit4: {fileID: 0}
-  digit5: {fileID: 0}
-  ssx: {fileID: 0}
-  images: []
-  digit_image: []
---- !u!114 &1278779612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278779606}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158890e2d5e6f004581920552ab2e759, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  normal: {fileID: 21300000, guid: d5ecfb476c6d7cb4c9736d388b2a51ab, type: 3}
+  normal2: {fileID: 21300000, guid: 8a6c14e03bdbf1f4db897d6b76d953b3, type: 3}
+  normal3: {fileID: 21300000, guid: 3b75b921f7666c44a8aae3a24dc6722c, type: 3}
+  normal4: {fileID: 21300000, guid: 6cb58b53c07396b4a9beb0ebe1997cb8, type: 3}
+  normalup: {fileID: 21300000, guid: 6fc0c2629832a36479c5e04d4f180821, type: 3}
+  normalup2: {fileID: 21300000, guid: 3d7337ca6d32f22408459e019cbdbf17, type: 3}
+  normalup3: {fileID: 21300000, guid: e82fea4ad76c07a4b9eb67edb46f13c1, type: 3}
+  punchclue: {fileID: 21300000, guid: ad27ef82093dd68409298bb4e000bd68, type: 3}
+  punch: {fileID: 21300000, guid: ec31b224f72339747bf4c7423e12cab7, type: 3}
+  preupper: {fileID: 21300000, guid: 8a6a6cca2c5676c4f983f35cf203cc11, type: 3}
+  upperclue: {fileID: 21300000, guid: d36725df32eee5146a5ad12c48e54080, type: 3}
+  midupper: {fileID: 21300000, guid: 767c14b0566fbf140b08576494bf49c8, type: 3}
+  upperend: {fileID: 21300000, guid: 9e1e3584d7908774d8f6b41e6caf0f28, type: 3}
+  blocklow: {fileID: 21300000, guid: 4695bac53303e774aac8ab48d00a591c, type: 3}
+  blocklow2: {fileID: 21300000, guid: 1c0a84059cd56674d8cf6a98d60b18f9, type: 3}
+  blockhigh: {fileID: 21300000, guid: d82977fc34225d243a50bdc67a918d1a, type: 3}
+  blockhigh2: {fileID: 21300000, guid: 031e7a8195f607341b861c7d48e06443, type: 3}
+  dodgeHit: {fileID: 21300000, guid: f2083ff169b55194688dcacd3d8d69d8, type: 3}
+  hithigh: {fileID: 21300000, guid: a47e6d2e8f07d904793f02e9d90045ab, type: 3}
+  hithigh2: {fileID: 21300000, guid: 9a890498606111f42b260415c68e856d, type: 3}
+  hitlow: {fileID: 21300000, guid: 07406bd5f2627874582256f3cc6841fa, type: 3}
+  hitlow2: {fileID: 21300000, guid: 600acaa4853decf40b8da9e16d8a685d, type: 3}
+  knockeddown: {fileID: 21300000, guid: e4a0c26465b660b4f8ebe7402e7cf807, type: 3}
+  knockeddown2: {fileID: 21300000, guid: 4a706711965d3f84c9d944e5890f00da, type: 3}
+  getup: {fileID: 21300000, guid: b58018bf8a3e8b649937e30ed07e6ee4, type: 3}
+  getup2: {fileID: 21300000, guid: 8a6a6cca2c5676c4f983f35cf203cc11, type: 3}
+  dodge: {fileID: 21300000, guid: 9fd37ae01a7e4a54bbcc6f90adf7f9c1, type: 3}
+  dodge2: {fileID: 21300000, guid: fb04c3f6ad531fd44afcb3e82df338ff, type: 3}
   punching: 0
   blockinglow: 1
   blockinghigh: 0
   specialing: 0
   onehit: 0
   counter: 0
-  health: 210
-  timesdown: 0
-  spriteRenderer: {fileID: 0}
-  action: 
-  hits: 7
-  stunned: 0
-  lm: {fileID: 0}
-  normal: {fileID: 0}
-  normal2: {fileID: 0}
-  normal3: {fileID: 0}
-  normal4: {fileID: 0}
-  normalup: {fileID: 0}
-  normaulup2: {fileID: 0}
-  normalup3: {fileID: 0}
-  punchclue: {fileID: 0}
-  punch: {fileID: 0}
-  preupper: {fileID: 0}
-  upperclue: {fileID: 0}
-  midupper: {fileID: 0}
-  upperend: {fileID: 0}
-  blocklow: {fileID: 0}
-  blocklow2: {fileID: 0}
-  blockhigh: {fileID: 0}
-  blockhigh2: {fileID: 0}
-  stunned: {fileID: 0}
-  hithigh: {fileID: 0}
-  hithigh2: {fileID: 0}
-  hitlow: {fileID: 0}
-  hitlow2: {fileID: 0}
-  knockeddown: {fileID: 0}
-  knockeddown2: {fileID: 0}
-  getup: {fileID: 0}
-  getup2: {fileID: 0}
-  dodge: {fileID: 0}
-  dodge2: {fileID: 0}
-  punching: 0
-  blockinglow: 1
-  blockinghigh: 0
-  specialing: 0
-  onehit: 0
-  counter: 0
-  lm: {fileID: 0}
+  lm: {fileID: 1270028635}
+  mar: {fileID: 1749548681}
   moveSpeed: 1
-  rb: {fileID: 0}
+  rb: {fileID: 1278779610}
   frame: 0
-  action: 
-  health: 210
+  action: wait
+  spriteRenderer: {fileID: 0}
+  health: 1
   lowhits: 0
   highhits: 0
+  timesdown: 2
   count: 0
+  hits: 7
+  stunned: 0
 --- !u!1 &1727170419
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lm: {fileID: 1270028635}
-  en: {fileID: 1278779607}
+  en: {fileID: 0}
   normal: {fileID: 21300000, guid: 5d3113d2bb204c94ea62b371f986ec57, type: 3}
   fight: {fileID: 21300000, guid: f8e5ecd15115f3c4a9bd8f279075ba6c, type: 3}
   one: {fileID: 21300000, guid: 5c4e9a91f1f1c4443a4d57d3fe32c2b8, type: 3}

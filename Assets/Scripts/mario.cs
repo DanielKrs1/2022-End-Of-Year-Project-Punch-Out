@@ -45,13 +45,13 @@ public class mario : MonoBehaviour
         if(en!=null){
             en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
             found = true;
-        }/*else{
+        }else{
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as enemy;
         }
         if (en!=null&&!found){
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
-        }else{
+        }/*else{
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
         if(en != null&&!found){
@@ -256,6 +256,7 @@ public class mario : MonoBehaviour
             lm.action = "wait";
             en.win();
             action = "ko";
+            en.setKnockedOut();
         }
     }
 

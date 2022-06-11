@@ -180,6 +180,8 @@ public class glassjoe : enemy
             specialing = true;
             spriteRenderer.sprite = prepunch;
             count++;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
         }else if(count == 1){
             spriteRenderer.sprite = cluepunch;
             count++;
@@ -210,8 +212,6 @@ public class glassjoe : enemy
             punching = false;
             counter = true;
             count++;
-            temp1 = blockinghigh;
-            temp2 = blockinglow;
             blockinghigh = false;
             blockinglow = true;
         }else if(count == 12){
@@ -228,7 +228,9 @@ public class glassjoe : enemy
         if(count == 0){
             specialing = true;
             spriteRenderer.sprite = upperStart;
-            count++;
+            count++;      
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
         }else if (count == 1){
             spriteRenderer.sprite = upperclue;
             count++;
@@ -252,9 +254,7 @@ public class glassjoe : enemy
             specialing = false;
             punching = false;
             counter = true;
-            count++;      
-            temp1 = blockinghigh;
-            temp2 = blockinglow;
+            count++;
             blockinghigh = false;
             blockinglow = true;
         }else if(count == 10){
@@ -563,5 +563,11 @@ public class glassjoe : enemy
     public override void setCounter(bool x)
     {
         counter = x;
+    }
+
+    public override void setKnockedOut()
+    {
+        action = "wait";
+        spriteRenderer.sprite = knockdown3;
     }
 }

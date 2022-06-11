@@ -68,13 +68,13 @@ public class littlemac : MonoBehaviour
         if(en!=null){
             en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
             found = true;
-        }/*else{
+        }else{
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as enemy;
         }
         if (en!=null&&!found){
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
-        }else{
+        }/*else{
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
         if(en != null&&!found){
@@ -160,6 +160,7 @@ public class littlemac : MonoBehaviour
 
             }else if (en.getTimesDown()>=3){
                 win();
+                en.setKnockedOut();
                 //en.spriteRenderer.sprite = en.knockdown3;
                 en.setAction("wait");
                 mar.action = "tko";
@@ -552,6 +553,7 @@ public class littlemac : MonoBehaviour
     }
 
     public void win(){
+        rb.position = fp;
         action = "win";
         en.setAction("wait");
         //en.knockDown();

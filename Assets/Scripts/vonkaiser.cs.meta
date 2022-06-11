@@ -1,9 +1,41 @@
 fileFormatVersion: 2
-guid: 158890e2d5e6f004581920552ab2e759
+guid: 91914e7d742eac041a049d5907a6ce68
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - normal: {fileID: 21300000, guid: d5ecfb476c6d7cb4c9736d388b2a51ab, type: 3}
+  - normal2: {fileID: 21300000, guid: 8a6c14e03bdbf1f4db897d6b76d953b3, type: 3}
+  - normal3: {fileID: 21300000, guid: 3b75b921f7666c44a8aae3a24dc6722c, type: 3}
+  - normal4: {fileID: 21300000, guid: 6cb58b53c07396b4a9beb0ebe1997cb8, type: 3}
+  - normalup: {fileID: 21300000, guid: 6fc0c2629832a36479c5e04d4f180821, type: 3}
+  - normalup2: {fileID: 21300000, guid: 3d7337ca6d32f22408459e019cbdbf17, type: 3}
+  - normalup3: {fileID: 21300000, guid: e82fea4ad76c07a4b9eb67edb46f13c1, type: 3}
+  - punchclue: {fileID: 21300000, guid: ad27ef82093dd68409298bb4e000bd68, type: 3}
+  - punch: {fileID: 21300000, guid: ec31b224f72339747bf4c7423e12cab7, type: 3}
+  - preupper: {fileID: 21300000, guid: 8a6a6cca2c5676c4f983f35cf203cc11, type: 3}
+  - upperclue: {fileID: 21300000, guid: d36725df32eee5146a5ad12c48e54080, type: 3}
+  - midupper: {fileID: 21300000, guid: 767c14b0566fbf140b08576494bf49c8, type: 3}
+  - upperend: {fileID: 21300000, guid: 9e1e3584d7908774d8f6b41e6caf0f28, type: 3}
+  - blocklow: {fileID: 21300000, guid: 4695bac53303e774aac8ab48d00a591c, type: 3}
+  - blocklow2: {fileID: 21300000, guid: 1c0a84059cd56674d8cf6a98d60b18f9, type: 3}
+  - blockhigh: {fileID: 21300000, guid: d82977fc34225d243a50bdc67a918d1a, type: 3}
+  - blockhigh2: {fileID: 21300000, guid: 031e7a8195f607341b861c7d48e06443, type: 3}
+  - dodgeHit: {fileID: 21300000, guid: f2083ff169b55194688dcacd3d8d69d8, type: 3}
+  - hithigh: {fileID: 21300000, guid: a47e6d2e8f07d904793f02e9d90045ab, type: 3}
+  - hithigh2: {fileID: 21300000, guid: 9a890498606111f42b260415c68e856d, type: 3}
+  - hitlow: {fileID: 21300000, guid: 07406bd5f2627874582256f3cc6841fa, type: 3}
+  - hitlow2: {fileID: 21300000, guid: 600acaa4853decf40b8da9e16d8a685d, type: 3}
+  - knockeddown: {fileID: 21300000, guid: e4a0c26465b660b4f8ebe7402e7cf807, type: 3}
+  - knockeddown2: {fileID: 21300000, guid: 4a706711965d3f84c9d944e5890f00da, type: 3}
+  - getup: {fileID: 21300000, guid: b58018bf8a3e8b649937e30ed07e6ee4, type: 3}
+  - getup2: {fileID: 21300000, guid: 8a6a6cca2c5676c4f983f35cf203cc11, type: 3}
+  - dodge: {fileID: 21300000, guid: 9fd37ae01a7e4a54bbcc6f90adf7f9c1, type: 3}
+  - dodge2: {fileID: 21300000, guid: fb04c3f6ad531fd44afcb3e82df338ff, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

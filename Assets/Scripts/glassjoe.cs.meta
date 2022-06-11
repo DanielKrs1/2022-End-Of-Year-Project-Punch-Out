@@ -41,9 +41,12 @@ MonoImporter:
   - knockdown3: {fileID: 21300000, guid: c722899b27f36d145b57d3f1b1af65b9, type: 3}
   - getup: {fileID: 21300000, guid: b66a3eaa2b0cb424faf784d558598a57, type: 3}
   - getup2: {fileID: 21300000, guid: ee4ff75559aa70941bc2cbb4d3bc0ffd, type: 3}
-  - victory: {instanceID: 0}
-  - victory2: {instanceID: 0}
+  - victory: {fileID: 21300000, guid: 456476b2695ef65408185fb014aff249, type: 3}
+  - victory2: {fileID: 21300000, guid: cf238493010d7c34ead7b741c1ef565f, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
   - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

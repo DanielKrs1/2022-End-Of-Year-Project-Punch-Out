@@ -16,6 +16,8 @@ public abstract class enemy : MonoBehaviour
         
     }
 
+    public virtual void setKnockedOut(){}
+
     public virtual void setCounter(bool x){}
 
     public virtual void setStunned(bool x){}
