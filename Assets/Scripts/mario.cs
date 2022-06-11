@@ -51,12 +51,12 @@ public class mario : MonoBehaviour
         if (en!=null&&!found){
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
-        }/*else{
+        }else{
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
         if(en != null&&!found){
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
-        }*/
+        }
 
         
     }

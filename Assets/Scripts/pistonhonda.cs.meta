@@ -3,7 +3,50 @@ guid: 6e4400efd8f2fd04e973d0bbf1db89f4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - normal: {fileID: 21300000, guid: 34c1c25f0326cd6418d1aef629506817, type: 3}
+  - normal2: {fileID: 21300000, guid: 7ef1542799013514e9087f98bfb5eaaa, type: 3}
+  - normal3: {fileID: 21300000, guid: bf90025c7a604df498f83ae6ccfd16ef, type: 3}
+  - normal4: {fileID: 21300000, guid: 82efd7b4adce08c4e9da40dfee1b39eb, type: 3}
+  - normal5: {fileID: 21300000, guid: 26c2cb1b9a6ea264cbe39ff441126dc5, type: 3}
+  - normal6: {fileID: 21300000, guid: 26c2cb1b9a6ea264cbe39ff441126dc5, type: 3}
+  - normalr: {fileID: 21300000, guid: 8f280d0b845f4a24989f9278d14f79fe, type: 3}
+  - normalr2: {instanceID: 0}
+  - normalr3: {instanceID: 0}
+  - normalup: {fileID: 21300000, guid: e7176d68f7e4f8442a42689ed8c65217, type: 3}
+  - normalup2: {fileID: 21300000, guid: 5e11b45fc94075c43b5caec64b522b2d, type: 3}
+  - normalup3: {fileID: 21300000, guid: bc00b603758ab35498be030775a24982, type: 3}
+  - blockup: {fileID: 21300000, guid: 51b2427783fc6e84c9fccaccc98d1394, type: 3}
+  - blocklow: {fileID: 21300000, guid: 5a9495896f4a68947815209b888cdbc7, type: 3}
+  - dodge: {instanceID: 0}
+  - hithigh: {fileID: 21300000, guid: 5c8a6a7c9f157ef4bb3a5a71073b629e, type: 3}
+  - hithigh2: {fileID: 21300000, guid: a786905170c9c4b4da81c3e347f12849, type: 3}
+  - dodgeHit: {fileID: 21300000, guid: 73dd88d5ee18bb447a651c5a230c4ef9, type: 3}
+  - hitlow: {fileID: 21300000, guid: c2f75b876d8de32498865b0e5106768b, type: 3}
+  - preright: {fileID: 21300000, guid: 8f280d0b845f4a24989f9278d14f79fe, type: 3}
+  - clueright: {fileID: 21300000, guid: 67f1bad911b4efa4fbf2b1c1beeae7aa, type: 3}
+  - punchright: {fileID: 21300000, guid: 1e6d9bca60e79a149b61f9c60ae8a203, type: 3}
+  - followright: {fileID: 21300000, guid: e780551c6f3eae445983f6bcc9a2138e, type: 3}
+  - preup: {fileID: 21300000, guid: 35509fde6ab05b44fbd10fe5f30c9ea4, type: 3}
+  - clueup: {fileID: 21300000, guid: 13ee2614619b6014092b140eb5090734, type: 3}
+  - midup: {fileID: 21300000, guid: 34d554b2fcddc0042a16b0c2d6198f52, type: 3}
+  - midup2: {fileID: 21300000, guid: 3848d944cba64304a81d2952187ed359, type: 3}
+  - up: {fileID: 21300000, guid: cd50cd55a60653b4b880ad145def463c, type: 3}
+  - punchclue: {fileID: 21300000, guid: a1475eea0ef15f0459aaeaf1f83444da, type: 3}
+  - punchclue2: {fileID: 21300000, guid: fb68ac5d2e9b3984eaae714f3ef059bc, type: 3}
+  - punch: {fileID: 21300000, guid: 03730bf3f1de02c419ba99489a6fdaf2, type: 3}
+  - falldown: {fileID: 21300000, guid: 0a97b955e1233c84d81bc0ad6d1c894f, type: 3}
+  - falldown2: {fileID: 21300000, guid: 5a0596160b0481b4c80e1945d2f6e041, type: 3}
+  - down: {fileID: 21300000, guid: 6c27846572684d542bd9691f256f4e7a, type: 3}
+  - getup: {fileID: 21300000, guid: eaf6632a3f81ac442ac6fbcdf0b12264, type: 3}
+  - forspecial: {fileID: 21300000, guid: e307d006c2ef4a74bac565ccc96651ab, type: 3}
+  - forspecial2: {fileID: 21300000, guid: 884d176f9645ece4091cd7abc19c781c, type: 3}
+  - forspecial3: {fileID: 21300000, guid: 259955666be9ed847b214ea47b79a4b3, type: 3}
+  - forspecial4: {fileID: 21300000, guid: 57e2edde2d1ab184f9278ac47827bbad, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
