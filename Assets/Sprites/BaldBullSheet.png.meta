@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 513821b9d32596441a530c113a11a8b5
+guid: 2afe7cefe91c1a143bb5fa1c9cca37a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PistonHondaSheet_0
+      name: BaldBullSheet_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1270
-        width: 41
-        height: 110
+        x: 17
+        y: 1137
+        width: 47
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 178d171512ba092409371d975cb511b1
-      internalID: -1603604215
+      spriteID: 5343aeaa79d907f4e904fd659e08289c
+      internalID: 1281877209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_1
+      name: BaldBullSheet_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 1270
-        width: 41
-        height: 110
+        x: 71
+        y: 1137
+        width: 44
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06cd64b618383dc4fa9b45aa374015a3
-      internalID: -266591063
+      spriteID: 2a52c734ad85dd947940fb8aa1254899
+      internalID: 1687837713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_2
+      name: BaldBullSheet_2
       rect:
         serializedVersion: 2
-        x: 117
-        y: 1270
-        width: 41
-        height: 110
+        x: 125
+        y: 1137
+        width: 44
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 898a615203e840648acd7677756d4a68
-      internalID: 950188055
+      spriteID: 4e9a8acc57e694a489b49d781711d008
+      internalID: -1846634240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_3
+      name: BaldBullSheet_3
       rect:
         serializedVersion: 2
-        x: 171
-        y: 1270
-        width: 41
-        height: 110
+        x: 180
+        y: 1137
+        width: 44
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce5b2989e94e1fe4998ea028a4c758e0
-      internalID: -1008190771
+      spriteID: 4715285161edf364ca76ce8fe0e1798b
+      internalID: 919189664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_4
+      name: BaldBullSheet_4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1148
-        width: 41
-        height: 110
+        x: 235
+        y: 1137
+        width: 44
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 533d7055630967d409cf0f9b152c4b2b
-      internalID: 1821722910
+      spriteID: a48f5ed9eb44d894c83c622b801428be
+      internalID: 1533729736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_5
+      name: BaldBullSheet_5
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1148
-        width: 39
-        height: 107
+        x: 290
+        y: 1137
+        width: 47
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,208 +235,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47555ef7c5c8b49459db46375b476f9d
-      internalID: -1601871524
+      spriteID: 7663db5ca41a5604db35eabe9dd43a99
+      internalID: 943892441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_6
+      name: BaldBullSheet_6
       rect:
         serializedVersion: 2
-        x: 113
-        y: 1148
-        width: 39
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c720e3e1eb3f5b6458ee6eb31aaf84f8
-      internalID: 1583759778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_7
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 1148
-        width: 40
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b89cbf871ad7524181b08cccbd31175
-      internalID: 584003790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_8
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 1148
-        width: 40
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93ae63e7c6909ef4092a1f4516e297c0
-      internalID: -1865464640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_9
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 1148
-        width: 41
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5a26eb1af4341c42a5e834874970d14
-      internalID: -431407215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_10
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 1026
-        width: 43
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a14e52df939ca842805f05a27870ef3
-      internalID: 338532326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_11
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 1026
-        width: 43
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6c444dd88d81134d8b652c214c228f1
-      internalID: -153040447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_12
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 1026
-        width: 45
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e82dde081221d904a974f18b85eaf7c3
-      internalID: 2119435685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_13
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 903
-        width: 42
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21c9e57cd2aef7e4d9aeaf09676ddbc3
-      internalID: 66986552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_14
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 903
-        width: 40
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 858ed24496dfa204eb26ab2a81f64c7e
-      internalID: -1420066273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_15
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 903
-        width: 51
+        x: 17
+        y: 1009
+        width: 46
         height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -445,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9132e321421638d4ab03912c548aecfb
-      internalID: -1251539282
+      spriteID: 1852e7620096cd945a55101e45eb5c6c
+      internalID: 874371144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_16
+      name: BaldBullSheet_7
       rect:
         serializedVersion: 2
-        x: 9
-        y: 780
-        width: 52
-        height: 109
+        x: 73
+        y: 1009
+        width: 46
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33a9bd5c57649a84da00c34b788f69fa
-      internalID: -110344084
+      spriteID: e897d60f860644c409a6edb4a81517e4
+      internalID: -1171072812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_17
+      name: BaldBullSheet_8
       rect:
         serializedVersion: 2
-        x: 75
-        y: 780
-        width: 55
-        height: 107
+        x: 130
+        y: 1009
+        width: 46
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,19 +298,187 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a52c81c45e9658d41b575409ed0c5b96
-      internalID: 541345324
+      spriteID: ed38dd99d07f9224fbca82b08c3f880e
+      internalID: 1995986936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_18
+      name: BaldBullSheet_9
       rect:
         serializedVersion: 2
-        x: 143
-        y: 780
-        width: 39
+        x: 17
+        y: 873
+        width: 47
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070975483f631954b86b76eeb9a782fc
+      internalID: 2118671847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 873
+        width: 47
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10687dc3e8384b9408c4477a736d513c
+      internalID: 2110271052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 873
+        width: 44
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e75ebfa719b3446a95af64809ff588
+      internalID: 442138335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_12
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 873
+        width: 48
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8082419024e21d940b979c2bda44ac59
+      internalID: -622731065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 737
+        width: 47
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72331466818517a4f8b3370ee2df2ea5
+      internalID: 1130102342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 737
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1e62f1e27af0d48896b88da49a2c71
+      internalID: -588342738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_15
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 737
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdf46823add26f4fbbe599b006d53ab
+      internalID: 1050119461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 737
+        width: 46
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d9388cc3898a248afbe31ca9235d21
+      internalID: 1444116599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_17
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 737
+        width: 54
         height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -508,20 +487,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2795f42c65460f4bb634000c5e8ca85
-      internalID: 85489717
+      spriteID: 0d05a83784785ff4dbdd185054ec8e0c
+      internalID: -1070986428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_19
+      name: BaldBullSheet_18
       rect:
         serializedVersion: 2
-        x: 194
-        y: 780
-        width: 53
-        height: 96
+        x: 17
+        y: 594
+        width: 51
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,20 +508,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183cbc165b242bd4bbfa7f88739d50f9
-      internalID: 1545014320
+      spriteID: e988c8ff81914794daff6b6a7a646533
+      internalID: 1861074184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_20
+      name: BaldBullSheet_19
       rect:
         serializedVersion: 2
-        x: 9
-        y: 658
-        width: 53
-        height: 108
+        x: 83
+        y: 594
+        width: 51
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,62 +529,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de5a425d5bb2b814ca871bb7f775d49d
-      internalID: 1192057695
+      spriteID: 3097657b02f4dfb409f43092f2f8535c
+      internalID: 969418208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_21
+      name: BaldBullSheet_20
       rect:
         serializedVersion: 2
-        x: 74
-        y: 658
-        width: 53
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 622b6a28819bab0448040225476a8a2f
-      internalID: -1323333690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_22
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 658
-        width: 36
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e50e0c31b27515342a1726200c32fce3
-      internalID: -1028137617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_23
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 658
+        x: 152
+        y: 594
         width: 46
-        height: 109
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,62 +550,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a179ea3bc783e254c92407cb18875022
-      internalID: 1679058371
+      spriteID: c47a36c1772f4da4ba7397a651201f26
+      internalID: -53849439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_24
+      name: BaldBullSheet_21
       rect:
         serializedVersion: 2
-        x: 9
-        y: 528
-        width: 41
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05fe2a66292d2e44087b71899564f882
-      internalID: -395661557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_25
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 528
-        width: 41
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 043db65c8ad1d6741a949eac2e88f880
-      internalID: 1352644919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_26
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 528
+        x: 214
+        y: 594
         width: 44
-        height: 90
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,39 +571,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87a523b8f4577a04f8be81edbc679d94
-      internalID: 1194388959
+      spriteID: b53ac542c32e90e4dbe0ec60828fe7be
+      internalID: -2074325606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_27
+      name: BaldBullSheet_22
       rect:
         serializedVersion: 2
-        x: 177
-        y: 528
-        width: 48
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a1fdc72b25f45d47bc0ab759f352295
-      internalID: -79742391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_28
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 528
+        x: 17
+        y: 456
         width: 48
         height: 120
       alignment: 0
@@ -718,20 +592,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9fd2ef8b6fff445929148e39a17412
-      internalID: -1263283111
+      spriteID: 0f29ac0f0a732704981fb4d396d8a837
+      internalID: 691166444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_29
+      name: BaldBullSheet_23
       rect:
         serializedVersion: 2
-        x: 9
-        y: 407
+        x: 78
+        y: 456
         width: 45
-        height: 108
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -739,20 +613,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdb3b72f1a9f303428fac87ed8b32c7c
-      internalID: 1204168153
+      spriteID: 73af6ae7884078a489334879bc8a90fe
+      internalID: -4615752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_30
+      name: BaldBullSheet_24
       rect:
         serializedVersion: 2
-        x: 69
-        y: 407
-        width: 36
-        height: 110
+        x: 137
+        y: 456
+        width: 56
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,20 +634,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17b43f289f3715b4695c036abe8f3668
-      internalID: -1908053999
+      spriteID: ba6d034c329020a4cbc7247738a78f7b
+      internalID: 766185251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_31
+      name: BaldBullSheet_25
       rect:
         serializedVersion: 2
-        x: 122
-        y: 407
-        width: 45
-        height: 108
+        x: 17
+        y: 321
+        width: 56
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,20 +655,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35714a6f514189a43b0deedd62728693
-      internalID: 6823251
+      spriteID: 121d818d9262b8c4bb4cb1d71c37af81
+      internalID: 223735298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_32
+      name: BaldBullSheet_26
       rect:
         serializedVersion: 2
-        x: 182
-        y: 407
-        width: 36
-        height: 110
+        x: 89
+        y: 321
+        width: 56
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,20 +676,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbd36cf67fa7f564abd78b3c4879bfb6
-      internalID: -1596369618
+      spriteID: fd12093b1f60ec344b9002208b6ef197
+      internalID: 179488782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_33
+      name: BaldBullSheet_27
       rect:
         serializedVersion: 2
-        x: 9
-        y: 286
-        width: 41
-        height: 110
+        x: 159
+        y: 321
+        width: 48
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,20 +697,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bb446fac28fc304f820267f58af7f79
-      internalID: 1978125307
+      spriteID: 8e24a33f8c7c93d41881149296eaa3ff
+      internalID: 1161070692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_34
+      name: BaldBullSheet_28
       rect:
         serializedVersion: 2
-        x: 62
-        y: 286
-        width: 41
-        height: 110
+        x: 223
+        y: 321
+        width: 44
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,20 +718,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7236a8eb5434bd14aafeb4639847ca06
-      internalID: 640510101
+      spriteID: b9876c10f54f3a54da45b3e89a2f96c3
+      internalID: -1404422432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_35
+      name: BaldBullSheet_29
       rect:
         serializedVersion: 2
-        x: 115
-        y: 286
-        width: 45
-        height: 110
+        x: 281
+        y: 321
+        width: 44
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,20 +739,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e771fc6c9255f94a9c6f61c164105ef
-      internalID: 295037314
+      spriteID: a43ff6ef1bdfbfa4493b9e26ab1148d7
+      internalID: 177790685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_36
+      name: BaldBullSheet_30
       rect:
         serializedVersion: 2
-        x: 174
-        y: 286
-        width: 45
-        height: 110
+        x: 17
+        y: 192
+        width: 49
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -886,19 +760,103 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41ba1ae55ed65c4d9068d7054db0c90
-      internalID: 1231507096
+      spriteID: f453ce4d4cdae134d96b4ce46b29ca48
+      internalID: -446315656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_37
+      name: BaldBullSheet_31
       rect:
         serializedVersion: 2
-        x: 232
-        y: 286
-        width: 41
+        x: 77
+        y: 192
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fcb32994df21740a78b11c3a85dbb1
+      internalID: 730699650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_32
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 192
+        width: 75
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d585c199fcb048438560fee25563ec5
+      internalID: 168635555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_33
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e14892a49aeaf4b90cca8640b28d56
+      internalID: 849215649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_34
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 192
+        width: 59
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea11bd34de93e6439a921863c666061
+      internalID: -170667013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaldBullSheet_35
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 69
+        width: 56
         height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -907,20 +865,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 851d45dfb2aaa4f45b665126047fac0f
-      internalID: -547810470
+      spriteID: 9c47f8f948239cd4eb52360753e72227
+      internalID: -2094623022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_38
+      name: BaldBullSheet_36
       rect:
         serializedVersion: 2
-        x: 9
-        y: 171
-        width: 60
-        height: 104
+        x: 83
+        y: 69
+        width: 56
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -928,81 +886,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d183e2b114289cf4092a5004ae554738
-      internalID: 1311456962
+      spriteID: eb6f3543c7a67e446b17f046ff412fc9
+      internalID: -1531775061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_39
+      name: BaldBullSheet_37
       rect:
         serializedVersion: 2
-        x: 81
-        y: 171
-        width: 51
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1873b63f3787b14e8dc4662dc02cce5
-      internalID: -1124309354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_40
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 171
-        width: 59
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88f6910c2fefee44b96f0662b1e3b993
-      internalID: -1447314770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_41
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 171
-        width: 48
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb0cb9c43eccb4947af83feea6e2f8a2
-      internalID: -1245531103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_42
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 87
+        x: 168
+        y: 94
         width: 80
         height: 77
       alignment: 0
@@ -1012,18 +907,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d3c59a0e0db3dc4a821e2a27cf979e4
-      internalID: -1808459101
+      spriteID: 20e3420787837fc49bbfd3eb2b04eaed
+      internalID: -250746283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_43
+      name: BaldBullSheet_38
       rect:
         serializedVersion: 2
-        x: 91
-        y: 87
+        x: 250
+        y: 94
         width: 80
         height: 77
       alignment: 0
@@ -1033,18 +928,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b4a44897111b74b82be6d9684f410a
-      internalID: 1201490881
+      spriteID: 359c93a2268ffd041947247b6af80f3f
+      internalID: 50252646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_44
+      name: BaldBullSheet_39
       rect:
         serializedVersion: 2
-        x: 9
-        y: 8
+        x: 168
+        y: 15
         width: 80
         height: 77
       alignment: 0
@@ -1054,18 +949,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3224c6555a8ab884091182da997196f9
-      internalID: 848818811
+      spriteID: 1e7128f28d8558c46b9ea1df47e0ddb7
+      internalID: 1775543087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PistonHondaSheet_45
+      name: BaldBullSheet_40
       rect:
         serializedVersion: 2
-        x: 91
-        y: 8
+        x: 250
+        y: 15
         width: 80
         height: 77
       alignment: 0
@@ -1075,134 +970,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 018bfff4ea13dd54e93a069a7a00e688
-      internalID: -699885761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_46
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 21
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29cbb928a77e8bf4ea6f8f0dcf0f5f65
-      internalID: -551849318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_47
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 21
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c008d6c1f0f01774aa6fbc699be2750f
-      internalID: -370008960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_48
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 23
-        width: 32
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a54720049a1d9045a25f17a59d90ab7
-      internalID: -235147905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_49
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 11
-        width: 32
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c33a36ce3b2414e429496f416b8e9a56
-      internalID: 379730715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_50
-      rect:
-        serializedVersion: 2
-        x: 244
-        y: 11
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 325f8fb027b1df444863fca81a8e16e4
-      internalID: 2082113552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PistonHondaSheet_51
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 9
-        width: 59
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64c0f1d7bb35cb446b11750cd4a51956
-      internalID: -1586697450
+      spriteID: 3a4d5831fec844343bdb30431cda829b
+      internalID: -1366314690
       vertices: []
       indices: 
       edges: []
@@ -1218,58 +987,47 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PistonHondaSheet_42: -1808459101
-      PistonHondaSheet_15: -1251539282
-      PistonHondaSheet_26: 1194388959
-      PistonHondaSheet_16: -110344084
-      PistonHondaSheet_43: 1201490881
-      PistonHondaSheet_30: -1908053999
-      PistonHondaSheet_4: 1821722910
-      PistonHondaSheet_14: -1420066273
-      PistonHondaSheet_10: 338532326
-      PistonHondaSheet_28: -1263283111
-      PistonHondaSheet_51: -1586697450
-      PistonHondaSheet_41: -1245531103
-      PistonHondaSheet_0: -1603604215
-      PistonHondaSheet_44: 848818811
-      PistonHondaSheet_45: -699885761
-      PistonHondaSheet_50: 2082113552
-      PistonHondaSheet_29: 1204168153
-      PistonHondaSheet_48: -235147905
-      PistonHondaSheet_47: -370008960
-      PistonHondaSheet_25: 1352644919
-      PistonHondaSheet_33: 1978125307
-      PistonHondaSheet_19: 1545014320
-      PistonHondaSheet_32: -1596369618
-      PistonHondaSheet_40: -1447314770
-      PistonHondaSheet_7: 584003790
-      PistonHondaSheet_37: -547810470
-      PistonHondaSheet_22: -1028137617
-      PistonHondaSheet_46: -551849318
-      PistonHondaSheet_11: -153040447
-      PistonHondaSheet_3: -1008190771
-      PistonHondaSheet_13: 66986552
-      PistonHondaSheet_23: 1679058371
-      PistonHondaSheet_21: -1323333690
-      PistonHondaSheet_6: 1583759778
-      PistonHondaSheet_38: 1311456962
-      PistonHondaSheet_1: -266591063
-      PistonHondaSheet_34: 640510101
-      PistonHondaSheet_49: 379730715
-      PistonHondaSheet_24: -395661557
-      PistonHondaSheet_17: 541345324
-      PistonHondaSheet_36: 1231507096
-      PistonHondaSheet_12: 2119435685
-      PistonHondaSheet_5: -1601871524
-      PistonHondaSheet_8: -1865464640
-      PistonHondaSheet_35: 295037314
-      PistonHondaSheet_39: -1124309354
-      PistonHondaSheet_31: 6823251
-      PistonHondaSheet_18: 85489717
-      PistonHondaSheet_9: -431407215
-      PistonHondaSheet_2: 950188055
-      PistonHondaSheet_27: -79742391
-      PistonHondaSheet_20: 1192057695
+      BaldBullSheet_23: -4615752
+      BaldBullSheet_34: -170667013
+      BaldBullSheet_26: 179488782
+      BaldBullSheet_28: -1404422432
+      BaldBullSheet_31: 730699650
+      BaldBullSheet_37: -250746283
+      BaldBullSheet_2: -1846634240
+      BaldBullSheet_0: 1281877209
+      BaldBullSheet_33: 849215649
+      BaldBullSheet_9: 2118671847
+      BaldBullSheet_19: 969418208
+      BaldBullSheet_16: 1444116599
+      BaldBullSheet_17: -1070986428
+      BaldBullSheet_24: 766185251
+      BaldBullSheet_29: 177790685
+      BaldBullSheet_12: -622731065
+      BaldBullSheet_4: 1533729736
+      BaldBullSheet_25: 223735298
+      BaldBullSheet_40: -1366314690
+      BaldBullSheet_35: -2094623022
+      BaldBullSheet_10: 2110271052
+      BaldBullSheet_32: 168635555
+      BaldBullSheet_11: 442138335
+      BaldBullSheet_7: -1171072812
+      BaldBullSheet_38: 50252646
+      BaldBullSheet_30: -446315656
+      BaldBullSheet_15: 1050119461
+      BaldBullSheet_21: -2074325606
+      BaldBullSheet_20: -53849439
+      BaldBullSheet_8: 1995986936
+      BaldBullSheet_22: 691166444
+      BaldBullSheet_39: 1775543087
+      BaldBullSheet_3: 919189664
+      BaldBullSheet_5: 943892441
+      BaldBullSheet_18: 1861074184
+      BaldBullSheet_1: 1687837713
+      BaldBullSheet_6: 874371144
+      BaldBullSheet_27: 1161070692
+      BaldBullSheet_14: -588342738
+      BaldBullSheet_13: 1130102342
+      BaldBullSheet_36: -1531775061
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

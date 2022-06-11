@@ -1,0 +1,882 @@
+fileFormatVersion: 2
+guid: 3b0e88edd3e77db498506e5a689bd8cb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1241
+        width: 53
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdca77aa98c1744dbc7feb6f4442c07
+      internalID: 978196609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1241
+        width: 53
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18f55a18d892a94a99c490e417d3480
+      internalID: 336413624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1241
+        width: 53
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ef6a66e2a13324fa837ae4ef9ab294
+      internalID: 1037351367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1109
+        width: 49
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c76019d7bd95b74f8039d02ff1b962f
+      internalID: 2136260299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1109
+        width: 49
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e29cbb86dece74e93e4ef2cfee9a9b
+      internalID: 1623220047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1109
+        width: 49
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6346b787476ce4fa1596df5f7db4f1
+      internalID: 1868839292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 980
+        width: 56
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d84f2f5ac80da419a1d1efae8722d7
+      internalID: 988337565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 980
+        width: 56
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf23e5f915da2642a6f717b210d772d
+      internalID: -881402179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 980
+        width: 53
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7001877fba2d7934cb787d26ebec0b3f
+      internalID: 33927714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 833
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d97d4ade0e5ab4cb5e70dd9aae10d0
+      internalID: -416907820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 833
+        width: 47
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e98b43471b87c647bc53838ee95739b
+      internalID: -1576098232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 833
+        width: 60
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe8f08e7b6acf843937e0424756ea8a
+      internalID: -93748785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 699
+        width: 53
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb58c7630a74f14d9ebc00b60b62143
+      internalID: -725682415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 699
+        width: 53
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6d93790539d84449f384d645e7f1bb
+      internalID: 737826394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 699
+        width: 53
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf07acd1359659b4ca9e7a04a2c8c044
+      internalID: 1129920698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 699
+        width: 48
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a869ad2b71a584b9ec2140c39b5af5
+      internalID: -664887095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_16
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 566
+        width: 48
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e78c20d349adf74187813fde90242b6
+      internalID: -1191530762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 566
+        width: 48
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67efda949aeb094f8a481d4152019bb
+      internalID: -1103573471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_18
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 565
+        width: 53
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c9b2ed344f4694bbf8ecc89438f125
+      internalID: -1152626820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 427
+        width: 49
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd9172d8c0794143b48bb7b324cff15
+      internalID: -161820860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_20
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 427
+        width: 49
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e4b28b34cbad49b28f7cc2a0473f5
+      internalID: -328846877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_21
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 427
+        width: 56
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d191d5216c242a4eb66f41d04295e7d
+      internalID: -716265462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 427
+        width: 55
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1919fdda44eff454980c5064711cdcff
+      internalID: -1818787509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_23
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 427
+        width: 48
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb47a813f6e04a4aa424fbde0b8f242
+      internalID: 503677572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_24
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 317
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd95cea01b3dc24988ae1df600ca15d
+      internalID: -85817445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_25
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 317
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5857026200d96542b16fea76b043ee9
+      internalID: 1402636127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_26
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 317
+        width: 54
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c52e3c5fe710c4c9a42bcd74aa75e4
+      internalID: 24251904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_27
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 317
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9bc8fb0414950488237f7e77c8cb9f
+      internalID: -66036053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_28
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 188
+        width: 62
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342d1d7c85ec8394da8bed2b18db4002
+      internalID: 1080516999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_29
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 188
+        width: 62
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b039d3917ee294e41bdaa25df9c10c05
+      internalID: -1526509766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 98
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a9c9c11b017914bb25b0fb877d0369
+      internalID: 1552410666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_31
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 98
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732a7ae5c4c21f24f9f703270968f023
+      internalID: 491174372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_32
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 17
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5399f39828ec04ab795b74a0f06579
+      internalID: 1798856406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SodaPopinksiSheet_33
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 17
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61464bc5a1051a1499ed1becd3e03dee
+      internalID: 766500980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SodaPopinksiSheet_8: 33927714
+      SodaPopinksiSheet_15: -664887095
+      SodaPopinksiSheet_16: -1191530762
+      SodaPopinksiSheet_18: -1152626820
+      SodaPopinksiSheet_4: 1623220047
+      SodaPopinksiSheet_2: 1037351367
+      SodaPopinksiSheet_27: -66036053
+      SodaPopinksiSheet_1: 336413624
+      SodaPopinksiSheet_12: -725682415
+      SodaPopinksiSheet_31: 491174372
+      SodaPopinksiSheet_14: 1129920698
+      SodaPopinksiSheet_0: 978196609
+      SodaPopinksiSheet_7: -881402179
+      SodaPopinksiSheet_32: 1798856406
+      SodaPopinksiSheet_22: -1818787509
+      SodaPopinksiSheet_20: -328846877
+      SodaPopinksiSheet_30: 1552410666
+      SodaPopinksiSheet_26: 24251904
+      SodaPopinksiSheet_24: -85817445
+      SodaPopinksiSheet_13: 737826394
+      SodaPopinksiSheet_29: -1526509766
+      SodaPopinksiSheet_25: 1402636127
+      SodaPopinksiSheet_9: -416907820
+      SodaPopinksiSheet_21: -716265462
+      SodaPopinksiSheet_11: -93748785
+      SodaPopinksiSheet_19: -161820860
+      SodaPopinksiSheet_28: 1080516999
+      SodaPopinksiSheet_6: 988337565
+      SodaPopinksiSheet_10: -1576098232
+      SodaPopinksiSheet_23: 503677572
+      SodaPopinksiSheet_3: 2136260299
+      SodaPopinksiSheet_5: 1868839292
+      SodaPopinksiSheet_17: -1103573471
+      SodaPopinksiSheet_33: 766500980
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
