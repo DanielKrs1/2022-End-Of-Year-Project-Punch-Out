@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class glassjoe : MonoBehaviour
+public class glassjoe : enemy
 {
     // Start is called before the first frame update
     public Sprite normal;
@@ -322,7 +322,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void blockLow(){
+    public override void blockLow(){
         action = "blockLow";
         if(count == 0){
             spriteRenderer.sprite = blocklow;
@@ -337,7 +337,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void blockHigh(){
+    public override void blockHigh(){
         action = "blockHigh";
         specialing = false;
         if(count == 0){
@@ -356,7 +356,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void hitLow(){
+    public override void hitLow(){
         specialing = false;
         lowhits++;
         action = "hitLow";
@@ -370,7 +370,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void rightHit(){
+    public override void rightHit(){
         highhits++;
         action = "rightHit";
         if(count == 0){
@@ -386,7 +386,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void leftHit(){
+    public override void leftHit(){
         highhits++;
         action = "leftHit";
         if(count == 0){
@@ -404,7 +404,7 @@ public class glassjoe : MonoBehaviour
 
     public int hits = 7;
     public bool stunned;
-    public void hitAfterDodge(){
+    public override void hitAfterDodge(){
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
@@ -417,7 +417,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void knockDown(){
+    public override void knockDown(){
         stunned = false;
         hits = 7;
         action = "knockDown";
@@ -440,7 +440,7 @@ public class glassjoe : MonoBehaviour
         }
     }
 
-    public void getUp(){
+    public override void getUp(){
         mar.action = "wait";
         var randint = Random.Range(0, 100);
         if(spriteRenderer.sprite == knockdown3&&randint<40){
@@ -464,7 +464,7 @@ public class glassjoe : MonoBehaviour
     }
         
 
-    public void win(){
+    public override void win(){
         action = "win";
         mar.action = "wait";
         if(count <= 3){
@@ -478,5 +478,90 @@ public class glassjoe : MonoBehaviour
     public void redo(){
         count = 0;
         action = "";
+    }
+
+    public override bool isblockingLow()
+    {
+        return blockinglow;
+    }
+
+    public override bool isblockingHigh()
+    {
+        return blockinghigh;
+    }
+
+    public override bool isSpecialing()
+    {
+        return specialing;
+    }
+
+    public override bool canOneShot()
+    {
+        return onehit;
+    }
+
+    public override bool canCounter()
+    {
+        return counter;
+    }
+
+    public override int getHealth()
+    {
+        return health;
+    }
+
+    public override void setHealth(int x)
+    {
+        health = x;
+    }
+
+    public override void changeHealth(int x)
+    {
+        health-=x;
+    }
+
+    public override int getTimesDown()
+    {
+        return timesdown;
+    }
+
+    public override void changeTimesDown()
+    {
+        timesdown++;
+    }
+
+    public override void setAction(string x)
+    {
+        action = x;
+    }
+
+    public override int getHits()
+    {
+        return hits;
+    }
+
+    public override void changeHits()
+    {
+        hits--;
+    }
+
+    public override void setHits(int x)
+    {
+        hits = x;
+    }
+
+    public override bool isStunned()
+    {
+        return stunned;
+    }
+
+     public override void setStunned(bool x)
+    {
+        stunned = x;
+    }
+
+    public override void setCounter(bool x)
+    {
+        counter = x;
     }
 }

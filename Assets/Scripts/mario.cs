@@ -6,7 +6,7 @@ public class mario : MonoBehaviour
 {
     // Start is called before the first frame update
     public littlemac lm;
-    public glassjoe en;
+    public enemy en;
     public Sprite normal;
     public Sprite fight;
     public Sprite one;
@@ -39,8 +39,26 @@ public class mario : MonoBehaviour
             spriteRenderer.sprite = normal;
         }
         action = "startFight";
+        bool found = false;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
-        en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
+        en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy;
+        if(en!=null){
+            en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
+            found = true;
+        }/*else{
+            en = GameObject.Find("enemy").GetComponent("vonkaiser") as enemy;
+        }
+        if (en!=null&&!found){
+            en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
+            found = true;
+        }else{
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
+        }
+        if(en != null&&!found){
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
+        }*/
+
+        
     }
 
     public int frame = 0;
@@ -53,7 +71,7 @@ public class mario : MonoBehaviour
         if(frame%25 == 0){
             if(action.Equals("startFight")){
                 lm.action = "wait";
-                en.action = "wait";
+                en.setAction("wait");
                 startFight();
             }else if(action.Equals("ecount")){
                 encountdown();
@@ -88,7 +106,7 @@ public class mario : MonoBehaviour
             count = 0;
             fightStarted = false;
             lm.action = "";
-            en.action = "";
+            en.setAction("");
             action = "";
         }
     }
@@ -167,7 +185,7 @@ public class mario : MonoBehaviour
             spriteRenderer.sprite = ten;
             count = 0;
             lm.win();
-            en.action = "wait";
+            en.setAction("wait");
             action = "ko";
         }
     }
@@ -175,7 +193,7 @@ public class mario : MonoBehaviour
     public void lmcountdown(){
         action= "lcount";
         if (count == 0){
-            en.action = "afa;dfjalkdfl;afdj;adfj";
+            en.setAction("afa;dfjalkdfl;afdj;adfj");
             spriteRenderer.sprite = counting;
             count++;
         }else if(count == 1){
@@ -245,7 +263,7 @@ public class mario : MonoBehaviour
         action = "ko";
         if(count < 3){
             spriteRenderer.sprite = ko;  
-            en.action = "wait";
+            en.setAction("wait");
         }        
     }
 
@@ -253,7 +271,7 @@ public class mario : MonoBehaviour
         action = "tko";
         if(count < 3){
             spriteRenderer.sprite = tko;  
-            en.action = "wait";
+            en.setAction("wait");
         }
     }
 

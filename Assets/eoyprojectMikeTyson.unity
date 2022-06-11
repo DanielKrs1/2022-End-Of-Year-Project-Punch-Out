@@ -383,6 +383,8 @@ GameObject:
   - component: {fileID: 1278779608}
   - component: {fileID: 1278779607}
   - component: {fileID: 1278779610}
+  - component: {fileID: 1278779612}
+  - component: {fileID: 1278779611}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -402,6 +404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad154a73ef571d43b46fc98332322cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punching: 0
+  blockinglow: 1
+  blockinghigh: 0
+  specialing: 0
+  onehit: 0
+  counter: 0
+  health: 30
+  timesdown: 0
+  spriteRenderer: {fileID: 0}
+  action: 
+  hits: 7
+  stunned: 0
+  lm: {fileID: 1270028635}
   normal: {fileID: 21300000, guid: 8216d9591e5680c4db789f7167929cad, type: 3}
   normal2: {fileID: 21300000, guid: 0e83b85536c28624e9bb9e2361162c1a, type: 3}
   normal3: {fileID: 21300000, guid: ce91a87781f18bf49a01cd7a1e191b4a, type: 3}
@@ -549,6 +564,95 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1278779611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278779606}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c222f85aad1493eae1e7cd105d8779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointLoader: {fileID: 0}
+  firstDigit: {fileID: 0}
+  digit2: {fileID: 0}
+  digit3: {fileID: 0}
+  digit4: {fileID: 0}
+  digit5: {fileID: 0}
+  ssx: {fileID: 0}
+  images: []
+  digit_image: []
+--- !u!114 &1278779612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278779606}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158890e2d5e6f004581920552ab2e759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punching: 0
+  blockinglow: 1
+  blockinghigh: 0
+  specialing: 0
+  onehit: 0
+  counter: 0
+  health: 210
+  timesdown: 0
+  spriteRenderer: {fileID: 0}
+  action: 
+  hits: 7
+  stunned: 0
+  lm: {fileID: 0}
+  normal: {fileID: 0}
+  normal2: {fileID: 0}
+  normal3: {fileID: 0}
+  normal4: {fileID: 0}
+  normalup: {fileID: 0}
+  normaulup2: {fileID: 0}
+  normalup3: {fileID: 0}
+  punchclue: {fileID: 0}
+  punch: {fileID: 0}
+  preupper: {fileID: 0}
+  upperclue: {fileID: 0}
+  midupper: {fileID: 0}
+  upperend: {fileID: 0}
+  blocklow: {fileID: 0}
+  blocklow2: {fileID: 0}
+  blockhigh: {fileID: 0}
+  blockhigh2: {fileID: 0}
+  stunned: {fileID: 0}
+  hithigh: {fileID: 0}
+  hithigh2: {fileID: 0}
+  hitlow: {fileID: 0}
+  hitlow2: {fileID: 0}
+  knockeddown: {fileID: 0}
+  knockeddown2: {fileID: 0}
+  getup: {fileID: 0}
+  getup2: {fileID: 0}
+  dodge: {fileID: 0}
+  dodge2: {fileID: 0}
+  punching: 0
+  blockinglow: 1
+  blockinghigh: 0
+  specialing: 0
+  onehit: 0
+  counter: 0
+  lm: {fileID: 0}
+  moveSpeed: 1
+  rb: {fileID: 0}
+  frame: 0
+  action: 
+  health: 210
+  lowhits: 0
+  highhits: 0
+  count: 0
 --- !u!1 &1727170419
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,12 +834,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ea6c663dda88b408e5c60c35a0dd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lm: {fileID: 0}
-  en: {fileID: 0}
+  lm: {fileID: 1270028635}
+  en: {fileID: 1278779607}
   normal: {fileID: 21300000, guid: 5d3113d2bb204c94ea62b371f986ec57, type: 3}
   fight: {fileID: 21300000, guid: f8e5ecd15115f3c4a9bd8f279075ba6c, type: 3}
   one: {fileID: 21300000, guid: 5c4e9a91f1f1c4443a4d57d3fe32c2b8, type: 3}
-  two: {fileID: 21300000, guid: b27358b833cbbba4080e2158485aca1e, type: 3}
+  two: {fileID: 21300000, guid: 3fa71abe2c2e3374b97a94d25bcb555a, type: 3}
   three: {fileID: 21300000, guid: be71ef74544426649bfcc20da7bf5456, type: 3}
   four: {fileID: 21300000, guid: a0ada1e6dbe097c4dae9ff67c87892c4, type: 3}
   five: {fileID: 21300000, guid: 800619aeb71bda04e8aeb84d4ace5061, type: 3}
@@ -753,7 +857,7 @@ MonoBehaviour:
   defendWin: {fileID: 21300000, guid: f373baf69bc7b7d449293f6fdeb5b066, type: 3}
   Win: {fileID: 21300000, guid: e02686c2956c0974ba74fb7ed9d08a7c, type: 3}
   spriteRenderer: {fileID: 0}
-  action: 
+  action: startFight
   fightStarted: 0
   frame: 0
   count: 0

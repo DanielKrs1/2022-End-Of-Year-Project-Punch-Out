@@ -4,14 +4,6 @@ using UnityEngine;
 
 public abstract class enemy : MonoBehaviour
 {
-    public bool punching;
-    public bool blockinglow;
-    public bool blockinghigh;
-    public bool specialing;
-    public bool onehit;
-    public bool counter;
-    public int health;
-    public littlemac lm;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,21 +15,74 @@ public abstract class enemy : MonoBehaviour
     {
         
     }
-    public void hitAfterDodge(){}
 
-    public void knockDown(){}
+    public virtual void setCounter(bool x){}
 
-    public void getUp(){}
+    public virtual void setStunned(bool x){}
 
-    public void win(){}
+    public virtual bool isStunned(){
+        return false;
+    }
 
-    public void blockLow(){}
+    public virtual int getHits(){
+        return -1;
+    }
 
-    public void blockHigh(){}
+    public virtual void setHits(int x){}
 
-    public void hitLow(){}
+    public virtual void changeHits(){}
 
-    public void rightHit(){}
+    public virtual void setAction(string x){}
 
-    public void leftHit(){}
+    public virtual void changeTimesDown(){}
+
+    public virtual int getTimesDown(){
+        return -1;
+    }
+
+    public virtual int getHealth(){
+        return -1;
+    }
+
+    public virtual void setHealth(int x){}
+
+    public virtual void changeHealth(int x){}
+
+    public virtual bool canOneShot(){
+        return false;
+    }
+
+    public virtual bool canCounter(){
+        return false;
+    }
+
+    public virtual bool isSpecialing(){
+        return false;
+    }
+
+    public virtual bool isblockingLow(){
+        return false;
+    }
+
+    public virtual bool isblockingHigh(){
+        return false;
+    }
+
+    public virtual void hitAfterDodge(){}
+
+    public virtual void knockDown(){}
+
+    public virtual void getUp(){}
+
+    public virtual void win(){}
+
+    public virtual void blockLow(){}
+
+    public virtual void blockHigh(){}
+
+    public virtual void hitLow(){}
+
+    public virtual void rightHit(){}
+
+    public virtual void leftHit(){}
 }

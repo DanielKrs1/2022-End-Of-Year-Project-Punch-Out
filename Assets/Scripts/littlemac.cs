@@ -36,7 +36,7 @@ public class littlemac : MonoBehaviour
     public Sprite win1;
     public Sprite win2;
 
-    public glassjoe en;
+    public enemy en;
     public mario mar;
     public int health = 90;
 
@@ -62,8 +62,25 @@ public class littlemac : MonoBehaviour
             spriteRenderer.sprite = normal;
         }
         fp = rb.position;
+        bool found = false;
         moveSpeed = 1f;
-        en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
+        en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy; 
+        if(en!=null){
+            en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
+            found = true;
+        }/*else{
+            en = GameObject.Find("enemy").GetComponent("vonkaiser") as enemy;
+        }
+        if (en!=null&&!found){
+            en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
+            found = true;
+        }else{
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
+        }
+        if(en != null&&!found){
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
+        }*/
+        
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
     }
 
@@ -141,10 +158,10 @@ public class littlemac : MonoBehaviour
                 win();
             }else if (action.Equals("knockedout")){
 
-            }else if (en.timesdown>=3){
+            }else if (en.getTimesDown()>=3){
                 win();
-                en.spriteRenderer.sprite = en.knockdown3;
-                en.action = "wait";
+                //en.spriteRenderer.sprite = en.knockdown3;
+                en.setAction("wait");
                 mar.action = "tko";
             }else if (health <= 0){
                  knockeddown();
@@ -162,14 +179,14 @@ public class littlemac : MonoBehaviour
             rb.MovePosition(rb.position+movement);//*Time.deltaTime);   
             
         }
-        if(en.stunned && fram2%75==0){
-            en.hits--;
-            if(en.hits<=0){
-                en.action = "";
-                en.spriteRenderer.sprite = en.normal;
-                en.hits = 7;
-                en.stunned = false;
-                en.counter = false;
+        if(en.isStunned() && fram2%75==0){
+            en.changeHits();
+            if(en.getHits()<=0){
+                en.setAction("");
+                //en.spriteRenderer.sprite = en.normal;
+                en.setHits(7);
+                en.setStunned(false);
+                en.setCounter(false);
                 fram2 = 0;
             }
         }
@@ -279,27 +296,27 @@ public class littlemac : MonoBehaviour
             movement.y = -1*moveSpeed;
             movement.x = 0f;
             punchhigh = false;
-            if(en.blockinghigh){
+            if(en.isblockingHigh()){
                 en.blockHigh();
-            }else if (!(en.specialing)){
-                en.health-=10;
-                if(en.onehit){
-                    en.health = 0;
+            }else if (!(en.isSpecialing())){
+                en.changeHealth(10);
+                if(en.canOneShot()){
+                    en.setHealth(0);
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }else{
-                    if(en.counter){
+                    if(en.canCounter()){
                         en.hitAfterDodge();
-                        en.hits--;
+                        en.changeHits();
                     }else{
                         en.leftHit();
                     }
                 } 
-                if(en.health<=0){
+                if(en.getHealth()<=0){
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }     
-                
+
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
         }else{
@@ -337,25 +354,25 @@ public class littlemac : MonoBehaviour
             movement.y = -1*moveSpeed;
             movement.x = 0f;
             punchhigh = false;
-            if(en.blockinghigh){
+            if(en.isblockingHigh()){
                 en.blockHigh();
-            }else if (!(en.specialing)){
-                en.health-=10;
-                if(en.onehit){
-                    en.health = 0;
+            }else if (!(en.isSpecialing())){
+                en.changeHealth(10);
+                if(en.canOneShot()){
+                    en.setHealth(0);
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }else{
-                    if(en.counter){
+                    if(en.canCounter()){
                         en.hitAfterDodge();
-                        en.hits--;
+                        en.changeHits();
                     }else{
                         en.rightHit();
                     }
                 } 
-                if(en.health<=0){
+                if(en.getHealth()<=0){
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }     
             }
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
@@ -405,19 +422,19 @@ public class littlemac : MonoBehaviour
             back = true;
             spriteRenderer.sprite = leftPunchMid;
             punchlow = false;
-            if(en.blockinglow){
+            if(en.isblockingLow()){
                 en.blockLow();
-            }else if (!(en.specialing)){
-                en.health-=10;
-                if(en.counter){
+            }else if (!(en.isSpecialing())){
+                en.changeHealth(10);
+                if(en.canCounter()){
                     en.hitAfterDodge();
-                    en.hits--;
+                    en.changeHits();
                 }else{
                     en.hitLow();
                 }
-                if(en.health<=0){
+                if(en.getHealth()<=0){
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }   
             }              
         }else{
@@ -445,19 +462,19 @@ public class littlemac : MonoBehaviour
             back = true;
             spriteRenderer.sprite = rightPunchMid;
             punchlow = false;
-            if(en.blockinglow){
+            if(en.isblockingLow()){
                 en.blockLow();
-            }else if (!(en.specialing)){
-                en.health-=10;
-                if(en.counter){
+            }else if (!(en.isSpecialing())){
+                en.changeHealth(10);
+                if(en.canCounter()){
                     en.hitAfterDodge();
-                    en.hits--;
+                    en.changeHits();
                 }else{
                     en.hitLow();
                 }
-                if(en.health<=0){
+                if(en.getHealth()<=0){
                     en.knockDown();
-                    en.timesdown++;
+                    en.changeTimesDown();
                 }   
             }
         }else{
@@ -476,7 +493,7 @@ public class littlemac : MonoBehaviour
     public void hit(){
         rb.position = fp;
         action = "hit";
-        en.counter = false;
+        en.setCounter(false);
         if(count<2){
             spriteRenderer.sprite = hit1;
             count++;
@@ -505,7 +522,7 @@ public class littlemac : MonoBehaviour
         if (count == 0){
             knockdowned++;
             spriteRenderer.sprite = hit1;
-            en.action = "asfasdfadfafa";
+            en.setAction("asfasdfadfafa");
             count++;
         }else if (count == 1){
            spriteRenderer.sprite = hit2; 
@@ -521,7 +538,7 @@ public class littlemac : MonoBehaviour
                 mar.count = 0;
                 health = 90;
                 action = "";
-                en.action = "";
+                en.setAction("");
                 countzx = 0;
             }
             if(knockdowned >= 3){
@@ -536,7 +553,7 @@ public class littlemac : MonoBehaviour
 
     public void win(){
         action = "win";
-        en.action = "wait";
+        en.setAction("wait");
         //en.knockDown();
         //en.spriteRenderer.sprite = normal;
         //en.hits = 7;
