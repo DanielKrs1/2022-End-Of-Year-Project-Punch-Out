@@ -5,38 +5,41 @@ using UnityEngine;
 public class miketyson : enemy
 {
     // Start is called before the first frame update
+    public Sprite move1;
+    public Sprite move2;
+    public Sprite move3;
+    public Sprite move4;
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
     public Sprite normal4;
-    public Sprite normalup;
-    public Sprite normalup2;
-    public Sprite normalup3;
-    public Sprite punchclue;
+    public Sprite prepunch;
     public Sprite punch;
-    public Sprite preupper;
-    public Sprite upperclue;
-    public Sprite midupper;
-    public Sprite upperend;
-    public Sprite blocklow;
-    public Sprite blocklow2;
-    public Sprite blockhigh;
-    public Sprite blockhigh2;
-    public Sprite dodgeHit;
+    public Sprite prehook;
+    public Sprite midhook;
+    public Sprite endhook;
+    public Sprite stunned1;
+    public Sprite hitlow;
     public Sprite hithigh;
     public Sprite hithigh2;
-    public Sprite hitlow;
-    public Sprite hitlow2;
-    public Sprite knockeddown;
-    public Sprite knockeddown2;
+    public Sprite knockdown1;
+    public Sprite knockdown2;
+    public Sprite knockdown3;
     public Sprite getup;
-    public Sprite getup2;
-    public Sprite dodge;
-    public Sprite dodge2;
+    public Sprite preupper;
+    public Sprite preupper2;
+    public Sprite startupper;
+    public Sprite midupper;
+    public Sprite endupper;
+    public Sprite win1;
+    public Sprite win2;
+    public Sprite win3;
+    public Sprite blockhigh;
+    public Sprite blocklow;
 
     public bool punching = false;
     public bool blockinglow = true;
-    public bool blockinghigh = false;
+    public bool blockinghigh = true;
     public bool specialing = false;
     public bool onehit = false;
     public bool counter = false;
@@ -98,6 +101,8 @@ public class miketyson : enemy
             }else */if(randint<2){
                 action = "upper";
             }else if(randint<6){
+                action = "right";
+            }else if (randint<8){
                 action = "normalPunch";
             }
         }
@@ -107,11 +112,13 @@ public class miketyson : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
-            }/*else if(action.Equals("special")){
+            }else if (action.Equals("right")){
+                hook();
+            }else if(action.Equals("special")){
                 specialing = true;
                 special();
                 rb.MovePosition(rb.position+movement);//*Time.deltaTime);  
-            }*/else if(action.Equals("blockLow")){
+            }else if(action.Equals("blockLow")){
                 counter = false;
                 blockLow();
             }else if(action.Equals("blockHigh")){
@@ -141,12 +148,14 @@ public class miketyson : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
-                    spriteRenderer.sprite = normalup3;
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
+                    spriteRenderer.sprite = normal3;
+                }else if (spriteRenderer.sprite == normal3){
+                    spriteRenderer.sprite = normal4;
                 }else{
-                    spriteRenderer.sprite = normalup;
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -159,26 +168,13 @@ public class miketyson : enemy
     private bool temp1;
     private bool temp2;
     void normalPunch(){
-        
         if(count == 0){
             specialing = true;
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
-        }else if(count == 1){
-            spriteRenderer.sprite = normal2;
-            count++;
-        }else if(count == 2){
-            spriteRenderer.sprite = normalup;
-            count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = punchclue;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if( count == 5){
+        }else if (count == 1){
             punching = true;
             spriteRenderer.sprite = punch;
             count++;
@@ -191,14 +187,14 @@ public class miketyson : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 8){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -208,22 +204,60 @@ public class miketyson : enemy
         }
     }
 
-    void upper(){
+    void hook(){
         if(count == 0){
             temp1 = blockinghigh;
             temp2 = blockinglow;
+            spriteRenderer.sprite = prehook;
+            count++;
+        }else if (count == 1){
+            spriteRenderer.sprite = midhook;
+            count++;
+        }else if (count ==2 ){
+            punching = true;
+            spriteRenderer.sprite = endhook;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+            }
+        }else if (count < 9){
+            specialing = false;
+            punching = false;
+            counter = true;
+            count++;
+            blockinghigh = false;
+            blockinglow = true;     
+        }else if(count == 9){
+                counter = false;
+                spriteRenderer.sprite = normal;
+                count = 0;
+                action = "";  
+                blockinghigh = temp1;
+                blockinglow = temp2;  
+        }
+    }
+
+    void upper(){
+        if(count == 0){
             specialing = true;
             spriteRenderer.sprite = preupper;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = upperclue;
+            spriteRenderer.sprite = preupper2;
             count++;
         }else if (count == 2){
+            spriteRenderer.sprite = startupper;
+            count++;
+        }else if (count == 3){
             spriteRenderer.sprite = midupper;
             count++;
-        }else if (count ==3 ){
+        }else if (count ==4 ){
             punching = true;
-            spriteRenderer.sprite = upperend;
+            spriteRenderer.sprite = endupper;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -234,14 +268,16 @@ public class miketyson : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 11){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 11){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -251,68 +287,63 @@ public class miketyson : enemy
         }
     }
 
-    /*void special(){
-        if(count == 0){
-            specialing = true;
-            movement.x = 0f;
-            movement.y = 1*moveSpeed;
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 1){
-            movement.y = 0f;
+    void special(){
+        /*if(count==80){
+            counter = false;
+            specialing = false;
+            punching = false;
+            blockinglow = true;
             spriteRenderer.sprite = normal;
-            count++;
-        }else if (count ==2){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 3){
-            spriteRenderer.sprite = move6;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 5){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if(count == 6){
-            spriteRenderer.sprite = midpunch;
-            count++;
-        }else if (count == 7){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if (count ==8){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 9){
+            count = 0;
+            action = ""; 
+        }else if(count%16 == 0){
             specialing = false;
-            onehit = true;
-            spriteRenderer.sprite = normald;
+            punching = false;
+            counter = true;
+            blockinglow = false;
+            count++; 
+            spriteRenderer.sprite = forspecial;
+        }else if (count%16 == 4){
+            specialing = true;
+            spriteRenderer.sprite = forspecial2;
             count++;
-            movement.x = 0f;
-            movement.y = -1*moveSpeed;
-            rb.position  = fp;
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else{
-            //specialing = false;
-            specialing = false;
-            movement.y = 0f;
-            onehit = false;
-            count-=10;
-            upper();
-            if(count!=0){
-                count+=10;
+            punching = true;
+            blockinglow = true;
+            spriteRenderer.sprite = up;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
             }
-        }
-    }*/
+        }else if (count%16 == 8){
+            specialing = false;
+            punching = false;
+            counter = true;
+            blockinglow = false;
+            count++; 
+            spriteRenderer.sprite = forspecial3;
+        }else if (count%16 == 12){
+            spriteRenderer.sprite = forspecial4;
+            count++;
+            punching = true;
+            specialing = true;
+            blockinglow = true;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+            }
+        }*/
+    }
 
     public override void blockLow(){
         action = "blockLow";
         if(count == 0){
             spriteRenderer.sprite = blocklow;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blocklow2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -326,9 +357,6 @@ public class miketyson : enemy
         specialing = false;
         if(count == 0){
             spriteRenderer.sprite = blockhigh;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blockhigh2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -344,8 +372,6 @@ public class miketyson : enemy
         if(count <= 2){
             spriteRenderer.sprite = hitlow;
             count++;
-        }else if( count < 4){
-            spriteRenderer.sprite = hitlow2;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -364,8 +390,8 @@ public class miketyson : enemy
             spriteRenderer.sprite = hithigh2;
             count++;
         }else{
-            spriteRenderer.sprite = normal;
             spriteRenderer.flipX = false;
+            spriteRenderer.sprite = normal;
             count = 0;
             action = "";
         }
@@ -393,7 +419,7 @@ public class miketyson : enemy
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            spriteRenderer.sprite = stunned1;
         }else{
             action = "";
             spriteRenderer.sprite = normal;
@@ -407,10 +433,13 @@ public class miketyson : enemy
         hits = 7;
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = knockeddown;
+            spriteRenderer.sprite = knockdown1;
+            count++;
+        }else if (count <=5){
+            spriteRenderer.sprite = knockdown2;
             count++;
         }else{
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown3;
             action = "getUp";
             lm.action = "";
             if(timesdown >=3){
@@ -424,14 +453,11 @@ public class miketyson : enemy
 
     public override void getUp(){
         mar.action = "wait";
-        action = "getUp";
         var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == knockeddown2&&randint<40){
+        if(spriteRenderer.sprite == knockdown3&&randint<40){
             action = "getUp";
             spriteRenderer.sprite = getup;
         }else if (spriteRenderer.sprite == getup&&randint<80){
-            spriteRenderer.sprite = getup2;
-        }else if(spriteRenderer.sprite == getup2){
             health = 210;
             spriteRenderer.sprite = normal;
             count = 0;
@@ -441,7 +467,7 @@ public class miketyson : enemy
             mar.count = 0;
         }else{
             action = "wait";
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown3;
             mar.action = "ecount";
         }
     }
@@ -450,12 +476,16 @@ public class miketyson : enemy
     public override void win(){
         action = "win";
         mar.action = "wait";
-        // if(count <= 3){
-        //     spriteRenderer.sprite = victory;
-        //     count++;
-        // }else{
-        //     spriteRenderer.sprite = victory2;
-        // }
+        if(count == 0){
+            spriteRenderer.sprite = win1;
+            count++;
+        }else if (count == 1){
+            spriteRenderer.sprite = win2;
+            count++;
+        }else{
+            spriteRenderer.sprite = win3;
+            count = 0;
+        }
     }
 
     public void redo(){
@@ -551,6 +581,6 @@ public class miketyson : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = knockeddown2;
+        spriteRenderer.sprite = knockdown3;
     }
 }
