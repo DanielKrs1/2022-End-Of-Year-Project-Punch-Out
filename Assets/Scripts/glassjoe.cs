@@ -199,8 +199,8 @@ public class glassjoe : enemy
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
+                lm.health -= 100.0F/9;
+                if(lm.health<=0F){
                     lm.knockeddown();
                 }
                 lm.hit();
@@ -242,8 +242,8 @@ public class glassjoe : enemy
             spriteRenderer.sprite = upperEnd;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
+                lm.health -= 100.0F/9;
+                if(lm.health<=0.0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";

@@ -38,7 +38,7 @@ public class littlemac : MonoBehaviour
 
     public enemy en;
     public mario mar;
-    public int health = 90;
+    public float health = 100.0F;
 
     public Rigidbody2D rb;
     Vector2 movement;
@@ -212,7 +212,7 @@ public class littlemac : MonoBehaviour
                 //en.spriteRenderer.sprite = en.knockdown3;
                 en.setAction("wait");
                 mar.action = "tko";
-            }else if (health <= 0){
+            }else if (health <= 0.0){
                  knockeddown();
             }else if (action.Equals("wait")){
 
@@ -591,13 +591,13 @@ public class littlemac : MonoBehaviour
             if(countzx >= 10){
                 mar.action = "";
                 mar.count = 0;
-                health = 90;
+                health = 100.0F;
                 action = "";
                 en.setAction("");
                 countzx = 0;
             }
             if(knockdowned >= 3){
-                health = 0;
+                health = 0F;
                 countzx = 0;
                 action = "knockedout";
                 mar.tkod();

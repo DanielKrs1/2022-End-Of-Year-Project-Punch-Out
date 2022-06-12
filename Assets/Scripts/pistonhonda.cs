@@ -104,14 +104,23 @@ public class pistonhonda : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(randint == 1){
+            /*if(randint == 1){
                 action = "special";
             }else if(randint<2){
                 action = "upper";
-            }else if(randint<6){
+            }else */if(randint<6){
                 action = "right";
             }else if (randint<8){
                 action = "normalPunch";
+            }
+            if(timesdown >1){
+                if(randint < 5){
+                    action = "special";
+                }else if(randint<20){
+                    action = "normalPunch";
+                }else if (randint<40){
+                    action = "normalPunch";
+                }
             }
         }
 

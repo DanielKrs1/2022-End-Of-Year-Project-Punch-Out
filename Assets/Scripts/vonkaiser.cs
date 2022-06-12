@@ -50,7 +50,7 @@ public class vonkaiser : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 310;
 
     public int lowhits = 0;
     public int highhits = 0;
@@ -69,22 +69,22 @@ public class vonkaiser : enemy
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         blockinglow = true;
-        blockinghigh = true;
+        blockinghigh = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // if(lowhits == 3){
-        //     blockinglow = true;
-        //     blockinghigh = false;
-        //     lowhits = 0;
-        // }
-        // if(highhits == 3){
-        //     blockinghigh = true;
-        //     blockinglow = false;
-        //     highhits = 0;
-        // }
+        if(lowhits == 2){
+            blockinglow = true;
+            blockinghigh = false;
+            lowhits = 0;
+        }
+        if(highhits == 2){
+            blockinghigh = true;
+            blockinglow = false;
+            highhits = 0;
+        }
         //var rand = new Random();
         moveSpeed = 1f;
         //lastPos = transform.position;
@@ -93,12 +93,16 @@ public class vonkaiser : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            /*if(randint == 1){
-                action = "special";
-            }else */if(randint<2){
-                action = "upper";
-            }else if(randint<6){
-                action = "normalPunch";
+            if(timesdown>0){
+                if(randint<30){
+                    action = "upper";
+                }else if(randint<35){
+                    action = "normalPunch";
+                }
+            }else{
+                if(randint<10){
+                    action = "normalPunch";
+                }
             }
         }
 
@@ -141,13 +145,24 @@ public class vonkaiser : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
-                    spriteRenderer.sprite = normalup3;
+                if(blockinghigh){
+                    if(spriteRenderer.sprite == normalup){
+                        spriteRenderer.sprite = normalup2;
+                    }else if(spriteRenderer.sprite == normalup2){
+                        spriteRenderer.sprite = normalup3;
+                    }else{
+                        spriteRenderer.sprite = normalup;
+                    }    
                 }else{
-                    spriteRenderer.sprite = normalup;
+                    if(spriteRenderer.sprite == normal){
+                        spriteRenderer.sprite = normal2;
+                    }else if(spriteRenderer.sprite == normal2){
+                        spriteRenderer.sprite = normal3;
+                    }else{
+                        spriteRenderer.sprite = normal;
+                    }  
                 }
+                
             }  
              
         }
@@ -183,7 +198,7 @@ public class vonkaiser : enemy
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=100.0F/9;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -226,8 +241,8 @@ public class vonkaiser : enemy
             spriteRenderer.sprite = upperend;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
+                lm.health -=100.0F/7;
+                if(lm.health<=0F){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
