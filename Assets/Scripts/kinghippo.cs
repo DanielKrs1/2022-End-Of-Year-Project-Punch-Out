@@ -5,34 +5,47 @@ using UnityEngine;
 public class kinghippo : enemy
 {
     // Start is called before the first frame update
+    public Sprite appear;
+    public Sprite appear2;
+    public Sprite appear3;
+    public Sprite move;
+    public Sprite move2;
+    public Sprite move3;
+    public Sprite move4;
+    public Sprite move5;
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
     public Sprite normal4;
-    public Sprite normalup;
-    public Sprite normalup2;
-    public Sprite normalup3;
-    public Sprite punchclue;
+    public Sprite prepunch;
+    public Sprite prepunch2;
     public Sprite punch;
-    public Sprite preupper;
-    public Sprite upperclue;
-    public Sprite midupper;
-    public Sprite upperend;
+    public Sprite prefullpunch;
+    public Sprite cluefullpunch;
+    public Sprite fullpunch;
+    public Sprite pantshigh;
+    public Sprite pantshigh2;
+    public Sprite pants;
+    public Sprite punched;
+    public Sprite pulluppants;
     public Sprite blocklow;
     public Sprite blocklow2;
     public Sprite blockhigh;
     public Sprite blockhigh2;
-    public Sprite dodgeHit;
-    public Sprite hithigh;
-    public Sprite hithigh2;
-    public Sprite hitlow;
-    public Sprite hitlow2;
-    public Sprite knockeddown;
-    public Sprite knockeddown2;
-    public Sprite getup;
-    public Sprite getup2;
-    public Sprite dodge;
-    public Sprite dodge2;
+    public Sprite knockout1;
+    public Sprite knockout2;
+    public Sprite knockout3;
+    public Sprite knockout4;
+    public Sprite knockout5;
+    public Sprite knockout6;
+    public Sprite knockout7;
+    public Sprite victory1;
+    public Sprite victory2;
+    public Sprite victory3;
+    public Sprite victory4;
+    public Sprite victory5;
+    public Sprite victory6;
+    public Sprite victory7;
 
     public bool punching = false;
     public bool blockinglow = true;
@@ -55,7 +68,7 @@ public class kinghippo : enemy
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -96,17 +109,29 @@ public class kinghippo : enemy
             /*if(randint == 1){
                 action = "special";
             }else */if(randint<2){
-                action = "upper";
+                if(Random.Range(0,10)<5){
+                    action = "fullpunchl";    
+                }else{
+                    action = "fullpunchr";
+                }                
             }else if(randint<6){
-                action = "normalPunch";
+                if(Random.Range(0,10)<5){
+                    action = "normalpunchl";    
+                }else{
+                    action = "normalpunchr";
+                } 
             }
         }
 
         if(frame%10==0){
-            if(action.Equals("normalPunch")){
-                normalPunch();
-            }else if(action.Equals("upper")){
-                upper();
+            if(action.Equals("normalpunchl")){
+                normalPunchL();
+            }else if (action.Equals("normalpunchr")){
+                normalPunchR();   
+            }else if (action.Equals("fullpunchl")){
+                fullPunchL();
+            }else if(action.Equals("fullpunchr")){
+                fullPunchR();
             }/*else if(action.Equals("special")){
                 specialing = true;
                 special();
@@ -133,7 +158,7 @@ public class kinghippo : enemy
                 knockDown();
             }else if(action.Equals("getUp")){
                 counter = false;
-                getUp();
+                knockDown();
             }else if(action.Equals("win")){
                 win();
             }else if (action.Equals("wait")){
@@ -141,12 +166,14 @@ public class kinghippo : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
-                    spriteRenderer.sprite = normalup3;
-                }else{
-                    spriteRenderer.sprite = normalup;
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
+                    spriteRenderer.sprite = normal3;
+                }else if (spriteRenderer.sprite == normal3){
+                    spriteRenderer.sprite = normal4;
+                }else {
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -158,27 +185,17 @@ public class kinghippo : enemy
     public int count = 0;
     private bool temp1;
     private bool temp2;
-    void normalPunch(){
-        
-        if(count == 0){
+    void normalPunchL(){
+        if(count < 2){
             specialing = true;
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
-        }else if(count == 1){
-            spriteRenderer.sprite = normal2;
+        }else if(count < 4){
+            spriteRenderer.sprite = prepunch2;
             count++;
-        }else if(count == 2){
-            spriteRenderer.sprite = normalup;
-            count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = punchclue;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if( count == 5){
+        }else if( count < 6){
             punching = true;
             spriteRenderer.sprite = punch;
             count++;
@@ -191,39 +208,69 @@ public class kinghippo : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else {
             specialing = false;
-            punching = false;
-            counter = true;
-            count++;
-            blockinghigh = false;
-            blockinglow = true;
-        }else if(count == 12){
-                counter = false;
-                spriteRenderer.sprite = normal;
-                count = 0;
-                action = "";  
-                blockinghigh = true;
-                blockinglow = true;  
+            counter = false;
+            spriteRenderer.sprite = normal;
+            count = 0;
+            action = "";  
+            blockinghigh = true;
+            blockinglow = true;  
         }
     }
 
-    void upper(){
+    void normalPunchR(){
+        if(count < 2){
+            spriteRenderer.flipX = true;
+            specialing = true;
+            spriteRenderer.sprite = prepunch;
+            count++;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
+        }else if(count < 4){
+            spriteRenderer.sprite = prepunch2;
+            count++;
+        }else if( count < 6){
+            punching = true;
+            spriteRenderer.sprite = punch;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+                lm.action = "hit";
+                lm.rb.position = lm.fp;
+            }
+        }else {
+            spriteRenderer.flipX = false;
+            specialing = false;
+            counter = false;
+            spriteRenderer.sprite = normal;
+            count = 0;
+            action = "";  
+            blockinghigh = true;
+            blockinglow = true;  
+        }
+    }
+
+    void fullPunchL(){
         if(count == 0){
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
-            spriteRenderer.sprite = preupper;
+            spriteRenderer.sprite = prefullpunch;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = upperclue;
+            spriteRenderer.sprite = cluefullpunch;
             count++;
         }else if (count == 2){
-            spriteRenderer.sprite = midupper;
+            spriteRenderer.sprite = prefullpunch;
             count++;
         }else if (count ==3 ){
             punching = true;
-            spriteRenderer.sprite = upperend;
+            spriteRenderer.sprite = fullpunch;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -237,7 +284,7 @@ public class kinghippo : enemy
         }else if (count < 10){
             specialing = false;
             punching = false;
-            counter = true;
+            counter = false;
             count++;      
             blockinghigh = false;
             blockinglow = true;
@@ -248,6 +295,51 @@ public class kinghippo : enemy
                 action = "";    
                 blockinghigh = true;
                 blockinglow = true;
+        }
+    }
+
+    void fullPunchR(){
+        if(count == 0){
+            spriteRenderer.flipX = true;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
+            specialing = true;
+            spriteRenderer.sprite = prefullpunch;
+            count++;
+        }else if (count == 1){
+            spriteRenderer.sprite = cluefullpunch;
+            count++;
+        }else if (count == 2){
+            spriteRenderer.sprite = prefullpunch;
+            count++;
+        }else if (count ==3 ){
+            punching = true;
+            spriteRenderer.sprite = fullpunch;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.action = "hit";
+                lm.hit();
+                lm.rb.position = lm.fp;
+            }
+        }else if (count < 10){
+            specialing = false;
+            punching = false;
+            counter = false;
+            count++;      
+            blockinghigh = false;
+            blockinglow = true;
+        }else if(count == 10){
+            spriteRenderer.flipX = false;
+            counter = false;
+            spriteRenderer.sprite = normal;
+            count = 0;
+            action = "";    
+            blockinghigh = true;
+            blockinglow = true;
         }
     }
 
@@ -338,14 +430,24 @@ public class kinghippo : enemy
     }
 
     public override void hitLow(){
+        if(spriteRenderer.sprite = pantshigh){
+            count = 0;
+        }
         specialing = false;
         lowhits++;
         action = "hitLow";
-        if(count <= 2){
-            spriteRenderer.sprite = hitlow;
+        if(count < 3){
+            spriteRenderer.sprite = pantshigh2;
             count++;
-        }else if( count < 4){
-            spriteRenderer.sprite = hitlow2;
+            counter = true;
+        }else if( count < 6){
+            counter = true;
+            spriteRenderer.sprite = pants;
+            count++;
+        }else if (count == 6){
+            spriteRenderer.sprite = pulluppants;
+            count++;
+            counter = false;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -356,12 +458,11 @@ public class kinghippo : enemy
     public override void rightHit(){
         highhits++;
         action = "rightHit";
-        spriteRenderer.flipX = true;
-        if(count == 0){
-            spriteRenderer.sprite = hithigh;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = hithigh2;
+        //spriteRenderer.flipX = true;
+        if(count < 5){
+            spriteRenderer.sprite = pantshigh;
+            blockinghigh = true;
+            blockinglow = false;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -373,15 +474,16 @@ public class kinghippo : enemy
 
     public override void leftHit(){
         highhits++;
-        action = "leftHit";
-        if(count == 0){
-            spriteRenderer.sprite = hithigh;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = hithigh2;
+        action = "rightHit";
+        //spriteRenderer.flipX = true;
+        if(count < 5){
+            spriteRenderer.sprite = pantshigh;
+            blockinghigh = true;
+            blockinglow = false;
             count++;
         }else{
             spriteRenderer.sprite = normal;
+            spriteRenderer.flipX = false;
             count = 0;
             action = "";
         }
@@ -393,7 +495,7 @@ public class kinghippo : enemy
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            spriteRenderer.sprite = punched;
         }else{
             action = "";
             spriteRenderer.sprite = normal;
@@ -406,56 +508,80 @@ public class kinghippo : enemy
         stunned = false;
         hits = 7;
         action = "knockDown";
-        if(count <=2){
-            spriteRenderer.sprite = knockeddown;
+        if(count == 0){
+            spriteRenderer.sprite = knockout1;
+            count++;
+        }else if(count == 1){
+            spriteRenderer.sprite = knockout2;
+            count++;
+        }else if(count == 2){
+            spriteRenderer.sprite = knockout3;
+            count++;
+        }else if(spriteRenderer.sprite = knockout4){
+            spriteRenderer.sprite = knockout5;
+            count++;
+        }else if(spriteRenderer.sprite = knockout5){
+            spriteRenderer.sprite = knockout6;
+            count++;
+        }else if(spriteRenderer.sprite = knockout6){
+            spriteRenderer.sprite = knockout7;
             count++;
         }else{
-            spriteRenderer.sprite = knockeddown2;
-            action = "getUp";
-            lm.action = "";
-            if(timesdown >=3){
-                action = "wait";
-                mar.tkod();
-                lm.win();
-                lm.rb.position = lm.fp;
-            }
+            spriteRenderer.sprite = knockout4;
         }
     }
 
     public override void getUp(){
-        mar.action = "wait";
-        action = "getUp";
-        var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == knockeddown2&&randint<40){
-            action = "getUp";
-            spriteRenderer.sprite = getup;
-        }else if (spriteRenderer.sprite == getup&&randint<80){
-            spriteRenderer.sprite = getup2;
-        }else if(spriteRenderer.sprite == getup2){
-            health = 210;
-            spriteRenderer.sprite = normal;
-            count = 0;
-            action = "";
-            lm.action = "";
-            mar.action = "";
-            mar.count = 0;
-        }else{
-            action = "wait";
-            spriteRenderer.sprite = knockeddown2;
-            mar.action = "ecount";
-        }
+        // mar.action = "wait";
+        // action = "getUp";
+        // var randint = Random.Range(0, 100);
+        // if(spriteRenderer.sprite == knockeddown2&&randint<40){
+        //     action = "getUp";
+        //     spriteRenderer.sprite = getup;
+        // }else if (spriteRenderer.sprite == getup&&randint<80){
+        //     spriteRenderer.sprite = getup2;
+        // }else if(spriteRenderer.sprite == getup2){
+        //     health = 210;
+        //     spriteRenderer.sprite = normal;
+        //     count = 0;
+        //     action = "";
+        //     lm.action = "";
+        //     mar.action = "";
+        //     mar.count = 0;
+        // }else{
+        //     action = "wait";
+        //     spriteRenderer.sprite = knockeddown2;
+        //     mar.action = "ecount";
+        // }
+        knockDown();
     }
         
 
     public override void win(){
         action = "win";
         mar.action = "wait";
-        // if(count <= 3){
-        //     spriteRenderer.sprite = victory;
-        //     count++;
-        // }else{
-        //     spriteRenderer.sprite = victory2;
-        // }
+        if(count == 0){
+            spriteRenderer.sprite = victory1;
+            count++;
+        }else if (count == 1){
+            spriteRenderer.sprite = victory2;
+            count++;  
+        }else if (count == 2){
+            spriteRenderer.sprite = victory3;
+            count++;  
+        }else if (count == 3){
+            spriteRenderer.sprite = victory4;
+            count++;  
+        }else if (count == 4){
+            spriteRenderer.sprite = victory5;
+            count++;  
+        }else if (count == 5){
+            spriteRenderer.sprite = victory6;
+            count++;  
+        }else if (count == 6){
+            spriteRenderer.sprite = victory7;
+            count = 0;
+        }
     }
 
     public void redo(){
@@ -551,6 +677,6 @@ public class kinghippo : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = knockeddown2;
+        spriteRenderer.sprite = knockout7;
     }
 }

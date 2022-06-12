@@ -321,7 +321,6 @@ public class pistonhonda : enemy
             blockinglow = false;
             count++; 
             spriteRenderer.sprite = forspecial;
-            count++;
         }else if (count%16 == 4){
             specialing = true;
             spriteRenderer.sprite = forspecial2;
@@ -329,7 +328,6 @@ public class pistonhonda : enemy
             punching = true;
             blockinglow = true;
             spriteRenderer.sprite = up;
-            count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
                 if(lm.health<=0){
@@ -344,15 +342,12 @@ public class pistonhonda : enemy
             blockinglow = false;
             count++; 
             spriteRenderer.sprite = forspecial3;
-            count++;
         }else if (count%16 == 12){
             spriteRenderer.sprite = forspecial4;
             count++;
             punching = true;
             specialing = true;
             blockinglow = true;
-            spriteRenderer.sprite = up;
-            count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
                 if(lm.health<=0){

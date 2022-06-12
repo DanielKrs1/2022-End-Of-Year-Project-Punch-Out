@@ -8,31 +8,34 @@ public class greattiger : enemy
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
-    public Sprite normal4;
     public Sprite normalup;
     public Sprite normalup2;
     public Sprite normalup3;
-    public Sprite punchclue;
+    public Sprite prepunch;
+    public Sprite prepunch2;
+    public Sprite prepunch3;
+    public Sprite prepunch4;
     public Sprite punch;
     public Sprite preupper;
-    public Sprite upperclue;
     public Sprite midupper;
-    public Sprite upperend;
-    public Sprite blocklow;
-    public Sprite blocklow2;
+    public Sprite uppercut;
+    public Sprite special1;
+    public Sprite special2;
+    public Sprite special3;
+    public Sprite special4;
     public Sprite blockhigh;
     public Sprite blockhigh2;
-    public Sprite dodgeHit;
+    public Sprite blocklow;
+    public Sprite blocklow2;
     public Sprite hithigh;
     public Sprite hithigh2;
     public Sprite hitlow;
     public Sprite hitlow2;
-    public Sprite knockeddown;
-    public Sprite knockeddown2;
-    public Sprite getup;
+    public Sprite dodgeHit;
+    public Sprite knockdown1;
+    public Sprite knockdown2;
+    public Sprite getup1;
     public Sprite getup2;
-    public Sprite dodge;
-    public Sprite dodge2;
 
     public bool punching = false;
     public bool blockinglow = true;
@@ -93,9 +96,9 @@ public class greattiger : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            /*if(randint == 1){
+            if(randint == 1){
                 action = "special";
-            }else */if(randint<2){
+            }else if(randint<2){
                 action = "upper";
             }else if(randint<6){
                 action = "normalPunch";
@@ -107,11 +110,11 @@ public class greattiger : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
-            }/*else if(action.Equals("special")){
+            }else if(action.Equals("special")){
                 specialing = true;
                 special();
                 rb.MovePosition(rb.position+movement);//*Time.deltaTime);  
-            }*/else if(action.Equals("blockLow")){
+            }else if(action.Equals("blockLow")){
                 counter = false;
                 blockLow();
             }else if(action.Equals("blockHigh")){
@@ -161,24 +164,22 @@ public class greattiger : enemy
     void normalPunch(){
         
         if(count == 0){
+            hits = 1;
             specialing = true;
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
         }else if(count == 1){
-            spriteRenderer.sprite = normal2;
+            spriteRenderer.sprite = prepunch2;
             count++;
         }else if(count == 2){
-            spriteRenderer.sprite = normalup;
+            spriteRenderer.sprite = prepunch3;
             count++;
         }else if(count == 3){
-            spriteRenderer.sprite = punchclue;
+            spriteRenderer.sprite = prepunch4;
             count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if( count == 5){
+        }else if( count == 4){
             punching = true;
             spriteRenderer.sprite = punch;
             count++;
@@ -191,7 +192,7 @@ public class greattiger : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 11){
             specialing = false;
             punching = false;
             counter = true;
@@ -210,20 +211,18 @@ public class greattiger : enemy
 
     void upper(){
         if(count == 0){
+            hits = 7;
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
             spriteRenderer.sprite = preupper;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = upperclue;
-            count++;
-        }else if (count == 2){
             spriteRenderer.sprite = midupper;
             count++;
-        }else if (count ==3 ){
+        }else if (count == 2){
             punching = true;
-            spriteRenderer.sprite = upperend;
+            spriteRenderer.sprite = uppercut;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -234,14 +233,14 @@ public class greattiger : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -251,60 +250,67 @@ public class greattiger : enemy
         }
     }
 
-    /*void special(){
+    void special(){
         if(count == 0){
-            specialing = true;
-            movement.x = 0f;
-            movement.y = 1*moveSpeed;
-            spriteRenderer.sprite = normal3;
+            spriteRenderer.sprite = special1;
             count++;
-        }else if (count == 1){
-            movement.y = 0f;
-            spriteRenderer.sprite = normal;
-            count++;
-        }else if (count ==2){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 3){
-            spriteRenderer.sprite = move6;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 5){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if(count == 6){
-            spriteRenderer.sprite = midpunch;
-            count++;
-        }else if (count == 7){
-            spriteRenderer.sprite = prepunch;
-            count++;
-        }else if (count ==8){
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else if (count == 9){
+        }else if(count>=64&&count<71){
+            counter = true;
             specialing = false;
-            onehit = true;
-            spriteRenderer.sprite = normald;
+            punching = false;
+            blockinglow = true;
             count++;
-            movement.x = 0f;
-            movement.y = -1*moveSpeed;
-            rb.position  = fp;
-            spriteRenderer.sprite = normal3;
-            count++;
-        }else{
-            //specialing = false;
-            specialing = false;
-            movement.y = 0f;
-            onehit = false;
-            count-=10;
-            upper();
-            if(count!=0){
-                count+=10;
+            if(count>71){
+               spriteRenderer.sprite = normal; 
+               count = 0;
+               action = ""; 
             }
+            movement.x = 0f;
+            movement.y = 0f;
+        }else if(count%16 == 0){
+            specialing = true;
+            punching = false;
+            counter = false;
+            count++; 
+            spriteRenderer.sprite = special4;
+            movement.x = -1*moveSpeed;
+            movement.y = moveSpeed;
+            count++;
+        }else if (count%16 == 4){
+            specialing = true;
+            spriteRenderer.sprite = special4;
+            movement.x = 1*moveSpeed;
+            movement.y = moveSpeed;
+            count++;
+        }else if (count%16 == 8){
+            specialing = false;
+            punching = false;
+            count++; 
+            spriteRenderer.sprite = special4;
+            movement.x = 1*moveSpeed;
+            movement.y = -1*moveSpeed;
+        }else if (count%16 == 12){
+            count++;
+            punching = true;
+            specialing = true;
+            spriteRenderer.sprite = punch;
+            movement.x = -1*moveSpeed;
+            movement.y = -1*moveSpeed;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+                lm.rb.position = lm.fp;
+                count-=16;
+            }
+        }else{
+            movement.x = 0f;
+            movement.y = 0f;
+            count++;
         }
-    }*/
+    }
 
     public override void blockLow(){
         action = "blockLow";
@@ -407,10 +413,10 @@ public class greattiger : enemy
         hits = 7;
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = knockeddown;
+            spriteRenderer.sprite = knockdown1;
             count++;
         }else{
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown2;
             action = "getUp";
             lm.action = "";
             if(timesdown >=3){
@@ -426,10 +432,10 @@ public class greattiger : enemy
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == knockeddown2&&randint<40){
+        if(spriteRenderer.sprite == knockdown2&&randint<40){
             action = "getUp";
-            spriteRenderer.sprite = getup;
-        }else if (spriteRenderer.sprite == getup&&randint<80){
+            spriteRenderer.sprite = getup1;
+        }else if (spriteRenderer.sprite == getup1&&randint<80){
             spriteRenderer.sprite = getup2;
         }else if(spriteRenderer.sprite == getup2){
             health = 210;
@@ -441,7 +447,7 @@ public class greattiger : enemy
             mar.count = 0;
         }else{
             action = "wait";
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown2;
             mar.action = "ecount";
         }
     }
@@ -551,6 +557,6 @@ public class greattiger : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = knockeddown2;
+        spriteRenderer.sprite = knockdown2;
     }
 }

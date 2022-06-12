@@ -5,34 +5,36 @@ using UnityEngine;
 public class sodapopinski : enemy
 {
     // Start is called before the first frame update
+    public Sprite move1;
+    public Sprite move2;
+    public Sprite move3;
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
-    public Sprite normal4;
-    public Sprite normalup;
-    public Sprite normalup2;
-    public Sprite normalup3;
-    public Sprite punchclue;
-    public Sprite punch;
-    public Sprite preupper;
-    public Sprite upperclue;
-    public Sprite midupper;
-    public Sprite upperend;
-    public Sprite blocklow;
-    public Sprite blocklow2;
+    public Sprite lefthook;
+    public Sprite lefthook2;
+    public Sprite lefthook3;
+    public Sprite leftup;
+    public Sprite leftup2;
+    public Sprite leftup3;
+    public Sprite punch1;
+    public Sprite punch2;
+    public Sprite punch3;
+    public Sprite punch4;
     public Sprite blockhigh;
-    public Sprite blockhigh2;
-    public Sprite dodgeHit;
+    public Sprite blocklow;
     public Sprite hithigh;
     public Sprite hithigh2;
     public Sprite hitlow;
-    public Sprite hitlow2;
-    public Sprite knockeddown;
-    public Sprite knockeddown2;
+    public Sprite stunned1;
+    public Sprite stunned2;
+    public Sprite knockdown1;
+    public Sprite knockdown2;
     public Sprite getup;
     public Sprite getup2;
-    public Sprite dodge;
-    public Sprite dodge2;
+    public Sprite victory;
+    public Sprite victory2;
+
 
     public bool punching = false;
     public bool blockinglow = true;
@@ -97,6 +99,8 @@ public class sodapopinski : enemy
                 action = "special";
             }else */if(randint<2){
                 action = "upper";
+            }else if (randint<4){
+                action = "hook";
             }else if(randint<6){
                 action = "normalPunch";
             }
@@ -107,6 +111,8 @@ public class sodapopinski : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
+            }else if (action.Equals("hook")){
+                hook();
             }/*else if(action.Equals("special")){
                 specialing = true;
                 special();
@@ -141,12 +147,12 @@ public class sodapopinski : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
-                    spriteRenderer.sprite = normalup3;
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
+                    spriteRenderer.sprite = normal3;
                 }else{
-                    spriteRenderer.sprite = normalup;
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -162,25 +168,19 @@ public class sodapopinski : enemy
         
         if(count == 0){
             specialing = true;
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = punch1;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
         }else if(count == 1){
-            spriteRenderer.sprite = normal2;
+            spriteRenderer.sprite = punch2;
             count++;
         }else if(count == 2){
-            spriteRenderer.sprite = normalup;
+            spriteRenderer.sprite = punch3;
             count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = punchclue;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if( count == 5){
+        }else if( count == 3){
             punching = true;
-            spriteRenderer.sprite = punch;
+            spriteRenderer.sprite = punch4;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -191,14 +191,54 @@ public class sodapopinski : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 10){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 10){
+                counter = false;
+                spriteRenderer.sprite = normal;
+                count = 0;
+                action = "";  
+                blockinghigh = true;
+                blockinglow = true;  
+        }
+    }
+
+    void hook(){
+        if(count == 0){
+            specialing = true;
+            spriteRenderer.sprite = lefthook;
+            count++;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
+        }else if(count == 1){
+            spriteRenderer.sprite = lefthook2;
+            count++;
+        }else if( count == 2){
+            punching = true;
+            spriteRenderer.sprite = lefthook3;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+                lm.action = "hit";
+                lm.rb.position = lm.fp;
+            }
+        }else if (count < 9){
+            specialing = false;
+            punching = false;
+            counter = true;
+            count++;
+            blockinghigh = false;
+            blockinglow = true;
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -213,17 +253,14 @@ public class sodapopinski : enemy
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
-            spriteRenderer.sprite = preupper;
+            spriteRenderer.sprite = leftup;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = upperclue;
+            spriteRenderer.sprite = leftup2;
             count++;
         }else if (count == 2){
-            spriteRenderer.sprite = midupper;
-            count++;
-        }else if (count ==3 ){
             punching = true;
-            spriteRenderer.sprite = upperend;
+            spriteRenderer.sprite = leftup3;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -234,14 +271,14 @@ public class sodapopinski : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -311,9 +348,6 @@ public class sodapopinski : enemy
         if(count == 0){
             spriteRenderer.sprite = blocklow;
             count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blocklow2;
-            count++;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -326,9 +360,6 @@ public class sodapopinski : enemy
         specialing = false;
         if(count == 0){
             spriteRenderer.sprite = blockhigh;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blockhigh2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -344,8 +375,6 @@ public class sodapopinski : enemy
         if(count <= 2){
             spriteRenderer.sprite = hitlow;
             count++;
-        }else if( count < 4){
-            spriteRenderer.sprite = hitlow2;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -393,7 +422,11 @@ public class sodapopinski : enemy
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            if(spriteRenderer.sprite == stunned1){
+                spriteRenderer.sprite = stunned2;
+            }else{
+                spriteRenderer.sprite = stunned1;
+            }
         }else{
             action = "";
             spriteRenderer.sprite = normal;
@@ -407,10 +440,10 @@ public class sodapopinski : enemy
         hits = 7;
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = knockeddown;
+            spriteRenderer.sprite = knockdown1;
             count++;
         }else{
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown2;
             action = "getUp";
             lm.action = "";
             if(timesdown >=3){
@@ -426,7 +459,7 @@ public class sodapopinski : enemy
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == knockeddown2&&randint<40){
+        if(spriteRenderer.sprite == knockdown2&&randint<40){
             action = "getUp";
             spriteRenderer.sprite = getup;
         }else if (spriteRenderer.sprite == getup&&randint<80){
@@ -441,7 +474,7 @@ public class sodapopinski : enemy
             mar.count = 0;
         }else{
             action = "wait";
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown2;
             mar.action = "ecount";
         }
     }
@@ -450,12 +483,12 @@ public class sodapopinski : enemy
     public override void win(){
         action = "win";
         mar.action = "wait";
-        // if(count <= 3){
-        //     spriteRenderer.sprite = victory;
-        //     count++;
-        // }else{
-        //     spriteRenderer.sprite = victory2;
-        // }
+        if(count <= 3){
+            spriteRenderer.sprite = victory;
+            count++;
+        }else{
+            spriteRenderer.sprite = victory2;
+        }
     }
 
     public void redo(){
@@ -551,6 +584,6 @@ public class sodapopinski : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = knockeddown2;
+        spriteRenderer.sprite = knockdown2;
     }
 }

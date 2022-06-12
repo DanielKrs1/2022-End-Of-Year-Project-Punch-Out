@@ -5,34 +5,42 @@ using UnityEngine;
 public class baldbull : enemy
 {
     // Start is called before the first frame update
+    public Sprite move1;
+    public Sprite move2;
+    public Sprite move3;
+    public Sprite move4;
+    public Sprite move5;
+    public Sprite move6;
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
-    public Sprite normal4;
-    public Sprite normalup;
-    public Sprite normalup2;
-    public Sprite normalup3;
-    public Sprite punchclue;
+    public Sprite prepunch;
+    public Sprite prepunch2;
+    public Sprite prepunch3;
     public Sprite punch;
-    public Sprite preupper;
-    public Sprite upperclue;
+    public Sprite prehook;
+    public Sprite prehook2;
+    public Sprite prehook3;
+    public Sprite midhook;
+    public Sprite righthook;
+    public Sprite preupper1;
+    public Sprite preupper2;
     public Sprite midupper;
-    public Sprite upperend;
-    public Sprite blocklow;
-    public Sprite blocklow2;
+    public Sprite uppercut;
     public Sprite blockhigh;
-    public Sprite blockhigh2;
-    public Sprite dodgeHit;
+    public Sprite blocklow;
     public Sprite hithigh;
     public Sprite hithigh2;
     public Sprite hitlow;
-    public Sprite hitlow2;
-    public Sprite knockeddown;
-    public Sprite knockeddown2;
+    public Sprite stunned1;
+    public Sprite stunned2;
+    public Sprite knockdown1;
+    public Sprite knockdown2;
+    public Sprite knockdown3;
     public Sprite getup;
     public Sprite getup2;
-    public Sprite dodge;
-    public Sprite dodge2;
+    public Sprite victory1;
+    public Sprite victory2;
 
     public bool punching = false;
     public bool blockinglow = true;
@@ -97,7 +105,9 @@ public class baldbull : enemy
                 action = "special";
             }else */if(randint<2){
                 action = "upper";
-            }else if(randint<6){
+            }else if (randint<4){
+                action = "hook";
+            }else if(randint<8){
                 action = "normalPunch";
             }
         }
@@ -107,6 +117,8 @@ public class baldbull : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
+            }else if (action.Equals("hook")){
+                hook();
             }/*else if(action.Equals("special")){
                 specialing = true;
                 special();
@@ -141,12 +153,12 @@ public class baldbull : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
-                    spriteRenderer.sprite = normalup3;
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
+                    spriteRenderer.sprite = normal3;
                 }else{
-                    spriteRenderer.sprite = normalup;
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -159,26 +171,19 @@ public class baldbull : enemy
     private bool temp1;
     private bool temp2;
     void normalPunch(){
-        
         if(count == 0){
             specialing = true;
-            spriteRenderer.sprite = normal;
+            spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
         }else if(count == 1){
-            spriteRenderer.sprite = normal2;
+            spriteRenderer.sprite = prepunch2;
             count++;
         }else if(count == 2){
-            spriteRenderer.sprite = normalup;
+            spriteRenderer.sprite = prepunch3;
             count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = punchclue;
-            count++;
-        }else if (count == 4){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if( count == 5){
+        }else if( count == 3){
             punching = true;
             spriteRenderer.sprite = punch;
             count++;
@@ -191,14 +196,60 @@ public class baldbull : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 10){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 10){
+                counter = false;
+                spriteRenderer.sprite = normal;
+                count = 0;
+                action = "";  
+                blockinghigh = true;
+                blockinglow = true;  
+        }
+    }
+
+    void hook(){
+        if(count == 0){
+            specialing = true;
+            spriteRenderer.sprite = prehook;
+            count++;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
+        }else if(count == 1){
+            spriteRenderer.sprite = prehook2;
+            count++;
+        }else if(count == 2){
+            spriteRenderer.sprite = prehook3;
+            count++;
+        }else if (count == 3){
+            spriteRenderer.sprite = midhook;
+            count++;
+        }else if( count == 3){
+            punching = true;
+            spriteRenderer.sprite = righthook;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+                lm.action = "hit";
+                lm.rb.position = lm.fp;
+            }
+        }else if (count < 10){
+            specialing = false;
+            punching = false;
+            counter = true;
+            count++;
+            blockinghigh = false;
+            blockinglow = true;
+        }else if(count == 10){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -213,17 +264,17 @@ public class baldbull : enemy
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
-            spriteRenderer.sprite = preupper;
+            spriteRenderer.sprite = preupper1;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = upperclue;
+            spriteRenderer.sprite = preupper2;
             count++;
         }else if (count == 2){
             spriteRenderer.sprite = midupper;
             count++;
         }else if (count ==3 ){
             punching = true;
-            spriteRenderer.sprite = upperend;
+            spriteRenderer.sprite = uppercut;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -311,9 +362,6 @@ public class baldbull : enemy
         if(count == 0){
             spriteRenderer.sprite = blocklow;
             count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blocklow2;
-            count++;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -326,9 +374,6 @@ public class baldbull : enemy
         specialing = false;
         if(count == 0){
             spriteRenderer.sprite = blockhigh;
-            count++;
-        }if(count == 1){
-            spriteRenderer.sprite = blockhigh2;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -344,8 +389,6 @@ public class baldbull : enemy
         if(count <= 2){
             spriteRenderer.sprite = hitlow;
             count++;
-        }else if( count < 4){
-            spriteRenderer.sprite = hitlow2;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
@@ -393,7 +436,11 @@ public class baldbull : enemy
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            if(spriteRenderer.sprite == stunned1){
+                spriteRenderer.sprite = stunned2;
+            }else{
+                spriteRenderer.sprite = stunned1;
+            }
         }else{
             action = "";
             spriteRenderer.sprite = normal;
@@ -407,10 +454,13 @@ public class baldbull : enemy
         hits = 7;
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = knockeddown;
+            spriteRenderer.sprite = knockdown1;
             count++;
+        }else if(count<=5){
+            count++;
+            spriteRenderer.sprite = knockdown2;
         }else{
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown3;
             action = "getUp";
             lm.action = "";
             if(timesdown >=3){
@@ -426,7 +476,7 @@ public class baldbull : enemy
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == knockeddown2&&randint<40){
+        if(spriteRenderer.sprite == knockdown3&&randint<40){
             action = "getUp";
             spriteRenderer.sprite = getup;
         }else if (spriteRenderer.sprite == getup&&randint<80){
@@ -441,7 +491,7 @@ public class baldbull : enemy
             mar.count = 0;
         }else{
             action = "wait";
-            spriteRenderer.sprite = knockeddown2;
+            spriteRenderer.sprite = knockdown3;
             mar.action = "ecount";
         }
     }
@@ -450,12 +500,12 @@ public class baldbull : enemy
     public override void win(){
         action = "win";
         mar.action = "wait";
-        // if(count <= 3){
-        //     spriteRenderer.sprite = victory;
-        //     count++;
-        // }else{
-        //     spriteRenderer.sprite = victory2;
-        // }
+        if(count <= 3){
+            spriteRenderer.sprite = victory1;
+            count++;
+        }else{
+            spriteRenderer.sprite = victory2;
+        }
     }
 
     public void redo(){
@@ -551,6 +601,6 @@ public class baldbull : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = knockeddown2;
+        spriteRenderer.sprite = knockdown3;
     }
 }
