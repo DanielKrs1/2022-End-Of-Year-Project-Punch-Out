@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pistonhonda : enemy
-{
+public class pistonhonda : MonoBehaviour
+{/*
     // Start is called before the first frame update
     public Sprite normal;
     public Sprite normal2;
@@ -67,6 +67,9 @@ public class pistonhonda : enemy
     public int highhits = 0;
 
     public int timesdown = 2;
+    public int punchcount = 0;
+    public int hookupper = 0;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -86,16 +89,16 @@ public class pistonhonda : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        // if(lowhits == 3){
-        //     blockinglow = true;
-        //     blockinghigh = false;
-        //     lowhits = 0;
-        // }
-        // if(highhits == 3){
-        //     blockinghigh = true;
-        //     blockinglow = false;
-        //     highhits = 0;
-        // }
+        if(lowhits == 1){
+            blockinglow = true;
+            blockinghigh = false;
+            lowhits = 0;
+        }
+        if(highhits == 1){
+            blockinghigh = true;
+            blockinglow = false;
+            highhits = 0;
+        }
         //var rand = new Random();
         moveSpeed = 1f;
         //lastPos = transform.position;
@@ -104,23 +107,8 @@ public class pistonhonda : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            /*if(randint == 1){
-                action = "special";
-            }else if(randint<2){
-                action = "upper";
-            }else */if(randint<6){
-                action = "right";
-            }else if (randint<8){
+            if(randint<40){
                 action = "normalPunch";
-            }
-            if(timesdown >1){
-                if(randint < 5){
-                    action = "special";
-                }else if(randint<20){
-                    action = "normalPunch";
-                }else if (randint<40){
-                    action = "normalPunch";
-                }
             }
         }
 
@@ -165,13 +153,29 @@ public class pistonhonda : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup3;
-                }else if(spriteRenderer.sprite == normalup3){
-                    spriteRenderer.sprite = normal3;
+                if(blockinghigh){
+                    if(spriteRenderer.sprite == normalup){
+                        spriteRenderer.sprite = normalup2;
+                    }else if(spriteRenderer.sprite == normalup2){
+                        spriteRenderer.sprite = normalup3;
+                    }else{
+                        spriteRenderer.sprite = normalup;
+                    }    
                 }else{
-                    spriteRenderer.sprite = normalup;
-                }
+                    if(spriteRenderer.sprite == normal){
+                        spriteRenderer.sprite = normal2;
+                    }else if(spriteRenderer.sprite == normal2){
+                        spriteRenderer.sprite = normal3;
+                    }else if(spriteRenderer.sprite == normal3){
+                        spriteRenderer.sprite = normal4;
+                    }else if(spriteRenderer.sprite == normal4){
+                        spriteRenderer.sprite = normal5;
+                    }else if(spriteRenderer.sprite == normal5){
+                        spriteRenderer.sprite = normal6;
+                    }else{
+                        spriteRenderer.sprite = normalup;
+                    }
+                }                
             }  
              
         }
@@ -184,6 +188,7 @@ public class pistonhonda : enemy
     private bool temp2;
     void normalPunch(){
         if(count == 0){
+            punchcount++;
             specialing = true;
             spriteRenderer.sprite = normal2;
             count++;
@@ -222,14 +227,26 @@ public class pistonhonda : enemy
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
-                action = "";  
                 blockinghigh = true;
                 blockinglow = true;  
+                if(punchcount == 1){
+                    count = 0;
+                    action = "normalPunch";
+                }else if (punchcount == 2){
+                    punchcount = 0;
+                    randint = Random.Range(0,100);
+                    if(randint<75){
+                        action = "hook";
+                    }else{
+                        action = "";
+                    }
+                }
         }
     }
 
     void hook(){
         if(count == 0){
+            hookupper++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
             spriteRenderer.sprite = preright;
@@ -265,6 +282,18 @@ public class pistonhonda : enemy
                 action = "";  
                 blockinghigh = temp1;
                 blockinglow = temp2;  
+                if(hookupper == 1){
+                    count = 0;
+                    action = "normalPunch";
+                }else if (punchcount == 2){
+                    punchcount = 0;
+                    randint = Random.Range(0,100);
+                    if(randint<75){
+                        action = "hook";
+                    }else{
+                        action = "";
+                    }
+                }
         }
     }
 
@@ -452,6 +481,18 @@ public class pistonhonda : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            if(punchcount == 1){
+                    count = 0;
+                    action = "normalPunch";
+                }else if (punchcount == 2){
+                    punchcount = 0;
+                    randint = Random.Range(0,100);
+                    if(randint<75){
+                        action = "hook";
+                    }else{
+                        action = "";
+                    }
+                }
         }
     }
 
@@ -605,5 +646,5 @@ public class pistonhonda : enemy
     {
         action = "wait";
         spriteRenderer.sprite = down;
-    }
+    }*/
 }

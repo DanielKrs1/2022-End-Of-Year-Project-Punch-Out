@@ -31,15 +31,16 @@ public class PointKeeper : MonoBehaviour
         //pointLoader.sprite = digit2;
         //changeSprite(2);
         
-        //points = 365;
+        points = 365;
         changeSprite(4);
         //new1 = 
     }
 
     // Update is called once per frame
+
     void updatePoints(int number){
         points+=number;
-        
+        changeSprite(points);
     }
 
    private int[] SeperatedDigit(int score)

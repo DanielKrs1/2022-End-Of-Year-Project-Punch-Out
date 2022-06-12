@@ -54,6 +54,7 @@ public class vonkaiser : enemy
 
     public int lowhits = 0;
     public int highhits = 0;
+    public int secondupper = 0;
 
     public int timesdown = 2;
     void Start()
@@ -93,16 +94,8 @@ public class vonkaiser : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(timesdown>0){
-                if(randint<30){
-                    action = "upper";
-                }else if(randint<35){
-                    action = "normalPunch";
-                }
-            }else{
-                if(randint<10){
-                    action = "normalPunch";
-                }
+            if(randint<45){
+                action = "normalPunch";
             }
         }
 
@@ -225,6 +218,7 @@ public class vonkaiser : enemy
 
     void upper(){
         if(count == 0){
+            secondupper++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
@@ -260,7 +254,11 @@ public class vonkaiser : enemy
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
-                action = "";    
+                if(secondupper <2){
+                    secondupper++;     
+                }else{
+                    secondupper = 0;
+                }
                 blockinghigh = true;
                 blockinglow = true;
         }
@@ -414,6 +412,11 @@ public class vonkaiser : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            if(secondupper==1){
+                action = "upper";
+            }else{
+                secondupper =0;
+            }
         }
     }
 
@@ -454,6 +457,7 @@ public class vonkaiser : enemy
             lm.action = "";
             mar.action = "";
             mar.count = 0;
+            action = "upper";
         }else{
             action = "wait";
             spriteRenderer.sprite = knockeddown2;

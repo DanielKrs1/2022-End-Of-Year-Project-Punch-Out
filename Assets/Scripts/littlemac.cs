@@ -75,10 +75,10 @@ public class littlemac : MonoBehaviour
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
         }else if(found == false){
-            en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
+            //en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
         if(en != null&&found==false){
-            en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
+            //en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
             found = true;
         }else if(found==false){
             en = GameObject.Find("enemy").GetComponent("donflamenco") as enemy;
