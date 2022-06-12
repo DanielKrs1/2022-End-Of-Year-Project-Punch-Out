@@ -52,6 +52,7 @@ public class donflamenco : enemy
     public littlemac lm;
     public mario mar;
 
+    public bool douppers = false;
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
     Vector2 movement;
@@ -59,12 +60,12 @@ public class donflamenco : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 290;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -101,20 +102,20 @@ public class donflamenco : enemy
             frame = 0;
         }
         if(frame%10==0&&action.Length<2){
-            var randint = Random.Range(0, 100);
-            /*if(randint == 1){
-                action = "special";
-            }else */if(randint<2){
-                action = "upper";
-            }else if(randint<6){
-                action = "normalPunch";
-            }
+            // var randint = Random.Range(0, 100);
+            // /*if(randint == 1){
+            //     action = "special";
+            // }else */if(randint<2){
+            //     action = "upper";
+            // }else if(randint<6){
+            //     action = "normalPunch";
+            // }
         }
 
         if(frame%10==0){
             if(action.Equals("normalPunch")){
                 normalPunch();
-            }else if(action.Equals("upper")){
+            }else if(action.Equals("upper")||douppers){
                 upper();
             }/*else if(action.Equals("special")){
                 specialing = true;
@@ -182,7 +183,7 @@ public class donflamenco : enemy
     void normalPunch(){
         
         if(count == 0){
-            specialing = true;
+            //specialing = true;
             spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
@@ -198,7 +199,7 @@ public class donflamenco : enemy
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=14f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -227,13 +228,15 @@ public class donflamenco : enemy
         if(count == 0){
             temp1 = blockinghigh;
             temp2 = blockinglow;
-            specialing = true;
+            //specialing = true;
             spriteRenderer.sprite = preupper1;
             count++;
         }else if (count == 1){
             spriteRenderer.sprite = preupper2;
+            blockinglow = false;
             count++;
         }else if (count == 2){
+            blockinglow = true;
             spriteRenderer.sprite = preupper2clue;
             count++;
         }else if (count == 3){
@@ -247,13 +250,20 @@ public class donflamenco : enemy
             spriteRenderer.sprite = uppercut;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=22f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if (lm.blocking){
+                lm.health-=14;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+            }else{
+                douppers = false;
             }
         }else if (count < 12){
             specialing = false;
@@ -335,7 +345,7 @@ public class donflamenco : enemy
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
-            action = "";
+            action = "upper";
         }
     }
 
@@ -348,7 +358,7 @@ public class donflamenco : enemy
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
-            action = "";
+            action = "upper";
         }
     }
 
@@ -451,7 +461,8 @@ public class donflamenco : enemy
             health = 210;
             spriteRenderer.sprite = normal;
             count = 0;
-            action = "";
+            action = "upper";
+            douppers = true;
             lm.action = "";
             mar.action = "";
             mar.count = 0;

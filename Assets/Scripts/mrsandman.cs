@@ -60,12 +60,12 @@ public class mrsandman : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 350;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -105,11 +105,11 @@ public class mrsandman : enemy
             var randint = Random.Range(0, 100);
             /*if(randint == 1){
                 action = "special";
-            }else */if(randint<2){
+            }else */if(randint<5){
                 action = "upper";
-            }else if (randint<4){
+            }else if (randint<10){
                 action = "hook";
-            }else if(randint<8){
+            }else if(randint<25){
                 action = "normalPunch";
             }
         }
@@ -190,7 +190,7 @@ public class mrsandman : enemy
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=6f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -201,7 +201,8 @@ public class mrsandman : enemy
         }else if (count < 10){
             specialing = false;
             punching = false;
-            counter = true;
+            counter = false;
+            blockinghigh = false;
             count++;
             blockinghigh = false;
             blockinglow = true;
@@ -214,9 +215,10 @@ public class mrsandman : enemy
                 blockinglow = true;  
         }
     }
-
+    public bool fromhook = false;
     void hook(){
         if(count == 0){
+            fromhook = true;
             specialing = true;
             spriteRenderer.sprite = prehook;
             count++;
@@ -236,7 +238,7 @@ public class mrsandman : enemy
             spriteRenderer.sprite = righthook;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=17f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -247,7 +249,7 @@ public class mrsandman : enemy
         }else if (count < 11){
             specialing = false;
             punching = false;
-            counter = true;
+            //counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
@@ -261,8 +263,10 @@ public class mrsandman : enemy
         }
     }
 
+    int times = 0;
     void upper(){
         if(count == 0){
+            times++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
@@ -285,19 +289,30 @@ public class mrsandman : enemy
                 lm.rb.position = lm.fp;
             }
         }else if (count < 9){
-            specialing = false;
-            punching = false;
-            counter = true;
-            count++;      
-            blockinghigh = false;
-            blockinglow = true;
+            if(times!=3){
+                count = 8;
+            }else{
+                specialing = false;
+                punching = false;
+                counter = true;
+                hits = 4;
+                count++;      
+                blockinghigh = true;
+                blockinglow = false;    
+            }
+            
         }else if(count == 9){
+            if(times ==3){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
                 action = "";    
                 blockinghigh = true;
                 blockinglow = true;
+                times = 0;
+            }else{
+                count = 0;
+            }
         }
     }
 
@@ -397,6 +412,11 @@ public class mrsandman : enemy
 
     public override void rightHit(){
         highhits++;
+        if(fromhook){
+            counter = true;
+            blockinghigh = true;
+            blockinglow = false;
+        }
         action = "rightHit";
         spriteRenderer.flipX = true;
         if(count == 0){
@@ -415,6 +435,11 @@ public class mrsandman : enemy
 
     public override void leftHit(){
         highhits++;
+        if(fromhook){
+            counter = true;
+            blockinghigh = true;
+            blockinglow = false;
+        }
         action = "leftHit";
         if(count == 0){
             spriteRenderer.sprite = hithigh;

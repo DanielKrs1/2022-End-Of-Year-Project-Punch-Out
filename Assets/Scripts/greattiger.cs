@@ -45,6 +45,8 @@ public class greattiger : enemy
     public bool counter = false;
     public littlemac lm;
     public mario mar;
+    public Timer tim;
+    public int time;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -53,12 +55,12 @@ public class greattiger : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 310;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -71,6 +73,7 @@ public class greattiger : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -95,15 +98,33 @@ public class greattiger : enemy
         if(frame == 119){
             frame = 0;
         }
+        time = tim.getTime();
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(randint == 1){
-                action = "special";
-            }else if(randint<2){
+            // if(randint == 1){
+            //     action = "special";
+            // }else if(randint<2){
+            //     action = "upper";
+            // }else if(randint<6){
+            //     action = "normalPunch";
+            // }
+            if(time>420){
                 action = "upper";
-            }else if(randint<6){
-                action = "normalPunch";
+            }else if(time >300){
+                if(randint < 20){
+                    action = "normalPunch";
+                }
+            }else if(time >100){
+                action = "upper";
+            }else{
+                if(randint < 20){
+                    action = "normalPunch";
+                }
             }
+        }
+
+        if(time==230||time==300||time==430){
+            action = "special";
         }
 
         if(frame%10==0){
@@ -168,7 +189,7 @@ public class greattiger : enemy
     void normalPunch(){
         if(count == 0){
             hits = 1;
-            specialing = true;
+            //specialing = true;
             spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
@@ -194,11 +215,14 @@ public class greattiger : enemy
                 lm.hit();
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
+            }if(lm.blocking){
+                counter = true;
+                hits = 5;
             }
         }else if (count < 11){
             specialing = false;
             punching = false;
-            counter = true;
+            //counter = false;
             count++;
             blockinghigh = false;
             blockinglow = true;
@@ -222,19 +246,24 @@ public class greattiger : enemy
             count++;
         }else if (count == 1){
             spriteRenderer.sprite = midupper;
+            blockinglow = false;
+            specialing = false;
             count++;
         }else if (count == 2){
             punching = true;
+            blockinglow = true;
             spriteRenderer.sprite = uppercut;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=15f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if(lm.blockBroken){
+                lm.health-=7f;
             }
         }else if (count < 9){
             specialing = false;
@@ -259,6 +288,7 @@ public class greattiger : enemy
             count++;
         }else if(count>=64){
             counter = true;
+            onehit = true;
             specialing = false;
             punching = false;
             blockinglow = true;
@@ -299,8 +329,8 @@ public class greattiger : enemy
             spriteRenderer.sprite = punch;
             movement.x = -1*moveSpeed;
             movement.y = -1*moveSpeed;
-            if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+            if(!lm.blocking){
+                lm.health -=13;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }

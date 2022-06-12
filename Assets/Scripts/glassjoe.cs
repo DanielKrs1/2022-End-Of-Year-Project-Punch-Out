@@ -50,8 +50,10 @@ public class glassjoe : enemy
     public bool specialing = false;
     public bool onehit = false;
     public bool counter = false;
+    public int time;
     public littlemac lm;
     public mario mar;
+    public Timer tim;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -65,7 +67,7 @@ public class glassjoe : enemy
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -78,6 +80,7 @@ public class glassjoe : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         blockinglow = true;
         blockinghigh = false;
     }
@@ -101,17 +104,18 @@ public class glassjoe : enemy
         if(frame == 119){
             frame = 0;
         }
+        time = tim.getTime();
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(randint == 1){
-                action = "special";
-            }else if(randint<2){
+            if(randint<7){
                 action = "upper";
-            }else if(randint<6){
+            }else if(randint<20){
                 action = "normalPunch";
             }
         }
-
+        if(time==40||time==330){
+            action = "special";
+        }
         if(frame%10==0){
             if(action.Equals("normalPunch")){
                 normalPunch();

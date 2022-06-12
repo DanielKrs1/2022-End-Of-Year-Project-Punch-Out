@@ -63,7 +63,7 @@ public class kinghippo : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 290;
 
     public int lowhits = 0;
     public int highhits = 0;
@@ -108,13 +108,13 @@ public class kinghippo : enemy
             var randint = Random.Range(0, 100);
             /*if(randint == 1){
                 action = "special";
-            }else */if(randint<2){
+            }else */if(randint<10){
                 if(Random.Range(0,10)<5){
                     action = "fullpunchl";    
                 }else{
                     action = "fullpunchr";
                 }                
-            }else if(randint<6){
+            }else if(randint<16){
                 if(Random.Range(0,10)<5){
                     action = "normalpunchl";    
                 }else{
@@ -273,7 +273,7 @@ public class kinghippo : enemy
             spriteRenderer.sprite = fullpunch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=27f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -317,13 +317,15 @@ public class kinghippo : enemy
             spriteRenderer.sprite = fullpunch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=48f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if(lm.blocking){
+                lm.health-=40f;
             }
         }else if (count < 10){
             specialing = false;

@@ -45,6 +45,8 @@ public class miketyson : enemy
     public bool counter = false;
     public littlemac lm;
     public mario mar;
+    public Timer tim;
+    public int time;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -53,12 +55,12 @@ public class miketyson : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 400;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -94,16 +96,34 @@ public class miketyson : enemy
         if(frame == 119){
             frame = 0;
         }
+        time = tim.getTime();
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            /*if(randint == 1){
-                action = "special";
-            }else */if(randint<2){
-                action = "upper";
-            }else if(randint<6){
-                action = "right";
-            }else if (randint<8){
+            // /*if(randint == 1){
+            //     action = "special";
+            // }else */if(randint<2){
+            //     action = "upper";
+            // }else if(randint<6){
+            //     action = "right";
+            // }else if (randint<8){
+            //     action = "normalPunch";
+            // }
+            if(time>330){
+                if(randint<60){
+                    action = "right";
+                }else if(randint<65){
+                    action = "upper";
+                }
+            }else if(time>300){
                 action = "normalPunch";
+            }else if(time>130){
+                if(randint<75){
+                    action = "right";
+                }
+            }else if(time>0){
+                if(randint<75){
+                    action = "upper";
+                }
             }
         }
 
@@ -169,7 +189,7 @@ public class miketyson : enemy
     private bool temp2;
     void normalPunch(){
         if(count == 0){
-            specialing = true;
+            //specialing = true;
             spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
@@ -179,21 +199,21 @@ public class miketyson : enemy
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=17f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.hit();
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
+            }if(lm.blocking){
+                blockinglow = false;
             }
         }else if (count < 8){
             specialing = false;
             punching = false;
-            counter = true;
+            //counter = true;
             count++;
-            blockinghigh = false;
-            blockinglow = true;
         }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
@@ -218,13 +238,14 @@ public class miketyson : enemy
             spriteRenderer.sprite = endhook;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=19f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.hit();
             }
         }else if (count < 9){
+            hits = 2;
             specialing = false;
             punching = false;
             counter = true;
@@ -260,15 +281,21 @@ public class miketyson : enemy
             spriteRenderer.sprite = endupper;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=100f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }if(lm.blocking){
+                lm.health -=90f;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
             }
         }else if (count < 11){
+            hits = 2;
             specialing = false;
             punching = false;
             counter = true;

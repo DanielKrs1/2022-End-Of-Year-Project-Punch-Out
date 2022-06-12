@@ -53,12 +53,12 @@ public class supermachoman : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 375;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -98,11 +98,11 @@ public class supermachoman : enemy
             var randint = Random.Range(0, 100);
             /*if(randint == 1){
                 action = "special";
-            }else */if(randint<2){
+            }else */if(randint<7){
                 action = "upper";
-            }else if (randint<4){
+            }else if (randint<15){
                 action = "hook";
-            }else if(randint<6){
+            }else if(randint<16){
                 action = "normalPunch";
             }
         }
@@ -176,15 +176,27 @@ public class supermachoman : enemy
         }else if(count == 1){
             spriteRenderer.sprite = punch2;
             count++;
-        }else if(count == 2){
+        }else if(count > 24){
+            if(count>=31){
+                counter = false;
+                spriteRenderer.sprite = normal;
+                count = 0;
+                action = "";  
+                blockinghigh = true;
+                blockinglow = true; 
+            }else{
+                specialing = false;
+                punching = false;
+                counter = true;
+                blockinghigh = false;
+                blockinglow = true;
+            } 
+        }else if( count %4 == 3){
+            punching = true;
             spriteRenderer.sprite = punch3;
             count++;
-        }else if( count == 3){
-            punching = true;
-            spriteRenderer.sprite = punch4;
-            count++;
-            if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+            if(!lm.dodging){
+                lm.health -=96;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -192,26 +204,15 @@ public class supermachoman : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
-            specialing = false;
-            punching = false;
-            counter = true;
+        }else if (count %4 ==0){
+            spriteRenderer.sprite = punch4;
             count++;
-            blockinghigh = false;
-            blockinglow = true;
-        }else if (count == 10){
+        }else if (count %4==1){
             spriteRenderer.sprite = punch5;
             count++;
-        }else if (count == 11){
+        }else if (count %4 == 2){
             spriteRenderer.sprite = punch6;
             count++;
-        }else if(count == 12){
-                counter = false;
-                spriteRenderer.sprite = normal;
-                count = 0;
-                action = "";  
-                blockinghigh = true;
-                blockinglow = true;  
         }
     }
 
@@ -230,7 +231,7 @@ public class supermachoman : enemy
             spriteRenderer.sprite = lefthook3;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=22f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -243,6 +244,7 @@ public class supermachoman : enemy
             punching = false;
             counter = true;
             count++;
+            hits = 4;
             blockinghigh = false;
             blockinglow = true;
         }else if(count == 9){
@@ -270,19 +272,25 @@ public class supermachoman : enemy
             spriteRenderer.sprite = leftup3;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=30;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if (lm.blocking){
+                lm.health -=22;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
             }
         }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
-            count++;      
+            count++;    
+            hits = 5;  
             blockinghigh = false;
             blockinglow = true;
         }else if(count == 9){

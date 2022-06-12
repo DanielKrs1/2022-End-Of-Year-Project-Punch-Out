@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pistonhonda : MonoBehaviour
-{/*
+public class pistonhonda : enemy
+{
     // Start is called before the first frame update
     public Sprite normal;
     public Sprite normal2;
@@ -53,6 +53,8 @@ public class pistonhonda : MonoBehaviour
     public bool counter = false;
     public littlemac lm;
     public mario mar;
+    public Timer tim;
+    public int time;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -61,12 +63,12 @@ public class pistonhonda : MonoBehaviour
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 330;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     public int punchcount = 0;
     public int hookupper = 0;
 
@@ -82,6 +84,7 @@ public class pistonhonda : MonoBehaviour
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -110,6 +113,12 @@ public class pistonhonda : MonoBehaviour
             if(randint<40){
                 action = "normalPunch";
             }
+        }
+
+        time = tim.getTime();
+
+        if(time == 100|| time == 240||time==320){
+            action = "special";
         }
 
         if(frame%10==0){
@@ -179,7 +188,8 @@ public class pistonhonda : MonoBehaviour
             }  
              
         }
-         
+        movement.y = 0F;
+        movement.x = 0F;
         frame++;  
     }
 
@@ -208,7 +218,7 @@ public class pistonhonda : MonoBehaviour
             spriteRenderer.sprite = punch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=100F/9;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -234,7 +244,7 @@ public class pistonhonda : MonoBehaviour
                     action = "normalPunch";
                 }else if (punchcount == 2){
                     punchcount = 0;
-                    randint = Random.Range(0,100);
+                    var randint = Random.Range(0,100);
                     if(randint<75){
                         action = "hook";
                     }else{
@@ -262,7 +272,7 @@ public class pistonhonda : MonoBehaviour
             spriteRenderer.sprite = followright;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=100F/9;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -274,7 +284,7 @@ public class pistonhonda : MonoBehaviour
             counter = true;
             count++;
             blockinghigh = false;
-            blockinglow = true;     
+            blockinglow = false;     
         }else if(count == 10){
                 counter = false;
                 spriteRenderer.sprite = normal;
@@ -284,21 +294,33 @@ public class pistonhonda : MonoBehaviour
                 blockinglow = temp2;  
                 if(hookupper == 1){
                     count = 0;
-                    action = "normalPunch";
-                }else if (punchcount == 2){
-                    punchcount = 0;
-                    randint = Random.Range(0,100);
+                    var  randint = Random.Range(0,100);
                     if(randint<75){
                         action = "hook";
                     }else{
+                        action = "upper";
+                    
+                    }
+                }else if (hookupper == 2){
+                    punchcount = 0;
+                    hookupper = 0;
+                    var randint = Random.Range(0,100);
+                    if(randint<75){
                         action = "";
+                        
+                    }else if(randint<90){
+                        action = "upper";
+                    }else{
+                        action = "hook";
                     }
                 }
+                    
         }
     }
 
     void upper(){
         if(count == 0){
+            hookupper++;
             specialing = true;
             spriteRenderer.sprite = preup;
             count++;
@@ -316,13 +338,18 @@ public class pistonhonda : MonoBehaviour
             spriteRenderer.sprite = up;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=20F;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if(lm.blocking){
+                lm.health -=100F/9;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
             }
         }else if (count < 10){
             specialing = false;
@@ -332,7 +359,7 @@ public class pistonhonda : MonoBehaviour
             temp1 = blockinghigh;
             temp2 = blockinglow;
             blockinghigh = false;
-            blockinglow = true;
+            blockinglow = false;
         }else if(count == 10){
                 counter = false;
                 spriteRenderer.sprite = normal;
@@ -340,15 +367,71 @@ public class pistonhonda : MonoBehaviour
                 action = "";    
                 blockinghigh = true;
                 blockinglow = true;
+                if(hookupper == 1){
+                    count = 0;
+                    var  randint = Random.Range(0,100);
+                    if(randint<75){
+                        action = "hook";
+                    }else{
+                        action = "upper";
+                    
+                    }
+                }else if (hookupper == 2){
+                    punchcount = 0;
+                    hookupper = 0;
+                    var randint = Random.Range(0,100);
+                    if(randint<75){
+                        action = "";
+                        
+                    }else if(randint<90){
+                        action = "upper";
+                    }else{
+                        action = "hook";
+                    }
+                }
         }
     }
 
     void special(){
-        if(count==80){
+        if(count == 1){
+            movement.y = moveSpeed;
+            count++;
+        }else if(count == 2){
+            movement.y = moveSpeed;
+            count++;
+        }else if(count == 3){
+            movement.x = moveSpeed;
+            spriteRenderer.sprite = forspecial3;
+            count++;
+        }else if (count <=7){
+            spriteRenderer.sprite = normal;
+            movement.x = -1*moveSpeed;
+            if(count ==7){
+                spriteRenderer.sprite = forspecial;
+            }
+            count++;
+        }else if(count<=10){
+            spriteRenderer.sprite = normal;
+            movement.x = moveSpeed;
+            count++;
+        }else if (count<=12){
+            onehit = true;
+            blockinglow = false;
+            movement.y = -1*moveSpeed;
+            count++;
+        }else if(count ==13){
+            count = 16;
+            onehit = false;
+            blockinghigh = true;
+            blockinglow = true;
+            special();
+        }
+        if(count==96){
             counter = false;
             specialing = false;
             punching = false;
             blockinglow = true;
+            blockinghigh = false;
             spriteRenderer.sprite = normal;
             count = 0;
             action = ""; 
@@ -367,7 +450,7 @@ public class pistonhonda : MonoBehaviour
             blockinglow = true;
             spriteRenderer.sprite = up;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=8F;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -387,7 +470,7 @@ public class pistonhonda : MonoBehaviour
             specialing = true;
             blockinglow = true;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=8F;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -486,7 +569,7 @@ public class pistonhonda : MonoBehaviour
                     action = "normalPunch";
                 }else if (punchcount == 2){
                     punchcount = 0;
-                    randint = Random.Range(0,100);
+                    var randint = Random.Range(0,100);
                     if(randint<75){
                         action = "hook";
                     }else{
@@ -494,6 +577,28 @@ public class pistonhonda : MonoBehaviour
                     }
                 }
         }
+        if(hookupper == 1){
+            count = 0;
+            var  randint = Random.Range(0,100);
+            if(randint<75){
+                action = "hook";
+            }else{
+                action = "upper";
+            
+            }
+        }else if (hookupper == 2){
+            punchcount = 0;
+            hookupper = 0;
+            var randint = Random.Range(0,100);
+            if(randint<75){
+                action = "";
+                
+            }else if(randint<90){
+                action = "upper";
+            }else{
+                action = "hook";
+            }
+                }
     }
 
     public override void knockDown(){
@@ -646,5 +751,5 @@ public class pistonhonda : MonoBehaviour
     {
         action = "wait";
         spriteRenderer.sprite = down;
-    }*/
+    }
 }

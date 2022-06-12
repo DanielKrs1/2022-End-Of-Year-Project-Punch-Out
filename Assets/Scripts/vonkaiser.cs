@@ -56,7 +56,7 @@ public class vonkaiser : enemy
     public int highhits = 0;
     public int secondupper = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

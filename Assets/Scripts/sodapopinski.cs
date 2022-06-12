@@ -52,12 +52,12 @@ public class sodapopinski : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 350;
 
     public int lowhits = 0;
     public int highhits = 0;
 
-    public int timesdown = 2;
+    public int timesdown = 0;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -97,11 +97,11 @@ public class sodapopinski : enemy
             var randint = Random.Range(0, 100);
             /*if(randint == 1){
                 action = "special";
-            }else */if(randint<2){
+            }else */if(randint<5){
                 action = "upper";
-            }else if (randint<4){
+            }else if (randint<15){
                 action = "hook";
-            }else if(randint<6){
+            }else if(randint<30){
                 action = "normalPunch";
             }
         }
@@ -183,7 +183,7 @@ public class sodapopinski : enemy
             spriteRenderer.sprite = punch4;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=16;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -192,6 +192,7 @@ public class sodapopinski : enemy
                 lm.rb.position = lm.fp;
             }
         }else if (count < 10){
+            hits = 3;
             specialing = false;
             punching = false;
             counter = true;
@@ -210,20 +211,22 @@ public class sodapopinski : enemy
 
     void hook(){
         if(count == 0){
-            specialing = true;
+            //specialing = true;
             spriteRenderer.sprite = lefthook;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
         }else if(count == 1){
             spriteRenderer.sprite = lefthook2;
+            blockinghigh  = false;
             count++;
         }else if( count == 2){
+            blockinghigh = true;
             punching = true;
             spriteRenderer.sprite = lefthook3;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=19f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
@@ -232,6 +235,7 @@ public class sodapopinski : enemy
                 lm.rb.position = lm.fp;
             }
         }else if (count < 9){
+            hits = 5;
             specialing = false;
             punching = false;
             counter = true;
@@ -252,10 +256,12 @@ public class sodapopinski : enemy
         if(count == 0){
             temp1 = blockinghigh;
             temp2 = blockinglow;
+            blockinglow = false;
             specialing = true;
             spriteRenderer.sprite = leftup;
             count++;
         }else if (count == 1){
+            blockinglow = true;
             spriteRenderer.sprite = leftup2;
             count++;
         }else if (count == 2){
@@ -263,15 +269,21 @@ public class sodapopinski : enemy
             spriteRenderer.sprite = leftup3;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
+                lm.health -=27;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if (lm.blocking){
+                lm.health -=19;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
             }
         }else if (count < 9){
+            hits = 6;
             specialing = false;
             punching = false;
             counter = true;

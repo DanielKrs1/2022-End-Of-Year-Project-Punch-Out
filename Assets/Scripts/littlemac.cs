@@ -239,6 +239,8 @@ public class littlemac : MonoBehaviour
                 fram2 = 0;
             }
         }
+        movement.x = 0f;
+        movement.y = 0f;
         frame++;  
         fram2++;
     }
@@ -547,6 +549,8 @@ public class littlemac : MonoBehaviour
     public int count;
     public void hit(){
         rb.position = fp;
+        movement.x = 0f;
+        movement.y = 0f;
         action = "hit";
         en.setCounter(false);
         if(count<2){
