@@ -2,52 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pistonhonda : enemy
+public class mrsandman : enemy
 {
     // Start is called before the first frame update
+    public Sprite move1;
+    public Sprite move2;
+    public Sprite move3;
+    public Sprite move4;
+    public Sprite move5;
+    public Sprite move6;
     public Sprite normal;
     public Sprite normal2;
     public Sprite normal3;
-    public Sprite normal4;
-    public Sprite normal5;
-    public Sprite normal6;
-    public Sprite normalr;
-    public Sprite normalr2;
-    public Sprite normalr3;
-    public Sprite normalup;
-    public Sprite normalup2;
-    public Sprite normalup3;
-    public Sprite blockup;
+    public Sprite prepunch;
+    public Sprite prepunch2;
+    public Sprite prepunch3;
+    public Sprite punch;
+    public Sprite prehook;
+    public Sprite prehook2;
+    public Sprite prehook3;
+    public Sprite midhook;
+    public Sprite righthook;
+    public Sprite preupper1;
+    public Sprite midupper;
+    public Sprite uppercut;
+    public Sprite blockhigh;
     public Sprite blocklow;
-    public Sprite dodge;
     public Sprite hithigh;
     public Sprite hithigh2;
-    public Sprite dodgeHit;
     public Sprite hitlow;
-    public Sprite preright;
-    public Sprite clueright;
-    public Sprite punchright;
-    public Sprite followright;
-    public Sprite preup;
-    public Sprite clueup;
-    public Sprite midup;
-    public Sprite midup2;
-    public Sprite up;
-    public Sprite punchclue;
-    public Sprite punchclue2;
-    public Sprite punch;
-    public Sprite falldown;
-    public Sprite falldown2;
-    public Sprite down;
+    public Sprite stunned1;
+    public Sprite stunned2;
+    public Sprite knockdown1;
+    public Sprite knockdown2;
+    public Sprite knockdown3;
     public Sprite getup;
-    public Sprite forspecial;
-    public Sprite forspecial2;
-    public Sprite forspecial3;
-    public Sprite forspecial4;
+    public Sprite special1;
+    public Sprite special2;
+    public Sprite special3;
+    public Sprite getup2;
+    public Sprite victory1;
+    public Sprite victory2;
 
     public bool punching = false;
     public bool blockinglow = true;
-    public bool blockinghigh = true;
+    public bool blockinghigh = false;
     public bool specialing = false;
     public bool onehit = false;
     public bool counter = false;
@@ -104,13 +103,13 @@ public class pistonhonda : enemy
         }
         if(frame%10==0&&action.Length<2){
             var randint = Random.Range(0, 100);
-            if(randint == 1){
+            /*if(randint == 1){
                 action = "special";
-            }else if(randint<2){
+            }else */if(randint<2){
                 action = "upper";
-            }else if(randint<6){
-                action = "right";
-            }else if (randint<8){
+            }else if (randint<4){
+                action = "hook";
+            }else if(randint<8){
                 action = "normalPunch";
             }
         }
@@ -120,13 +119,13 @@ public class pistonhonda : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
-            }else if (action.Equals("right")){
+            }else if (action.Equals("hook")){
                 hook();
-            }else if(action.Equals("special")){
+            }/*else if(action.Equals("special")){
                 specialing = true;
                 special();
                 rb.MovePosition(rb.position+movement);//*Time.deltaTime);  
-            }else if(action.Equals("blockLow")){
+            }*/else if(action.Equals("blockLow")){
                 counter = false;
                 blockLow();
             }else if(action.Equals("blockHigh")){
@@ -156,12 +155,12 @@ public class pistonhonda : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
-                    spriteRenderer.sprite = normalup3;
-                }else if(spriteRenderer.sprite == normalup3){
+                if(spriteRenderer.sprite == normal){
+                    spriteRenderer.sprite = normal2;
+                }else if(spriteRenderer.sprite == normal2){
                     spriteRenderer.sprite = normal3;
                 }else{
-                    spriteRenderer.sprite = normalup;
+                    spriteRenderer.sprite = normal;
                 }
             }  
              
@@ -176,22 +175,65 @@ public class pistonhonda : enemy
     void normalPunch(){
         if(count == 0){
             specialing = true;
-            spriteRenderer.sprite = normal2;
+            spriteRenderer.sprite = prepunch;
             count++;
             temp1 = blockinghigh;
             temp2 = blockinglow;
         }else if(count == 1){
-            spriteRenderer.sprite = punchclue;
+            spriteRenderer.sprite = prepunch2;
             count++;
         }else if(count == 2){
-            spriteRenderer.sprite = punchclue2;
+            spriteRenderer.sprite = prepunch3;
             count++;
-        }else if(count == 3){
-            spriteRenderer.sprite = normalup3;
-            count++;
-        }else if (count == 4){
+        }else if( count == 3){
             punching = true;
             spriteRenderer.sprite = punch;
+            count++;
+            if(!lm.blocking && !lm.dodging){
+                lm.health -=10;
+                if(lm.health<=0){
+                    lm.knockeddown();
+                }
+                lm.hit();
+                lm.action = "hit";
+                lm.rb.position = lm.fp;
+            }
+        }else if (count < 10){
+            specialing = false;
+            punching = false;
+            counter = true;
+            count++;
+            blockinghigh = false;
+            blockinglow = true;
+        }else if(count == 10){
+                counter = false;
+                spriteRenderer.sprite = normal;
+                count = 0;
+                action = "";  
+                blockinghigh = true;
+                blockinglow = true;  
+        }
+    }
+
+    void hook(){
+        if(count == 0){
+            specialing = true;
+            spriteRenderer.sprite = prehook;
+            count++;
+            temp1 = blockinghigh;
+            temp2 = blockinglow;
+        }else if(count == 1){
+            spriteRenderer.sprite = prehook2;
+            count++;
+        }else if(count == 2){
+            spriteRenderer.sprite = prehook3;
+            count++;
+        }else if (count == 3){
+            spriteRenderer.sprite = midhook;
+            count++;
+        }else if( count == 4){
+            punching = true;
+            spriteRenderer.sprite = righthook;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -219,63 +261,19 @@ public class pistonhonda : enemy
         }
     }
 
-    void hook(){
+    void upper(){
         if(count == 0){
             temp1 = blockinghigh;
             temp2 = blockinglow;
-            spriteRenderer.sprite = preright;
-            count++;
-        }else if (count == 1){
-            spriteRenderer.sprite = clueright;
-            count++;
-        }else if (count == 2){
-            spriteRenderer.sprite = punchright;
-            count++;
-        }else if (count ==3 ){
-            punching = true;
-            spriteRenderer.sprite = followright;
-            count++;
-            if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
-                    lm.knockeddown();
-                }
-                lm.hit();
-            }
-        }else if (count < 10){
-            specialing = false;
-            punching = false;
-            counter = true;
-            count++;
-            blockinghigh = false;
-            blockinglow = true;     
-        }else if(count == 10){
-                counter = false;
-                spriteRenderer.sprite = normal;
-                count = 0;
-                action = "";  
-                blockinghigh = temp1;
-                blockinglow = temp2;  
-        }
-    }
-
-    void upper(){
-        if(count == 0){
             specialing = true;
-            spriteRenderer.sprite = preup;
+            spriteRenderer.sprite = preupper1;
             count++;
         }else if (count == 1){
-            spriteRenderer.sprite = clueup;
+            spriteRenderer.sprite = midupper;
             count++;
-        }else if (count == 2){
-            spriteRenderer.sprite = midup;
-            count++;
-        }else if (count == 3){
-            spriteRenderer.sprite = midup2;
-            count++;
-        }else if (count ==4 ){
+        }else if (count ==2 ){
             punching = true;
-            spriteRenderer.sprite = up;
+            spriteRenderer.sprite = uppercut;
             count++;
             if(!lm.blocking && !lm.dodging){
                 lm.health -=10;
@@ -286,16 +284,14 @@ public class pistonhonda : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
-            temp1 = blockinghigh;
-            temp2 = blockinglow;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -305,58 +301,60 @@ public class pistonhonda : enemy
         }
     }
 
-    void special(){
-        if(count==80){
-            counter = false;
-            specialing = false;
-            punching = false;
-            blockinglow = true;
+    /*void special(){
+        if(count == 0){
+            specialing = true;
+            movement.x = 0f;
+            movement.y = 1*moveSpeed;
+            spriteRenderer.sprite = normal3;
+            count++;
+        }else if (count == 1){
+            movement.y = 0f;
             spriteRenderer.sprite = normal;
-            count = 0;
-            action = ""; 
-        }else if(count%16 == 0){
-            specialing = false;
-            punching = false;
-            counter = true;
-            blockinglow = false;
-            count++; 
-            spriteRenderer.sprite = forspecial;
-        }else if (count%16 == 4){
-            specialing = true;
-            spriteRenderer.sprite = forspecial2;
             count++;
-            punching = true;
-            blockinglow = true;
-            spriteRenderer.sprite = up;
-            if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
-                    lm.knockeddown();
-                }
-                lm.hit();
-            }
-        }else if (count%16 == 8){
-            specialing = false;
-            punching = false;
-            counter = true;
-            blockinglow = false;
-            count++; 
-            spriteRenderer.sprite = forspecial3;
-        }else if (count%16 == 12){
-            spriteRenderer.sprite = forspecial4;
+        }else if (count ==2){
+            spriteRenderer.sprite = normal3;
             count++;
-            punching = true;
-            specialing = true;
-            blockinglow = true;
-            if(!lm.blocking && !lm.dodging){
-                lm.health -=10;
-                if(lm.health<=0){
-                    lm.knockeddown();
-                }
-                lm.hit();
+        }else if (count == 3){
+            spriteRenderer.sprite = move6;
+            count++;
+        }else if (count == 4){
+            spriteRenderer.sprite = normal3;
+            count++;
+        }else if (count == 5){
+            spriteRenderer.sprite = prepunch;
+            count++;
+        }else if(count == 6){
+            spriteRenderer.sprite = midpunch;
+            count++;
+        }else if (count == 7){
+            spriteRenderer.sprite = prepunch;
+            count++;
+        }else if (count ==8){
+            spriteRenderer.sprite = normal3;
+            count++;
+        }else if (count == 9){
+            specialing = false;
+            onehit = true;
+            spriteRenderer.sprite = normald;
+            count++;
+            movement.x = 0f;
+            movement.y = -1*moveSpeed;
+            rb.position  = fp;
+            spriteRenderer.sprite = normal3;
+            count++;
+        }else{
+            //specialing = false;
+            specialing = false;
+            movement.y = 0f;
+            onehit = false;
+            count-=10;
+            upper();
+            if(count!=0){
+                count+=10;
             }
         }
-    }
+    }*/
 
     public override void blockLow(){
         action = "blockLow";
@@ -374,7 +372,7 @@ public class pistonhonda : enemy
         action = "blockHigh";
         specialing = false;
         if(count == 0){
-            spriteRenderer.sprite = blockup;
+            spriteRenderer.sprite = blockhigh;
             count++;
         }else{
             spriteRenderer.sprite = normal;
@@ -408,8 +406,8 @@ public class pistonhonda : enemy
             spriteRenderer.sprite = hithigh2;
             count++;
         }else{
-            spriteRenderer.flipX = false;
             spriteRenderer.sprite = normal;
+            spriteRenderer.flipX = false;
             count = 0;
             action = "";
         }
@@ -437,8 +435,14 @@ public class pistonhonda : enemy
         action = "hitAfterDodge";
         stunned = true;
         if(hits>0){
-            spriteRenderer.sprite = dodgeHit;
+            blockinglow = false;
+            if(spriteRenderer.sprite == stunned1){
+                spriteRenderer.sprite = stunned2;
+            }else{
+                spriteRenderer.sprite = stunned1;
+            }
         }else{
+            blockinglow = true;
             action = "";
             spriteRenderer.sprite = normal;
             hits = 7;
@@ -451,13 +455,13 @@ public class pistonhonda : enemy
         hits = 7;
         action = "knockDown";
         if(count <=2){
-            spriteRenderer.sprite = falldown;
+            spriteRenderer.sprite = knockdown1;
             count++;
-        }else if (count <=5){
-            spriteRenderer.sprite = falldown2;
+        }else if(count<=5){
             count++;
+            spriteRenderer.sprite = knockdown2;
         }else{
-            spriteRenderer.sprite = down;
+            spriteRenderer.sprite = knockdown3;
             action = "getUp";
             lm.action = "";
             if(timesdown >=3){
@@ -471,11 +475,14 @@ public class pistonhonda : enemy
 
     public override void getUp(){
         mar.action = "wait";
+        action = "getUp";
         var randint = Random.Range(0, 100);
-        if(spriteRenderer.sprite == down&&randint<40){
+        if(spriteRenderer.sprite == knockdown3&&randint<40){
             action = "getUp";
             spriteRenderer.sprite = getup;
         }else if (spriteRenderer.sprite == getup&&randint<80){
+            spriteRenderer.sprite = getup2;
+        }else if(spriteRenderer.sprite == getup2){
             health = 210;
             spriteRenderer.sprite = normal;
             count = 0;
@@ -485,7 +492,7 @@ public class pistonhonda : enemy
             mar.count = 0;
         }else{
             action = "wait";
-            spriteRenderer.sprite = down;
+            spriteRenderer.sprite = knockdown3;
             mar.action = "ecount";
         }
     }
@@ -494,12 +501,12 @@ public class pistonhonda : enemy
     public override void win(){
         action = "win";
         mar.action = "wait";
-        // if(count <= 3){
-        //     spriteRenderer.sprite = victory;
-        //     count++;
-        // }else{
-        //     spriteRenderer.sprite = victory2;
-        // }
+        if(count <= 3){
+            spriteRenderer.sprite = victory1;
+            count++;
+        }else{
+            spriteRenderer.sprite = victory2;
+        }
     }
 
     public void redo(){
@@ -595,6 +602,6 @@ public class pistonhonda : enemy
     public override void setKnockedOut()
     {
         action = "wait";
-        spriteRenderer.sprite = down;
+        spriteRenderer.sprite = knockdown3;
     }
 }

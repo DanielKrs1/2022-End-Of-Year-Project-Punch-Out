@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: fbb2fbf81ec5a2c4c8368de78bac3153
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - move1: {fileID: 978196609, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - move2: {fileID: 336413624, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - move3: {fileID: 1037351367, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - normal: {fileID: 2136260299, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - normal2: {fileID: 1623220047, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - normal3: {fileID: 1868839292, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - lefthook: {fileID: 988337565, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - lefthook2: {fileID: -881402179, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - lefthook3: {fileID: 33927714, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - leftup: {fileID: -416907820, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - leftup2: {fileID: -1576098232, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - leftup3: {fileID: -93748785, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - punch1: {fileID: -725682415, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - punch2: {fileID: 737826394, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - punch3: {fileID: 1129920698, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - punch4: {fileID: -664887095, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - blockhigh: {fileID: -1191530762, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - blocklow: {fileID: -1103573471, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - hithigh: {fileID: -716265462, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - hithigh2: {fileID: -1818787509, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - hitlow: {fileID: 503677572, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - stunned1: {fileID: -161820860, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - stunned2: {fileID: -328846877, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - knockdown1: {fileID: -85817445, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - knockdown2: {fileID: 1402636127, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - getup: {fileID: 24251904, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - getup2: {fileID: -66036053, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - victory: {fileID: 1080516999, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - victory2: {fileID: -1526509766, guid: 3b0e88edd3e77db498506e5a689bd8cb, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -41,24 +41,71 @@ public class mario : MonoBehaviour
         action = "startFight";
         bool found = false;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
-        en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy;
+        en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy; 
         if(en!=null){
             en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
             found = true;
-        }else{
+        }else if(found==false){
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as enemy;
         }
-        if (en!=null&&!found){
+        if (en!=null&&found==false){
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
-        }else{
+        }else if(found == false){
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
-        if(en != null&&!found){
+        if(en != null&&found==false){
             en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("donflamenco") as enemy;
         }
-
-        
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("donflamenco") as donflamenco;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("kinghippo") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("kinghippo") as kinghippo;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("greattiger") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("greattiger") as greattiger;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("baldbull") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("baldbull") as baldbull;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("sodapopinski") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("sodapopinski") as sodapopinski;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as mrsandman;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("supermachoman") as enemy;
+        }
+        if(en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("supermachoman") as supermachoman;
+            found = true;
+        }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("miketyson") as enemy;
+        }
+        if(en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("miketyson") as miketyson;
+            found = true;
+        }
     }
 
     public int frame = 0;

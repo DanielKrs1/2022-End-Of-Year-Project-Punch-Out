@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 009cffb3d74f3754b8bce0fda36adee6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - normal: {fileID: 1506254710, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - normal2: {fileID: -38332223, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - normal3: {fileID: 1841856798, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - normalup: {fileID: -369886503, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - normalup2: {fileID: 1996050191, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - normalup3: {fileID: 449016451, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - prepunch: {fileID: -1276796692, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - prepunch2: {fileID: -1324330140, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - prepunch3: {fileID: 657757911, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - prepunch4: {fileID: 71314677, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - punch: {fileID: 1772762869, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - preupper: {fileID: -460642593, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - midupper: {fileID: 2057622804, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - uppercut: {fileID: 1078320907, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - special1: {fileID: -2022086139, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - special2: {fileID: 1852262512, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - special3: {fileID: 1415544671, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - special4: {fileID: -773483441, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - blockhigh: {fileID: 1797994178, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - blockhigh2: {fileID: 1501535877, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - blocklow: {fileID: -2059404080, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - blocklow2: {fileID: 18771388, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - hithigh: {fileID: 1936313134, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - hithigh2: {fileID: 1058756523, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - hitlow: {fileID: 1557944756, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - hitlow2: {fileID: 526341742, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - dodgeHit: {fileID: -624665779, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - knockdown1: {fileID: -500719547, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - knockdown2: {fileID: 1146946505, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - getup1: {fileID: -277383966, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - getup2: {fileID: 161988887, guid: eb52751a78d508d4f94d4ae01f7808ac, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
