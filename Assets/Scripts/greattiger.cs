@@ -76,6 +76,7 @@ public class greattiger : enemy
     }
 
     // Update is called once per frame
+    int temp;
     void FixedUpdate()
     {
         // if(lowhits == 3){
@@ -144,12 +145,15 @@ public class greattiger : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normalup){
+                if(temp == 1){
                     spriteRenderer.sprite = normalup2;
-                }else if(spriteRenderer.sprite == normalup2){
+                    temp++;
+                }else if(temp == 2){
                     spriteRenderer.sprite = normalup3;
+                    temp = 0;
                 }else{
                     spriteRenderer.sprite = normalup;
+                    temp++;
                 }
             }  
              
@@ -162,7 +166,6 @@ public class greattiger : enemy
     private bool temp1;
     private bool temp2;
     void normalPunch(){
-        
         if(count == 0){
             hits = 1;
             specialing = true;
@@ -199,7 +202,7 @@ public class greattiger : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 11){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -254,7 +257,7 @@ public class greattiger : enemy
         if(count == 0){
             spriteRenderer.sprite = special1;
             count++;
-        }else if(count>=64&&count<71){
+        }else if(count>=64){
             counter = true;
             specialing = false;
             punching = false;

@@ -3,7 +3,41 @@ guid: fc1e71391c4e54941b78d5edcb5b8f7d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - move1: {fileID: -327253230, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - move2: {fileID: 1792399222, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - move3: {fileID: 101101712, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - normal: {fileID: 267650599, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - normal2: {fileID: 2057396722, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - normal3: {fileID: -1914738199, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - lefthook: {fileID: 1741403466, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - lefthook2: {fileID: -702682489, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - lefthook3: {fileID: -1341816774, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - leftup: {fileID: -1676664641, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - leftup2: {fileID: 1722077781, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - leftup3: {fileID: -228612414, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch1: {fileID: -1806796254, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch2: {fileID: 1943283737, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch3: {fileID: -243588905, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch4: {fileID: -115261116, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch5: {fileID: 2145360964, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - punch6: {fileID: 1596876614, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - blockhigh: {fileID: -1617949033, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - blocklow: {fileID: 95174271, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - hithigh: {fileID: 1314807668, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - hithigh2: {fileID: 1963569307, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - hitlow: {fileID: 514869346, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - stunned1: {fileID: -1536159725, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - knockdown1: {fileID: -1115144793, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - knockdown2: {fileID: -1183968043, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - getup: {fileID: 539447980, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - getup2: {fileID: 928975446, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - victory: {fileID: 2107302759, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - victory2: {fileID: 448413698, guid: 7053f24a496aaef469940cd0b19c228d, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

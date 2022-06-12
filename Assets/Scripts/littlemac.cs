@@ -111,6 +111,12 @@ public class littlemac : MonoBehaviour
             en = GameObject.Find("enemy").GetComponent("sodapopinski") as sodapopinski;
             found = true;
         }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as mrsandman;
+            found = true;
+        }else if(found==false){
             en = GameObject.Find("enemy").GetComponent("supermachoman") as enemy;
         }
         if(en!=null&&found==false){
@@ -346,6 +352,7 @@ public class littlemac : MonoBehaviour
                 if(en.canOneShot()){
                     en.setHealth(0);
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }else{
                     if(en.canCounter()){
@@ -357,6 +364,7 @@ public class littlemac : MonoBehaviour
                 } 
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }     
 
@@ -404,6 +412,7 @@ public class littlemac : MonoBehaviour
                 if(en.canOneShot()){
                     en.setHealth(0);
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }else{
                     if(en.canCounter()){
@@ -415,6 +424,7 @@ public class littlemac : MonoBehaviour
                 } 
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }     
             }
@@ -477,6 +487,7 @@ public class littlemac : MonoBehaviour
                 }
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }   
             }              
@@ -517,6 +528,7 @@ public class littlemac : MonoBehaviour
                 }
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    mar.action = "ecount";
                     en.changeTimesDown();
                 }   
             }

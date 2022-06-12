@@ -267,7 +267,7 @@ MonoBehaviour:
   knockedDown: {fileID: 21300000, guid: 6ad503b5b068ec941ac337e1b70c8a73, type: 3}
   win1: {fileID: 21300000, guid: faf23b1be493df74b80d7718389ebc2c, type: 3}
   win2: {fileID: 21300000, guid: 00c509e3f06412f478a4ba337e0bc6d4, type: 3}
-  en: {fileID: 1278779611}
+  en: {fileID: 0}
   mar: {fileID: 1749548681}
   health: 90
   rb: {fileID: 1270028638}
@@ -487,48 +487,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278779606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad154a73ef571d43b46fc98332322cc, type: 3}
+  m_Script: {fileID: 11500000, guid: dc71c1cc7537640448c6d6eeaf6c8523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: -535201674, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  normal2: {fileID: 1658619025, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  normal3: {fileID: 1073839118, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  normald: {fileID: 1712510481, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  normald2: {fileID: -1975321098, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  normald3: {fileID: 646987400, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move: {fileID: -69593600, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move2: {fileID: -2014900151, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move3: {fileID: 94379029, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move4: {fileID: -786242551, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move5: {fileID: 1851395261, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  move6: {fileID: -1602379061, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  prepunch: {fileID: -1343099832, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  cluepunch: {fileID: 1416805354, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  midpunch: {fileID: -1339539598, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  punch: {fileID: -551656732, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  upperStart: {fileID: 1254512641, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  upperclue: {fileID: 1196092536, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  upperMid: {fileID: 122629895, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  upperEnd: {fileID: -589384744, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  blocklow: {fileID: 183787849, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  blocklow2: {fileID: 1007343619, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  blockhigh: {fileID: 477272593, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  blockhigh2: {fileID: -1532812060, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  blockhigh3: {fileID: -1657764153, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  hitlow: {fileID: -788903533, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  hitlow2: {fileID: 0}
-  hithigh: {fileID: -658720668, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  hithigh2: {fileID: -724178793, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  hithighr: {fileID: 21300000, guid: 0dcdb88ae6594e044acae342419702d4, type: 3}
-  hithighr2: {fileID: 21300000, guid: fb2afe6677827b549aa41298a059f2e5, type: 3}
-  dodgeHit: {fileID: -1561367674, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  knockdown: {fileID: 755259696, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  knockdown2: {fileID: 2042717577, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  knockdown3: {fileID: 1429644750, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  getup: {fileID: -818952914, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  getup2: {fileID: -2137850884, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  victory: {fileID: -828372128, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
-  victory2: {fileID: 810552940, guid: b8813dc49ff1975478b9f1d9b728a7c4, type: 3}
+  appear: {fileID: -1604432897, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  appear2: {fileID: 1032692077, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  appear3: {fileID: 1594521369, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  move: {fileID: -647634744, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  move2: {fileID: -268785782, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  move3: {fileID: -726708840, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  move4: {fileID: 423345851, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  move5: {fileID: 390149654, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  normal: {fileID: 237596714, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  normal2: {fileID: 439600254, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  normal3: {fileID: 121777638, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  normal4: {fileID: 774755614, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  prepunch: {fileID: -1113023736, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  prepunch2: {fileID: 419184108, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  punch: {fileID: 1998802127, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  prefullpunch: {fileID: 1790562242, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  cluefullpunch: {fileID: 1885846602, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  fullpunch: {fileID: -1390959726, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  pantshigh: {fileID: -2123949001, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  pantshigh2: {fileID: 441099797, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  pants: {fileID: -479827018, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  punched: {fileID: -668739603, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  pulluppants: {fileID: 847430933, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  blocklow: {fileID: -884164670, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  blocklow2: {fileID: -1764345079, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  blockhigh: {fileID: 1602109387, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  blockhigh2: {fileID: -230893206, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout1: {fileID: -2087449606, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout2: {fileID: 295407235, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout3: {fileID: -381017824, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout4: {fileID: -1730138161, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout5: {fileID: 402806089, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout6: {fileID: 1217553321, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  knockout7: {fileID: 1812946810, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory1: {fileID: 144732260, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory2: {fileID: -768595932, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory3: {fileID: -1715775886, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory4: {fileID: -120904755, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory5: {fileID: -46114163, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory6: {fileID: 1096458964, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
+  victory7: {fileID: -1993402724, guid: 6769bdf96363826439d2b66eeb58af0a, type: 3}
   punching: 0
   blockinglow: 1
   blockinghigh: 0
@@ -545,7 +547,7 @@ MonoBehaviour:
   health: 1
   lowhits: 0
   highhits: 0
-  timesdown: 2
+  timesdown: 0
   count: 0
   hits: 7
   stunned: 0
@@ -731,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lm: {fileID: 1270028635}
-  en: {fileID: 1278779611}
+  en: {fileID: 0}
   normal: {fileID: 21300000, guid: 5d3113d2bb204c94ea62b371f986ec57, type: 3}
   fight: {fileID: 21300000, guid: f8e5ecd15115f3c4a9bd8f279075ba6c, type: 3}
   one: {fileID: 21300000, guid: 5c4e9a91f1f1c4443a4d57d3fe32c2b8, type: 3}

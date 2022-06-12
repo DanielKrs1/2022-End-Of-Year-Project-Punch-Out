@@ -64,6 +64,7 @@ public class baldbull : enemy
     public int highhits = 0;
 
     public int timesdown = 2;
+    int tempcount;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -153,12 +154,15 @@ public class baldbull : enemy
             }else{
                 counter = false;
                 specialing = false;
-                if(spriteRenderer.sprite == normal){
+                if(tempcount == 1){
                     spriteRenderer.sprite = normal2;
-                }else if(spriteRenderer.sprite == normal2){
+                    tempcount = 2;
+                }else if(tempcount == 2){
                     spriteRenderer.sprite = normal3;
+                    tempcount = 0;
                 }else{
                     spriteRenderer.sprite = normal;
+                    tempcount = 1;
                 }
             }  
              
@@ -229,7 +233,7 @@ public class baldbull : enemy
         }else if (count == 3){
             spriteRenderer.sprite = midhook;
             count++;
-        }else if( count == 3){
+        }else if( count == 4){
             punching = true;
             spriteRenderer.sprite = righthook;
             count++;
@@ -242,14 +246,14 @@ public class baldbull : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 11){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 11){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;

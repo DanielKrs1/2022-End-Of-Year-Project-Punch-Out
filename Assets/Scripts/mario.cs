@@ -88,6 +88,12 @@ public class mario : MonoBehaviour
             en = GameObject.Find("enemy").GetComponent("sodapopinski") as sodapopinski;
             found = true;
         }else if(found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as enemy;
+        }
+        if (en!=null&&found==false){
+            en = GameObject.Find("enemy").GetComponent("mrsandman") as mrsandman;
+            found = true;
+        }else if(found==false){
             en = GameObject.Find("enemy").GetComponent("supermachoman") as enemy;
         }
         if(en!=null&&found==false){

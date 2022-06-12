@@ -3,7 +3,42 @@ guid: d53b921c3cf1e224a9f14e641c54114b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - move1: {fileID: 406056720, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - move2: {fileID: -1362113135, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - move3: {fileID: 781525395, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - move4: {fileID: -2024929798, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - normal: {fileID: 1498688387, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - normal2: {fileID: -2048285186, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - normal3: {fileID: -827377529, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - normal4: {fileID: 186916617, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - prepunch: {fileID: -145801156, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - punch: {fileID: 2130352604, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - prehook: {fileID: -178119719, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - midhook: {fileID: 1520872045, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - endhook: {fileID: -543065065, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - stunned1: {fileID: 567945452, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - hitlow: {fileID: -1781849565, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - hithigh: {fileID: 1118228371, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - hithigh2: {fileID: 739462128, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - knockdown1: {fileID: 524545068, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - knockdown2: {fileID: -1661780486, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - knockdown3: {fileID: -1155400977, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - getup: {fileID: -173193784, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - preupper: {fileID: 1719845842, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - preupper2: {fileID: -1039697850, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - startupper: {fileID: 977792252, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - midupper: {fileID: -673925145, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - endupper: {fileID: -1479954994, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - win1: {fileID: 1018076363, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - win2: {fileID: 983213543, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - win3: {fileID: 1922206979, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - blockhigh: {fileID: -772627569, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - blocklow: {fileID: 1997621920, guid: 238d6b19da4afa3468de0faad6618c69, type: 3}
+  - lm: {instanceID: 0}
+  - mar: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
