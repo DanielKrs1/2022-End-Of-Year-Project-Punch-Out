@@ -142,6 +142,13 @@ public class littlemac : MonoBehaviour
     void FixedUpdate()
     {
         heal.scale(health/100F);
+        if(health<=0){
+            heal.scale(0);
+            if(frame%5==0){
+                knockeddown();    
+            }
+            
+        }
         moveSpeed = 1f;
         //lastPos = transform.position;
         if(frame == 119){
@@ -231,10 +238,12 @@ public class littlemac : MonoBehaviour
                 movement.x = 0f;
                 movement.y = 0f;
             }  
-            rb.MovePosition(rb.position+movement);//*Time.deltaTime);   
-            
+            rb.MovePosition(rb.position+movement);//*Time.deltaTime);  
+            if(health<=0f){
+                knockeddown();
+            }            
         }
-        if(en.isStunned() && fram2%75==0){
+        if(en.isStunned() && fram2%37==0){
             en.changeHits();
             if(en.getHits()<=0){
                 en.setAction("");

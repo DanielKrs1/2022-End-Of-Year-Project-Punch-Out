@@ -385,7 +385,7 @@ public class glassjoe : enemy
             spriteRenderer.sprite = hithigh;
             count++;
         }if(count == 1){
-            spriteRenderer.sprite = hithighr;
+            spriteRenderer.sprite = hithigh2;
             count++;
         }else{
             spriteRenderer.sprite = normal;

@@ -801,7 +801,7 @@ MonoBehaviour:
   digit3: {fileID: 0}
   digit4: {fileID: 0}
   digit5: {fileID: 0}
-  ssx: {fileID: 0}
+  sex: {fileID: 0}
   images:
   - {fileID: 21300000, guid: 5a2104e636bac4414887d2a13d75ae7e, type: 3}
   - {fileID: 21300000, guid: 4fd98adbda0af43c0a8197acbc8b06ec, type: 3}
@@ -848,10 +848,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 999
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 555, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
