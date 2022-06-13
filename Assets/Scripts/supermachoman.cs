@@ -496,7 +496,7 @@ public class supermachoman : enemy
 
     public override void win(){
         action = "win";
-        //mar.action = "wait";
+        mar.action = "ko";
         mar.enwin = true;
         if(count <= 3){
             spriteRenderer.sprite = victory;

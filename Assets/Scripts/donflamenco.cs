@@ -481,6 +481,8 @@ public class donflamenco : enemy
         action = "win";
         //mar.action = "wait";
         mar.enwin = true;
+        mar.action = "ko";
+        mar.enwin = true;
         if(count <= 3){
             spriteRenderer.sprite = win1;
             count++;

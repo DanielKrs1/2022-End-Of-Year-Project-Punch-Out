@@ -491,6 +491,8 @@ public class greattiger : enemy
 
     public override void win(){
         action = "win";
+        mar.action = "ko";
+        mar.enwin = true;
         //mar.action = "wait";
         mar.enwin = true;
         // if(count <= 3){
