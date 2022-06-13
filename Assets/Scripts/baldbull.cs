@@ -51,6 +51,7 @@ public class baldbull : enemy
     public littlemac lm;
     public mario mar;
     public Timer tim;
+    public Health heal;
     public int time;
 
     public float moveSpeed = 1f;
@@ -80,6 +81,7 @@ public class baldbull : enemy
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -87,6 +89,7 @@ public class baldbull : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/350f);
         // if(lowhits == 3){
         //     blockinglow = true;
         //     blockinghigh = false;
@@ -617,5 +620,10 @@ public class baldbull : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown3;
+    }
+
+    public override int pointsForKnockout()
+    {
+        return 999999;
     }
 }

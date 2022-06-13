@@ -6,26 +6,29 @@ MonoImporter:
   defaultReferences:
   - lm: {instanceID: 0}
   - en: {instanceID: 0}
-  - normal: {fileID: 21300000, guid: 5d3113d2bb204c94ea62b371f986ec57, type: 3}
-  - fight: {fileID: 21300000, guid: f8e5ecd15115f3c4a9bd8f279075ba6c, type: 3}
-  - one: {fileID: 21300000, guid: 5c4e9a91f1f1c4443a4d57d3fe32c2b8, type: 3}
-  - two: {fileID: 21300000, guid: 3fa71abe2c2e3374b97a94d25bcb555a, type: 3}
-  - three: {fileID: 21300000, guid: be71ef74544426649bfcc20da7bf5456, type: 3}
-  - four: {fileID: 21300000, guid: a0ada1e6dbe097c4dae9ff67c87892c4, type: 3}
-  - five: {fileID: 21300000, guid: 800619aeb71bda04e8aeb84d4ace5061, type: 3}
-  - six: {fileID: 21300000, guid: edb841f6bc49036498fd6e0e52ddd89b, type: 3}
-  - seven: {fileID: 21300000, guid: b92e9a7210cc8de45a535279f88907c6, type: 3}
-  - eight: {fileID: 21300000, guid: 66968103c68f52046a14a6db1e6e6c00, type: 3}
-  - nine: {fileID: 21300000, guid: 8611e976c822d6e4a964f1d26e4040ac, type: 3}
-  - ten: {fileID: 21300000, guid: d833a54fcf74ac94bb285d01fb43aef6, type: 3}
-  - ko: {fileID: 21300000, guid: 0e70c4068957808479b7f2cdc4d5bbd1, type: 3}
-  - tko: {fileID: 21300000, guid: 07daebbe6b42a664eac85da9c7e7db89, type: 3}
-  - counting: {fileID: 21300000, guid: b27358b833cbbba4080e2158485aca1e, type: 3}
-  - prefight: {fileID: 21300000, guid: bd01fac4689225749a1041ccfdb4ac28, type: 3}
-  - prefight2: {fileID: 21300000, guid: b27358b833cbbba4080e2158485aca1e, type: 3}
-  - prefight3: {fileID: 21300000, guid: 6bcf1e8009a44864d8c971257b5209c6, type: 3}
-  - defendWin: {fileID: 21300000, guid: f373baf69bc7b7d449293f6fdeb5b066, type: 3}
-  - Win: {fileID: 21300000, guid: e02686c2956c0974ba74fb7ed9d08a7c, type: 3}
+  - normal: {fileID: 1664280998, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - fight: {fileID: 539743315, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - one: {fileID: -1498016689, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - two: {fileID: -557961912, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - three: {fileID: 1418633654, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - four: {fileID: 144796180, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - five: {fileID: -182344945, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - six: {fileID: -911959066, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - seven: {fileID: 290837290, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - eight: {fileID: 931125776, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - nine: {fileID: 1640238760, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - ten: {fileID: 894499451, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - ko: {fileID: -994014307, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - tko: {fileID: -866396449, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - counting: {fileID: 1348776762, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - prefight: {fileID: -2030145086, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - prefight2: {fileID: -1947733683, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - prefight3: {fileID: 1022614694, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - defendWin: {fileID: 551497461, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - Win: {fileID: -1608340621, guid: 0776144bf26686342b4f2436832cf701, type: 3}
+  - fl: {instanceID: 0}
+  - tim: {instanceID: 0}
+  - pk: {instanceID: 0}
   - spriteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

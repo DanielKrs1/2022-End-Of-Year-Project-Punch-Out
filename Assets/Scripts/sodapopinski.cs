@@ -44,6 +44,7 @@ public class sodapopinski : enemy
     public bool counter = false;
     public littlemac lm;
     public mario mar;
+    public Health heal;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -70,6 +71,7 @@ public class sodapopinski : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -77,6 +79,7 @@ public class sodapopinski : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/350f);
         // if(lowhits == 3){
         //     blockinglow = true;
         //     blockinghigh = false;
@@ -597,5 +600,10 @@ public class sodapopinski : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown2;
+    }
+
+    public override int pointsForKnockout()
+    {
+        return 10000;
     }
 }

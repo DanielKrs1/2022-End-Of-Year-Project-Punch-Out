@@ -54,6 +54,7 @@ public class pistonhonda : enemy
     public littlemac lm;
     public mario mar;
     public Timer tim;
+    public Health heal;
     public int time;
 
     public float moveSpeed = 1f;
@@ -85,6 +86,7 @@ public class pistonhonda : enemy
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -92,6 +94,7 @@ public class pistonhonda : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/330f);
         if(lowhits == 1){
             blockinglow = true;
             blockinghigh = false;
@@ -751,5 +754,10 @@ public class pistonhonda : enemy
     {
         action = "wait";
         spriteRenderer.sprite = down;
+    }
+
+    public override int pointsForKnockout()
+    {
+        return 999999;
     }
 }

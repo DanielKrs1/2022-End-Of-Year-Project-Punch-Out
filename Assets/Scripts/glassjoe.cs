@@ -54,6 +54,7 @@ public class glassjoe : enemy
     public littlemac lm;
     public mario mar;
     public Timer tim;
+    public Health heal;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -62,7 +63,7 @@ public class glassjoe : enemy
     public string action = "wait";
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
-    public int health = 1;//210;
+    public int health = 210;
 
     public int lowhits = 0;
     public int highhits = 0;
@@ -81,6 +82,7 @@ public class glassjoe : enemy
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = false;
     }
@@ -88,6 +90,7 @@ public class glassjoe : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/210F);
         if(lowhits == 3){
             blockinglow = true;
             blockinghigh = false;
@@ -377,16 +380,18 @@ public class glassjoe : enemy
     public override void rightHit(){
         highhits++;
         action = "rightHit";
+        spriteRenderer.flipX = true;
         if(count == 0){
-            spriteRenderer.sprite = hithighr;
+            spriteRenderer.sprite = hithigh;
             count++;
         }if(count == 1){
-            spriteRenderer.sprite = hithighr2;
+            spriteRenderer.sprite = hithighr;
             count++;
         }else{
             spriteRenderer.sprite = normal;
             count = 0;
             action = "";
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -573,5 +578,9 @@ public class glassjoe : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown3;
+    }
+    public override int pointsForKnockout()
+    {
+        return 5000;
     }
 }

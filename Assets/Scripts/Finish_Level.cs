@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 public class Finish_Level : MonoBehaviour
 {
     // Start is called before the first frame update
-   private void Finished(){
+   public void Win(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
        
+    }
+
+    public void Lost(){
+        if(SceneManager.GetActiveScene().buildIndex>0){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+        }else{
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

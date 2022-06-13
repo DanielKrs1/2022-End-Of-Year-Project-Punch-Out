@@ -51,6 +51,7 @@ public class donflamenco : enemy
     public bool counter = false;
     public littlemac lm;
     public mario mar;
+    public Health heal;
 
     public bool douppers = false;
     public float moveSpeed = 1f;
@@ -78,6 +79,7 @@ public class donflamenco : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -85,6 +87,7 @@ public class donflamenco : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/290f);
         // if(lowhits == 3){
         //     blockinglow = true;
         //     blockinghigh = false;
@@ -579,5 +582,9 @@ public class donflamenco : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown3;
+    }
+    public override int pointsForKnockout()
+    {
+        return 10000;
     }
 }

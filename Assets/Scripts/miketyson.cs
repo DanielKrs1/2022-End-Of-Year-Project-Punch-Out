@@ -46,6 +46,7 @@ public class miketyson : enemy
     public littlemac lm;
     public mario mar;
     public Timer tim;
+    public Health heal;
     public int time;
 
     public float moveSpeed = 1f;
@@ -73,6 +74,7 @@ public class miketyson : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -80,6 +82,7 @@ public class miketyson : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/400f);
         // if(lowhits == 3){
         //     blockinglow = true;
         //     blockinghigh = false;
@@ -609,5 +612,10 @@ public class miketyson : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown3;
+    }
+
+    public override int pointsForKnockout()
+    {
+        return 5000;
     }
 }

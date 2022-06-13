@@ -27,6 +27,11 @@ public class mario : MonoBehaviour
     public Sprite prefight3;
     public Sprite defendWin;
     public Sprite Win;
+    public bool enwin;
+    public bool lmwin;
+    public Finish_Level fl;
+    public Timer tim;
+    public PointKeeper pk;
     public SpriteRenderer spriteRenderer;
     public string action = "startFight";
 
@@ -42,6 +47,9 @@ public class mario : MonoBehaviour
         bool found = false;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy; 
+        fl = GameObject.Find("canvas").GetComponent("Finish_Level") as Finish_Level;
+        tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
+        pk = GameObject.Find("canvas").GetComponent("PointKeeper") as PointKeeper;
         if(en!=null){
             en = GameObject.Find("enemy").GetComponent("glassjoe") as glassjoe;
             found = true;
@@ -132,6 +140,14 @@ public class mario : MonoBehaviour
 
             }else{
                 spriteRenderer.sprite = normal;
+            }
+        }
+        int time = tim.getTime();
+        if(time>=500){
+            if(pk.getPoints()>=en.pointsForKnockout()){
+                lmWin();
+            }else{
+                defenderWin();
             }
         }
         frame++;
@@ -312,7 +328,11 @@ public class mario : MonoBehaviour
         if(count < 3){
             spriteRenderer.sprite = ko;  
             en.setAction("wait");
-        }        
+        }else if(enwin){
+            fl.Lost();
+        }else if(lmwin){
+            fl.Win();
+        }
     }
 
     public void tkod(){
@@ -320,17 +340,23 @@ public class mario : MonoBehaviour
         if(count < 3){
             spriteRenderer.sprite = tko;  
             en.setAction("wait");
+        }else if(enwin){
+            fl.Lost();
+        }else if(lmwin){
+            fl.Win();
         }
     }
 
     public void defenderWin(){
         spriteRenderer.sprite = defendWin;
         action = "wait";
+        fl.Lost();
     }
 
     public void lmWin(){
         spriteRenderer.sprite = Win;
         action = "wait";
+        fl.Win();
     }
 
 }

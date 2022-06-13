@@ -16,6 +16,10 @@ public abstract class enemy : MonoBehaviour
         
     }
 
+    public virtual int pointsForKnockout(){
+        return -1;
+    }
+
     public virtual void setKnockedOut(){}
 
     public virtual void setCounter(bool x){}

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    SpriteRenderer current;
+    private SpriteRenderer spriteRenderer;
+    float fullscale;
     
     // Start is called before the first frame update
     void Start()
     {
         //transform.localScale = new Vector2(0.9991398f, 1.382134f);
-
+        fullscale = 0.4712254f;
 
         //scale(0.5f);
     }
@@ -23,7 +24,7 @@ public class Health : MonoBehaviour
 
     public void scale(float x)
     {
-        transform.localScale = new Vector2(x, 1.382134f);
+        transform.localScale = new Vector2(fullscale*x, 0.3660011f);
         //transform.position = new Vector2(transform.position.x - x, transform.position.y);
     }
 }

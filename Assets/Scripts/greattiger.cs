@@ -46,6 +46,7 @@ public class greattiger : enemy
     public littlemac lm;
     public mario mar;
     public Timer tim;
+    public Health heal;
     public int time;
 
     public float moveSpeed = 1f;
@@ -74,6 +75,7 @@ public class greattiger : enemy
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -82,6 +84,7 @@ public class greattiger : enemy
     int temp;
     void FixedUpdate()
     {
+        heal.scale(health/310f);
         // if(lowhits == 3){
         //     blockinglow = true;
         //     blockinghigh = false;
@@ -591,5 +594,9 @@ public class greattiger : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockdown2;
+    }
+    public override int pointsForKnockout()
+    {
+        return 10000;
     }
 }

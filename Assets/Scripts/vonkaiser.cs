@@ -57,8 +57,10 @@ public class vonkaiser : enemy
     public int secondupper = 0;
 
     public int timesdown = 0;
+    public Health heal;
     void Start()
     {
+        heal.scale(health/310f);
         spriteRenderer = GetComponent<SpriteRenderer>();
         if(spriteRenderer.sprite == null){
             spriteRenderer.sprite = normal;
@@ -69,6 +71,7 @@ public class vonkaiser : enemy
         movement.y = 0f;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        heal = GameObject.Find("health2").GetComponent("Health") as Health;
         blockinglow = true;
         blockinghigh = false;
     }
@@ -571,5 +574,9 @@ public class vonkaiser : enemy
     {
         action = "wait";
         spriteRenderer.sprite = knockeddown2;
+    }
+    public override int pointsForKnockout()
+    {
+        return 8000;
     }
 }

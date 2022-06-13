@@ -38,6 +38,9 @@ public class littlemac : MonoBehaviour
 
     public enemy en;
     public mario mar;
+    public Health heal;
+    public PointKeeper pk;
+
     public float health = 100.0F;
 
     public Rigidbody2D rb;
@@ -130,12 +133,15 @@ public class littlemac : MonoBehaviour
             found = true;
         }
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
+        heal = GameObject.Find("health1").GetComponent("Health") as Health;
+        pk = GameObject.Find("canvas").GetComponent("PointKeeper") as PointKeeper;
     }
 
     // Update is called once per frame
     public int fram2;
     void FixedUpdate()
     {
+        heal.scale(health/100F);
         moveSpeed = 1f;
         //lastPos = transform.position;
         if(frame == 119){
@@ -183,7 +189,7 @@ public class littlemac : MonoBehaviour
             }
         }
 
-        if(frame%10==0){
+        if(frame%5==0){
             if(action.Equals("dodgeLeft")){
                 leftDodge();
             }else if(action.Equals("dodgeRight")){
@@ -351,9 +357,11 @@ public class littlemac : MonoBehaviour
                 en.blockHigh();
             }else if (!(en.isSpecialing())){
                 en.changeHealth(10);
+                pk.updatePoints(10);
                 if(en.canOneShot()){
                     en.setHealth(0);
                     en.knockDown();
+                    pk.updatePoints(1000);
                     mar.action = "ecount";
                     en.changeTimesDown();
                 }else{
@@ -366,6 +374,7 @@ public class littlemac : MonoBehaviour
                 } 
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    pk.updatePoints(1000);
                     mar.action = "ecount";
                     en.changeTimesDown();
                 }     
@@ -389,21 +398,22 @@ public class littlemac : MonoBehaviour
     }
 
     void uppercutRight(){
+        spriteRenderer.flipX = true;
         movement.x = 0;
-                movement.y = 0;
-        if(spriteRenderer.sprite == rightUppercutMid){
+        movement.y = 0;
+        if(spriteRenderer.sprite == leftUppercutMid){
             if(back){
-                spriteRenderer.sprite = rightUppercutStart;
+                spriteRenderer.sprite = leftUppercutStart;
             }else{
                 punchhigh = true;
-                spriteRenderer.sprite = rightUppercutEnd;
+                spriteRenderer.sprite = leftUppercutEnd;
                 movement.y = moveSpeed;
                 movement.x = 0f;
                 //rb.MovePosition(rb.position + movement * Time.deltaTime);
             }
-        }else if(spriteRenderer.sprite == rightUppercutEnd){
+        }else if(spriteRenderer.sprite == leftUppercutEnd){
             back = true;
-            spriteRenderer.sprite = rightUppercutMid;
+            spriteRenderer.sprite = leftUppercutMid;
             movement.y = -1*moveSpeed;
             movement.x = 0f;
             punchhigh = false;
@@ -411,11 +421,13 @@ public class littlemac : MonoBehaviour
                 en.blockHigh();
             }else if (!(en.isSpecialing())){
                 en.changeHealth(10);
+                pk.updatePoints(10);
                 if(en.canOneShot()){
                     en.setHealth(0);
                     en.knockDown();
                     mar.action = "ecount";
                     en.changeTimesDown();
+                    pk.updatePoints(1000);
                 }else{
                     if(en.canCounter()){
                         en.hitAfterDodge();
@@ -426,6 +438,7 @@ public class littlemac : MonoBehaviour
                 } 
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    pk.updatePoints(1000);
                     mar.action = "ecount";
                     en.changeTimesDown();
                 }     
@@ -439,10 +452,11 @@ public class littlemac : MonoBehaviour
                 spriteRenderer.sprite = normal;
                 action = "";
                 rb.position = fp;
-            }else if(spriteRenderer.sprite == rightUppercutStart){
-                spriteRenderer.sprite = rightUppercutMid;
+                spriteRenderer.flipX = false;
+            }else if(spriteRenderer.sprite == leftUppercutStart){
+                spriteRenderer.sprite = leftUppercutMid;
             }else{
-                spriteRenderer.sprite = rightUppercutStart;
+                spriteRenderer.sprite = leftUppercutStart;
             }
         }
     }
@@ -481,14 +495,24 @@ public class littlemac : MonoBehaviour
                 en.blockLow();
             }else if (!(en.isSpecialing())){
                 en.changeHealth(10);
-                if(en.canCounter()){
-                    en.hitAfterDodge();
-                    en.changeHits();
+                pk.updatePoints(10);
+                if(en.canOneShot()){
+                    en.setHealth(0);
+                    en.knockDown();
+                    mar.action = "ecount";
+                    en.changeTimesDown();
+                    pk.updatePoints(1000);
                 }else{
-                    en.hitLow();
-                }
+                    if(en.canCounter()){
+                        en.hitAfterDodge();
+                        en.changeHits();
+                    }else{
+                        en.rightHit();
+                    }
+                } 
                 if(en.getHealth()<=0){
                     en.knockDown();
+                    pk.updatePoints(10);
                     mar.action = "ecount";
                     en.changeTimesDown();
                 }   
@@ -507,27 +531,37 @@ public class littlemac : MonoBehaviour
     }
 
     void punchRight(){
-        if(spriteRenderer.sprite == rightPunchMid){
+        spriteRenderer.flipX = true;
+        if(spriteRenderer.sprite == leftPunchMid){
             if(back){
-                spriteRenderer.sprite = rightPunchStart;
+                spriteRenderer.sprite = leftPunchStart;
             }else{
-                spriteRenderer.sprite = rightPunch;
+                spriteRenderer.sprite = leftPunch;
                 punchlow = true;
             }
-        }else if(spriteRenderer.sprite == rightPunch){
+        }else if(spriteRenderer.sprite == leftPunch){
             back = true;
-            spriteRenderer.sprite = rightPunchMid;
+            spriteRenderer.sprite = leftPunchMid;
             punchlow = false;
             if(en.isblockingLow()){
                 en.blockLow();
             }else if (!(en.isSpecialing())){
                 en.changeHealth(10);
-                if(en.canCounter()){
-                    en.hitAfterDodge();
-                    en.changeHits();
+                pk.updatePoints(10);
+                if(en.canOneShot()){
+                    en.setHealth(0);
+                    en.knockDown();
+                    mar.action = "ecount";
+                    en.changeTimesDown();
+                    pk.updatePoints(1000);
                 }else{
-                    en.hitLow();
-                }
+                    if(en.canCounter()){
+                        en.hitAfterDodge();
+                        en.changeHits();
+                    }else{
+                        en.rightHit();
+                    }
+                } 
                 if(en.getHealth()<=0){
                     en.knockDown();
                     mar.action = "ecount";
@@ -537,17 +571,19 @@ public class littlemac : MonoBehaviour
         }else{
             if(back){
                 back = false;
+                spriteRenderer.flipX = false;
                 spriteRenderer.sprite = normal;
                 action = "";
-            }else if(spriteRenderer.sprite == rightPunchStart){
-                spriteRenderer.sprite = rightPunchMid;
+            }else if(spriteRenderer.sprite == leftPunchStart){
+                spriteRenderer.sprite = leftPunchMid;
             }else{
-                spriteRenderer.sprite = rightPunchStart;
+                spriteRenderer.sprite = leftPunchStart;
             }
         }
     }
     public int count;
     public void hit(){
+        spriteRenderer.flipX = false;
         rb.position = fp;
         movement.x = 0f;
         movement.y = 0f;
