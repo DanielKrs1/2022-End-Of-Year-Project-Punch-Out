@@ -11,7 +11,7 @@ public class PointKeeper : MonoBehaviour
     public Sprite digit3;
     public Sprite digit4;
     public Sprite digit5;
-    public GameObject ssx;
+    public GameObject sex;
     public Sprite[] images;
     public Image[] digit_image;
     // Start is called before the first frame update
