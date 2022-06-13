@@ -165,8 +165,10 @@ public class mrsandman : enemy
                 }else{
                     spriteRenderer.sprite = normal;
                 }
+                specialing = false;
+                counter = false;
             }  
-             
+            
         }
          
         frame++;  
@@ -201,7 +203,7 @@ public class mrsandman : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = false;
@@ -209,7 +211,7 @@ public class mrsandman : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -249,14 +251,14 @@ public class mrsandman : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 11){
+        }else if (count < 8){
             specialing = false;
             punching = false;
             //counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 11){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -291,7 +293,7 @@ public class mrsandman : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 9){
+        }else if (count < 6){
             if(times!=3){
                 count = 8;
             }else{
@@ -304,7 +306,7 @@ public class mrsandman : enemy
                 blockinglow = false;    
             }
             
-        }else if(count == 9){
+        }else if(count == 6){
             if(times ==3){
                 counter = false;
                 spriteRenderer.sprite = normal;
@@ -475,6 +477,7 @@ public class mrsandman : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 
@@ -502,6 +505,7 @@ public class mrsandman : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);

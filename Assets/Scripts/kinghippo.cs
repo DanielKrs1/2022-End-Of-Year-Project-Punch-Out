@@ -178,6 +178,8 @@ public class kinghippo : enemy
                 }else {
                     spriteRenderer.sprite = normal;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -276,28 +278,30 @@ public class kinghippo : enemy
             spriteRenderer.sprite = fullpunch;
             count++;
             if(!lm.blocking && !lm.dodging){
-                lm.health -=27f;
+                lm.health -=48f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else if(lm.blocking){
+                lm.health-=40f;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = false;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
-                counter = false;
-                spriteRenderer.sprite = normal;
-                count = 0;
-                action = "";    
-                blockinghigh = true;
-                blockinglow = true;
+        }else if(count == 7){
+            counter = false;
+            spriteRenderer.sprite = normal;
+            count = 0;
+            action = "";    
+            blockinghigh = true;
+            blockinglow = true;
         }
     }
 
@@ -330,14 +334,14 @@ public class kinghippo : enemy
             }else if(lm.blocking){
                 lm.health-=40f;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = false;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
             spriteRenderer.flipX = false;
             counter = false;
             spriteRenderer.sprite = normal;
@@ -506,6 +510,7 @@ public class kinghippo : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 

@@ -187,6 +187,8 @@ public class pistonhonda : enemy
                     }else{
                         spriteRenderer.sprite = normalup;
                     }
+                    specialing = false;
+                    counter = false;
                 }                
             }  
              
@@ -229,14 +231,14 @@ public class pistonhonda : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 11){
+        }else if (count < 8){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 11){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -281,14 +283,14 @@ public class pistonhonda : enemy
                 }
                 lm.hit();
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = false;     
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -354,7 +356,7 @@ public class pistonhonda : enemy
                     lm.knockeddown();
                 }
             }
-        }else if (count < 10){
+        }else if (count < 8){
             specialing = false;
             punching = false;
             counter = true;
@@ -363,7 +365,7 @@ public class pistonhonda : enemy
             temp2 = blockinglow;
             blockinghigh = false;
             blockinglow = false;
-        }else if(count == 10){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -566,6 +568,7 @@ public class pistonhonda : enemy
             action = "";
             spriteRenderer.sprite = normal;
             hits = 7;
+            counter = false;
             stunned = false;
             if(punchcount == 1){
                     count = 0;
@@ -628,6 +631,7 @@ public class pistonhonda : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         var randint = Random.Range(0, 100);
         if(spriteRenderer.sprite == down&&randint<40){

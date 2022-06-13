@@ -171,6 +171,8 @@ public class glassjoe : enemy
                         spriteRenderer.sprite = normald;
                     }
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -214,14 +216,14 @@ public class glassjoe : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -257,14 +259,14 @@ public class glassjoe : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -309,10 +311,11 @@ public class glassjoe : enemy
         }else if (count == 9){
             specialing = false;
             onehit = true;
+            blockinglow = false;
             spriteRenderer.sprite = normald;
             count++;
             movement.x = 0f;
-            movement.y = -1*moveSpeed;
+            //movement.y = -1*moveSpeed;
             rb.position  = fp;
             spriteRenderer.sprite = normal3;
             count++;
@@ -450,6 +453,7 @@ public class glassjoe : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         var randint = Random.Range(0, 100);
         if(spriteRenderer.sprite == knockdown3&&randint<40){

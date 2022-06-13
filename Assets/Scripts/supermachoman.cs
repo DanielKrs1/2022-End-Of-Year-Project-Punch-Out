@@ -158,6 +158,8 @@ public class supermachoman : enemy
                 }else{
                     spriteRenderer.sprite = normal;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -180,7 +182,7 @@ public class supermachoman : enemy
             spriteRenderer.sprite = punch2;
             count++;
         }else if(count > 24){
-            if(count>=31){
+            if(count>=28){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -242,7 +244,7 @@ public class supermachoman : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 9){
+        }else if (count < 6){
             specialing = false;
             punching = false;
             counter = true;
@@ -250,7 +252,7 @@ public class supermachoman : enemy
             hits = 4;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -288,7 +290,7 @@ public class supermachoman : enemy
                     lm.knockeddown();
                 }
             }
-        }else if (count < 9){
+        }else if (count < 6){
             specialing = false;
             punching = false;
             counter = true;
@@ -296,7 +298,7 @@ public class supermachoman : enemy
             hits = 5;  
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -445,6 +447,7 @@ public class supermachoman : enemy
             action = "";
             spriteRenderer.sprite = normal;
             hits = 7;
+            counter = false;
             stunned = false;
         }
     }
@@ -470,6 +473,7 @@ public class supermachoman : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);
