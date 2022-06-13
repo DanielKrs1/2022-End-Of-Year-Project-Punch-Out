@@ -519,6 +519,8 @@ public class baldbull : enemy
         action = "win";
         //mar.action = "wait";
         mar.enwin = true;
+        mar.action = "ko";
+        mar.enwin = true;
         if(count <= 3){
             spriteRenderer.sprite = victory1;
             count++;
