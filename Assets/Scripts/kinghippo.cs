@@ -564,7 +564,8 @@ public class kinghippo : enemy
 
     public override void win(){
         action = "win";
-        mar.action = "wait";
+        //mar.action = "wait";
+        mar.enwin = true;
         if(count == 0){
             spriteRenderer.sprite = victory1;
             count++;
@@ -684,7 +685,7 @@ public class kinghippo : enemy
         action = "wait";
         spriteRenderer.sprite = knockout7;
     }
-    
+
     public override int pointsForKnockout()
     {
         return 999999;

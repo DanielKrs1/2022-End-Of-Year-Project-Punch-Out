@@ -47,7 +47,7 @@ public class mario : MonoBehaviour
         bool found = false;
         lm = GameObject.Find("lm").GetComponent("littlemac") as littlemac;
         en = GameObject.Find("enemy").GetComponent("glassjoe") as enemy; 
-        fl = GameObject.Find("canvas").GetComponent("Finish_Level") as Finish_Level;
+        fl = GameObject.Find("mario").GetComponent("Finish_Level") as Finish_Level;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         pk = GameObject.Find("canvas").GetComponent("PointKeeper") as PointKeeper;
         if(en!=null){
@@ -60,10 +60,10 @@ public class mario : MonoBehaviour
             en = GameObject.Find("enemy").GetComponent("vonkaiser") as vonkaiser;
             found = true;
         }else if(found == false){
-            //en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as enemy;
         }
         if(en != null&&found==false){
-            //en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
+            en = GameObject.Find("enemy").GetComponent("pistonhonda") as pistonhonda;
             found = true;
         }else if(found==false){
             en = GameObject.Find("enemy").GetComponent("donflamenco") as enemy;
@@ -325,9 +325,10 @@ public class mario : MonoBehaviour
 
     public void kod(){
         action = "ko";
-        if(count < 3){
+        if(count < 2){
             spriteRenderer.sprite = ko;  
             en.setAction("wait");
+            count++;
         }else if(enwin){
             fl.Lost();
         }else if(lmwin){
@@ -337,9 +338,10 @@ public class mario : MonoBehaviour
 
     public void tkod(){
         action = "tko";
-        if(count < 3){
+        if(count < 2){
             spriteRenderer.sprite = tko;  
             en.setAction("wait");
+            count++;
         }else if(enwin){
             fl.Lost();
         }else if(lmwin){

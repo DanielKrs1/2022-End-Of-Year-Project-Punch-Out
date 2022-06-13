@@ -15,7 +15,7 @@ public class PointKeeper : MonoBehaviour
     public Sprite[] images;
     public Image[] digit_image;
     // Start is called before the first frame update
-    private static int points;
+    private int points;
     void Start()
 
     {

@@ -79,6 +79,7 @@ public class vonkaiser : enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        heal.scale(health/310f);
         if(lowhits == 2){
             blockinglow = true;
             blockinghigh = false;
@@ -471,7 +472,8 @@ public class vonkaiser : enemy
 
     public override void win(){
         action = "win";
-        mar.action = "wait";
+        //mar.action = "wait";
+        mar.enwin = true;
         // if(count <= 3){
         //     spriteRenderer.sprite = victory;
         //     count++;

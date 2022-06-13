@@ -652,6 +652,7 @@ public class pistonhonda : enemy
     public override void win(){
         action = "win";
         mar.action = "wait";
+        mar.enwin = true;
         // if(count <= 3){
         //     spriteRenderer.sprite = victory;
         //     count++;

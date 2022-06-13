@@ -505,7 +505,8 @@ public class miketyson : enemy
 
     public override void win(){
         action = "win";
-        mar.action = "wait";
+        //mar.action = "wait";
+        mar.enwin = true;
         if(count == 0){
             spriteRenderer.sprite = win1;
             count++;
