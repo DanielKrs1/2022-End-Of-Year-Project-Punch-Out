@@ -249,7 +249,9 @@ public class mario : MonoBehaviour
             count = 0;
             lm.win();
             en.setAction("wait");
+            en.setKnockedOut();
             action = "ko";
+            lmwin = true;
         }
     }
 
@@ -319,16 +321,19 @@ public class mario : MonoBehaviour
             lm.action = "wait";
             en.win();
             action = "ko";
-            en.setKnockedOut();
+            kod();
+            en.win();
+            lm.action = "wait";
+            enwin = true;
         }
     }
 
     public void kod(){
         action = "ko";
+        count++;
+        spriteRenderer.sprite = ko; 
         if(count < 2){
-            spriteRenderer.sprite = ko;  
-            en.setAction("wait");
-            count++;
+             
         }else if(enwin){
             fl.Lost();
         }else if(lmwin){
@@ -339,8 +344,7 @@ public class mario : MonoBehaviour
     public void tkod(){
         action = "tko";
         if(count < 2){
-            spriteRenderer.sprite = tko;  
-            en.setAction("wait");
+            spriteRenderer.sprite = tko;
             count++;
         }else if(enwin){
             fl.Lost();
