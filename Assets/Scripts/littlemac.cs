@@ -295,41 +295,43 @@ public class littlemac : MonoBehaviour
     }
 
     void rightDodge(){
-        if(spriteRenderer.sprite == dodgeRight){
+        spriteRenderer.flipX = true;
+        if(spriteRenderer.sprite == dodgeLeft){
             if(back){
                 dodging = false;
-                spriteRenderer.sprite = dodgeRightStart;
+                spriteRenderer.sprite = dodgeLeftStart;
                 movement.x = -1*moveSpeed/2;
                 movement.y = 0f;
                 //rb.MovePosition(rb.position + movement * Time.deltaTime);
             }else{
-                spriteRenderer.sprite = dodgeRightEnd;
+                spriteRenderer.sprite = dodgeLeftEnd;
                 movement.x = moveSpeed/2;
                 movement.y = 0f;
                 //rb.MovePosition(rb.position + movement * Time.deltaTime);
             }
-        }else if(spriteRenderer.sprite == dodgeRightEnd){
+        }else if(spriteRenderer.sprite == dodgeLeftEnd){
             back = true;
-            spriteRenderer.sprite = dodgeRight;
+            spriteRenderer.sprite = dodgeLeft;
             movement.x = -1*moveSpeed/2;
             movement.y = 0f;
             //rb.MovePosition(rb.position + movement * Time.deltaTime);
         }else{
             if(back){
                 back = false;
+                spriteRenderer.flipX = false;
                 spriteRenderer.sprite = normal;
                 action = "";
                 rb.position = fp;
                 movement.x = 0;
                 movement.y = 0;
-            }else if(spriteRenderer.sprite == dodgeRightStart){
+            }else if(spriteRenderer.sprite == dodgeLeftStart){
                 dodging = true;
-                spriteRenderer.sprite = dodgeRight;
+                spriteRenderer.sprite = dodgeLeft;
                 movement.x = moveSpeed/2;
                 movement.y = 0f;
                 //rb.MovePosition(rb.position + movement * Time.deltaTime);
             }else{
-                spriteRenderer.sprite = dodgeRightStart;
+                spriteRenderer.sprite = dodgeLeftStart;
             }
         }
     }
@@ -636,7 +638,7 @@ public class littlemac : MonoBehaviour
                 en.setAction("");
                 countzx = 0;
             }
-            if(knockdowned >= 3){
+            if(knockdowned >= 4){
                 health = 0F;
                 countzx = 0;
                 action = "knockedout";
