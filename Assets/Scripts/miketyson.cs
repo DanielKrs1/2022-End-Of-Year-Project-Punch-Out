@@ -182,6 +182,8 @@ public class miketyson : enemy
                 }
                 specialing = false;
                 counter = false;
+                blockinghigh = true;
+                blockinglow = true;
             }  
              
         }
@@ -458,10 +460,14 @@ public class miketyson : enemy
             hits = 7;
             counter = false;
             stunned = false;
+            blockinghigh = true;
+            blockinglow = true;
         }
     }
 
     public override void knockDown(){
+        blockinghigh = true;
+        blockinglow = true;
         stunned = false;
         hits = 7;
         action = "knockDown";

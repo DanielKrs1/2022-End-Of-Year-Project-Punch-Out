@@ -167,6 +167,8 @@ public class mrsandman : enemy
                 }
                 specialing = false;
                 counter = false;
+                blockinghigh = true;
+                blockinglow = true;
             }  
             
         }
@@ -478,11 +480,15 @@ public class mrsandman : enemy
             hits = 7;
             stunned = false;
             counter = false;
+            blockinghigh = true;
+            blockinglow = true;
         }
     }
 
     public override void knockDown(){
         stunned = false;
+        blockinghigh = true;
+        blockinglow = true;
         hits = 7;
         action = "knockDown";
         if(count <=2){
