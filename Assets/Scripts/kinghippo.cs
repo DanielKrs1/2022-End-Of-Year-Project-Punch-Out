@@ -124,6 +124,8 @@ public class kinghippo : enemy
                     action = "normalpunchr";
                 } 
             }
+            blockinglow = true;
+            blockinghigh = true;
         }
 
         if(frame%10==0){
@@ -180,6 +182,8 @@ public class kinghippo : enemy
                 }
                 specialing = false;
                 counter = false;
+                blockinglow = true;
+                blockinghigh = true;
             }  
              
         }
@@ -261,19 +265,24 @@ public class kinghippo : enemy
     }
 
     void fullPunchL(){
-        if(count == 0){
+        if(count < 3){
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
             spriteRenderer.sprite = prefullpunch;
             count++;
-        }else if (count == 1){
+            specialing = false;
+            punching = false;
+            counter = false;     
+            blockinghigh = false;
+            blockinglow = true;
+        }else if (count == 4){
             spriteRenderer.sprite = cluefullpunch;
             count++;
-        }else if (count == 2){
+        }else if (count == 5){
             spriteRenderer.sprite = prefullpunch;
             count++;
-        }else if (count ==3 ){
+        }else if (count ==6){
             punching = true;
             spriteRenderer.sprite = fullpunch;
             count++;
@@ -288,15 +297,10 @@ public class kinghippo : enemy
             }else if(lm.blocking){
                 lm.health-=40f;
             }
-        }else if (count < 7){
-            specialing = false;
-            punching = false;
-            counter = false;
-            count++;      
-            blockinghigh = false;
-            blockinglow = true;
         }else if(count == 7){
             counter = false;
+            punching = false;
+            specialing = false;
             spriteRenderer.sprite = normal;
             count = 0;
             action = "";    
@@ -306,20 +310,25 @@ public class kinghippo : enemy
     }
 
     void fullPunchR(){
-        if(count == 0){
-            spriteRenderer.flipX = true;
+        spriteRenderer.flipX = true;
+        if(count < 3){
             temp1 = blockinghigh;
             temp2 = blockinglow;
             specialing = true;
             spriteRenderer.sprite = prefullpunch;
             count++;
-        }else if (count == 1){
+            specialing = false;
+            punching = false;
+            counter = false;
+            blockinghigh = false;
+            blockinglow = true;
+        }else if (count == 4){
             spriteRenderer.sprite = cluefullpunch;
             count++;
-        }else if (count == 2){
+        }else if (count == 5){
             spriteRenderer.sprite = prefullpunch;
             count++;
-        }else if (count ==3 ){
+        }else if (count ==6){
             punching = true;
             spriteRenderer.sprite = fullpunch;
             count++;
@@ -334,21 +343,16 @@ public class kinghippo : enemy
             }else if(lm.blocking){
                 lm.health-=40f;
             }
-        }else if (count < 7){
-            specialing = false;
-            punching = false;
-            counter = false;
-            count++;      
-            blockinghigh = false;
-            blockinglow = true;
         }else if(count == 7){
-            spriteRenderer.flipX = false;
             counter = false;
+            punching = false;
+            specialing = false;
             spriteRenderer.sprite = normal;
             count = 0;
             action = "";    
             blockinghigh = true;
             blockinglow = true;
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -445,15 +449,15 @@ public class kinghippo : enemy
         specialing = false;
         lowhits++;
         action = "hitLow";
-        if(count < 3){
+        if(count < 4){
             spriteRenderer.sprite = pantshigh2;
             count++;
             counter = true;
-        }else if( count < 6){
+        }else if( count < 8){
             counter = true;
             spriteRenderer.sprite = pants;
             count++;
-        }else if (count == 6){
+        }else if (count == 8){
             spriteRenderer.sprite = pulluppants;
             count++;
             counter = false;
@@ -465,6 +469,10 @@ public class kinghippo : enemy
     }
 
     public override void rightHit(){
+        if(action.Equals("fullpunchl")||action.Equals("fullpunchr")){
+            count = 0;
+        }
+        spriteRenderer.flipX = false;
         highhits++;
         action = "rightHit";
         //spriteRenderer.flipX = true;
@@ -482,6 +490,10 @@ public class kinghippo : enemy
     }
 
     public override void leftHit(){
+        if(action.Equals("fullpunchl")||action.Equals("fullpunchr")){
+            count = 0;
+        }
+        spriteRenderer.flipX = false;
         highhits++;
         action = "rightHit";
         //spriteRenderer.flipX = true;
