@@ -130,7 +130,7 @@ public class pistonhonda : enemy
 
         time = tim.getTime();
 
-        if(time==10){//time == 100|| time == 240||time==320){
+        if(time == 100|| time == 240||time==320){
             action = "special";
         }
 

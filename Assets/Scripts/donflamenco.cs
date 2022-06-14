@@ -152,6 +152,8 @@ public class donflamenco : enemy
             }else if (action.Equals("wait")){
 
             }else{
+                blockinghigh = true;
+                blockinglow = true;
                 counter = false;
                 specialing = false;
                 if(spriteRenderer.sprite == up1){
@@ -428,6 +430,8 @@ public class donflamenco : enemy
             hits = 7;
             stunned = false;
             counter = false;
+            blockinglow = true;
+            blockinghigh = true;
         }
     }
 
