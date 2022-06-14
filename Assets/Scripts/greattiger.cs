@@ -48,6 +48,9 @@ public class greattiger : enemy
     public Timer tim;
     public Health heal;
     public int time;
+    public Transform for1;
+    public Transform for2;
+    public Transform for3;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -76,6 +79,9 @@ public class greattiger : enemy
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         heal = GameObject.Find("health2").GetComponent("Health") as Health;
+        for1 = GameObject.Find("one").GetComponent("Transform") as Transform;
+        for2 = GameObject.Find("two").GetComponent("Transform") as Transform;
+        for3 = GameObject.Find("three").GetComponent("Transform") as Transform;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -126,7 +132,7 @@ public class greattiger : enemy
             }
         }
 
-        if(time==230||time==300||time==430){
+        if(time == 10){//time==230||time==300||time==430){
             action = "special";
         }
 
@@ -179,8 +185,11 @@ public class greattiger : enemy
                     spriteRenderer.sprite = normalup;
                     temp++;
                 }
+                onehit = false;
                 specialing = false;
                 counter = false;
+                blockinghigh = true;
+                blockinglow = true;
             }  
              
         }
@@ -270,7 +279,7 @@ public class greattiger : enemy
             }else if(lm.blockBroken){
                 lm.health-=7f;
             }
-        }else if (count < 7){
+        }else if (count < 6){
             specialing = false;
             punching = false;
             counter = true;
@@ -298,10 +307,11 @@ public class greattiger : enemy
             punching = false;
             blockinglow = true;
             count++;
-            if(count>71){
+            if(count>69){
                spriteRenderer.sprite = normal; 
                count = 0;
                action = ""; 
+               onehit = false;
             }
             movement.x = 0f;
             movement.y = 0f;
@@ -311,29 +321,25 @@ public class greattiger : enemy
             counter = false;
             count++; 
             spriteRenderer.sprite = special4;
-            movement.x = -1*moveSpeed;
-            movement.y = moveSpeed;
+            rb.position = for1.position;
             count++;
         }else if (count%16 == 4){
             specialing = true;
             spriteRenderer.sprite = special4;
-            movement.x = 1*moveSpeed;
-            movement.y = moveSpeed;
+            rb.position = for2.position;
             count++;
         }else if (count%16 == 8){
             specialing = false;
             punching = false;
             count++; 
-            spriteRenderer.sprite = special4;
-            movement.x = 1*moveSpeed;
-            movement.y = -1*moveSpeed;
+            spriteRenderer.sprite = special3;
+            rb.position = for3.position;
         }else if (count%16 == 12){
             count++;
             punching = true;
             specialing = true;
             spriteRenderer.sprite = punch;
-            movement.x = -1*moveSpeed;
-            movement.y = -1*moveSpeed;
+            rb.position = fp;
             if(!lm.blocking){
                 lm.health -=13;
                 if(lm.health<=0){
@@ -451,6 +457,7 @@ public class greattiger : enemy
         stunned = false;
         hits = 7;
         action = "knockDown";
+        onehit = false;
         if(count <=2){
             spriteRenderer.sprite = knockdown1;
             count++;
