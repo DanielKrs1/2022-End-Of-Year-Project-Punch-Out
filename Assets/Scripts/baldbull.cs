@@ -62,6 +62,10 @@ public class baldbull : enemy
     public SpriteRenderer spriteRenderer;
     Vector2 fp;
     public int health = 350;
+    public Transform for1;
+    public Transform for2;
+    public Transform for3;
+    public Transform for4;
 
     public int lowhits = 0;
     public int highhits = 0;
@@ -82,6 +86,10 @@ public class baldbull : enemy
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         heal = GameObject.Find("health2").GetComponent("Health") as Health;
+        for1 = GameObject.Find("one").GetComponent("Transform") as Transform;
+        for2 = GameObject.Find("two").GetComponent("Transform") as Transform;
+        for3 = GameObject.Find("three").GetComponent("Transform") as Transform;
+        for4 = GameObject.Find("four").GetComponent("Transform") as Transform;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -110,11 +118,11 @@ public class baldbull : enemy
             var randint = Random.Range(0, 100);
             /*if(randint == 1){
                 action = "special";
-            }else */if(randint<4){
+            }else */if(randint<8){
                 action = "upper";
-            }else if (randint<10){
+            }else if (randint<16){
                 action = "hook";
-            }else if(randint<20){
+            }else if(randint<30){
                 action = "normalPunch";
             }
         }
@@ -122,6 +130,7 @@ public class baldbull : enemy
         time = tim.getTime();
 
         if(time == 200||time == 230|| time ==430){
+            count = 0;
             action = "special";
         }
 
@@ -177,6 +186,10 @@ public class baldbull : enemy
                     tempcount = 1;
                 }
                 counter = false;
+                stunned = false;
+                blockinghigh = true;
+                blockinglow = true;
+                onehit = false;
             }  
              
         }
@@ -334,12 +347,21 @@ public class baldbull : enemy
         if(count < 4){
             punching = false;
             specialing= true;
-            if(spriteRenderer.sprite = normal){
-                spriteRenderer.sprite = normal2;
+            if(spriteRenderer.sprite = preupper1){
+                spriteRenderer.sprite = preupper2;
             }else{
-                spriteRenderer.sprite = normal;
+                spriteRenderer.sprite = preupper1;
             }
-            movement.y = moveSpeed;
+            //movement.y = moveSpeed;
+            if(count == 0){
+                rb.position = for1.position;
+            }else if (count == 1){
+                rb.position = for2.position;
+            }else if (count == 2){
+                rb.position = for3.position;
+            }else if (count == 3){
+                rb.position = for4.position;
+            }
             count++;
         }else if(count<7){
             if(spriteRenderer.sprite ==preupper1){
@@ -347,31 +369,49 @@ public class baldbull : enemy
             }
             count++;
         }else if (count<11){
-            if(spriteRenderer.sprite = normal){
-                spriteRenderer.sprite = normal2;
+            if(spriteRenderer.sprite = preupper1){
+                spriteRenderer.sprite = preupper2;
             }else{
-                spriteRenderer.sprite = normal;
+                spriteRenderer.sprite = preupper1;
             }
-            movement.y = -1*moveSpeed;
+            if(count == 10){
+                rb.position = fp;
+            }else if (count == 9){
+                rb.position = for1.position;
+            }else if (count == 8){
+                rb.position = for2.position;
+            }else if (count == 7){
+                rb.position = for3.position;
+            }
             if(count == 10){
                 counter = true;
                 blockinglow = false;
                 specialing = false;
+                onehit = true;
+            }else{
+                counter = false;
+                blockinglow = true;
+                specialing = true;
+                onehit = false;
             }
             count++;
         }else if(count == 11){
+            onehit = false;
             counter = false;
             blockinglow = true;
             spriteRenderer.sprite = uppercut;
             punching = true;
             if(!lm.dodging){
-                lm.health -=96f;
+                lm.health -=100f;
                 if(lm.health<=0){
                     lm.knockeddown();
                 }
                 lm.action = "hit";
                 lm.hit();
                 lm.rb.position = lm.fp;
+            }else{
+                count = 0;
+                punching = false;
             }
         }
     }
@@ -464,13 +504,16 @@ public class baldbull : enemy
             action = "";
             spriteRenderer.sprite = normal;
             hits = 7;
-            stunned = false;
             counter = false;
+            stunned = false;
+            blockinghigh = true;
+            blockinglow = true;
         }
     }
 
     public override void knockDown(){
         stunned = false;
+        onehit = false;
         hits = 7;
         action = "knockDown";
         if(count <=2){
