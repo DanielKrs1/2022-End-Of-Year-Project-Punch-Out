@@ -8,6 +8,8 @@ public static class AudioPlayer
         audioSource.clip = clip;
         audioSource.loop = loopClip;
         audioSource.Play();
-        Object.Destroy(g, clip.length);
+
+        if (!loopClip)
+            Object.Destroy(g, clip.length);
     }
 }
