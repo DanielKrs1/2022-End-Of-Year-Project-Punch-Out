@@ -142,6 +142,13 @@ public class littlemac : MonoBehaviour
     void FixedUpdate()
     {
         heal.scale(health/100F);
+        if(health<=0){
+            heal.scale(0);
+            if(frame%5==0){
+                knockeddown();    
+            }
+            
+        }
         moveSpeed = 1f;
         //lastPos = transform.position;
         if(frame == 119){
@@ -230,11 +237,14 @@ public class littlemac : MonoBehaviour
                 }
                 movement.x = 0f;
                 movement.y = 0f;
+                rb.position = fp;
             }  
-            rb.MovePosition(rb.position+movement);//*Time.deltaTime);   
-            
+            rb.MovePosition(rb.position+movement);//*Time.deltaTime);  
+            if(health<=0f){
+                knockeddown();
+            }            
         }
-        if(en.isStunned() && fram2%75==0){
+        if(en.isStunned() && fram2%37==0){
             en.changeHits();
             if(en.getHits()<=0){
                 en.setAction("");
@@ -252,87 +262,74 @@ public class littlemac : MonoBehaviour
     }
 
     public bool back = false;
-
+    int dodgecount;
     void leftDodge(){
-        if(spriteRenderer.sprite == dodgeLeft){
-            if(back){
-                dodging = false;
-                spriteRenderer.sprite = dodgeLeftStart;
-                movement.x = moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }else{
-                spriteRenderer.sprite = dodgeLeftEnd;
-                movement.x = -1*moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }
-        }else if(spriteRenderer.sprite == dodgeLeftEnd){
-            back = true;
+        dodging = true;
+        action = "dodgeLeft";
+        if(dodgecount ==0){
+            spriteRenderer.sprite = dodgeLeftStart;
+            dodgecount++;
+        }else if (dodgecount == 1){
             spriteRenderer.sprite = dodgeLeft;
-            
+            dodgecount++;
+            movement.x = -1*moveSpeed/2;
+            movement.y = 0f;
+        }else if (dodgecount == 2){
+            spriteRenderer.sprite = dodgeLeftEnd;
+            movement.x = -1*moveSpeed/2;    
+            dodgecount++;
+            movement.y = 0f;
+        }else if (dodgecount == 3){
+            spriteRenderer.sprite = dodgeLeft;
             movement.x = moveSpeed/2;
             movement.y = 0f;
-            //rb.MovePosition(rb.position + movement * Time.deltaTime);
-        }else{
-            if(back){
-                back = false;
-                spriteRenderer.sprite = normal;
-                action = "";
-                rb.position = fp;
-                movement.x = 0;
-                movement.y = 0;
-            }else if(spriteRenderer.sprite == dodgeLeftStart){
-                dodging = true;
-                spriteRenderer.sprite = dodgeLeft;
-                movement.x = -1*moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }else{
-                spriteRenderer.sprite = dodgeLeftStart;                
-            }
+            dodgecount++;
+        }else if (dodgecount == 4){
+            spriteRenderer.sprite = dodgeLeftStart;
+            movement.x = moveSpeed/2;
+            movement.y = 0f;
+            dodgecount++;
+        }else if (dodgecount == 5){
+            spriteRenderer.sprite = normal;
+            dodging = false;
+            action = "";
+            dodgecount = 0;
         }
     }
 
     void rightDodge(){
+        dodging = true;
+        action = "dodgeRight";
         spriteRenderer.flipX = true;
-        if(spriteRenderer.sprite == dodgeLeft){
-            if(back){
-                dodging = false;
-                spriteRenderer.sprite = dodgeLeftStart;
-                movement.x = -1*moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }else{
-                spriteRenderer.sprite = dodgeLeftEnd;
-                movement.x = moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }
-        }else if(spriteRenderer.sprite == dodgeLeftEnd){
-            back = true;
+        if(dodgecount ==0){
+            spriteRenderer.sprite = dodgeLeftStart;
+            dodgecount++;
+        }else if (dodgecount == 1){
+            spriteRenderer.sprite = dodgeLeft;
+            dodgecount++;
+            movement.x = moveSpeed/2;
+            movement.y = 0f;
+        }else if (dodgecount ==2 ){
+            spriteRenderer.sprite = dodgeLeftEnd;
+            movement.x = moveSpeed/2;  
+            dodgecount++;
+            movement.y = 0f;
+        }else if (dodgecount == 3){
             spriteRenderer.sprite = dodgeLeft;
             movement.x = -1*moveSpeed/2;
             movement.y = 0f;
-            //rb.MovePosition(rb.position + movement * Time.deltaTime);
-        }else{
-            if(back){
-                back = false;
-                spriteRenderer.flipX = false;
-                spriteRenderer.sprite = normal;
-                action = "";
-                rb.position = fp;
-                movement.x = 0;
-                movement.y = 0;
-            }else if(spriteRenderer.sprite == dodgeLeftStart){
-                dodging = true;
-                spriteRenderer.sprite = dodgeLeft;
-                movement.x = moveSpeed/2;
-                movement.y = 0f;
-                //rb.MovePosition(rb.position + movement * Time.deltaTime);
-            }else{
-                spriteRenderer.sprite = dodgeLeftStart;
-            }
+            dodgecount++;
+        }else if (dodgecount == 4){
+            spriteRenderer.sprite = dodgeLeftStart;
+            movement.x = -1*moveSpeed/2;
+            movement.y = 0f;
+            dodgecount++;
+        }else if (dodgecount == 5){
+            spriteRenderer.sprite = normal;
+            spriteRenderer.flipX = false;
+            dodging = false;
+            action = "";
+            dodgecount = 0;
         }
     }
 
@@ -509,7 +506,7 @@ public class littlemac : MonoBehaviour
                         en.hitAfterDodge();
                         en.changeHits();
                     }else{
-                        en.rightHit();
+                        en.hitLow();
                     }
                 } 
                 if(en.getHealth()<=0){
@@ -561,7 +558,7 @@ public class littlemac : MonoBehaviour
                         en.hitAfterDodge();
                         en.changeHits();
                     }else{
-                        en.rightHit();
+                        en.hitLow();
                     }
                 } 
                 if(en.getHealth()<=0){
@@ -594,10 +591,10 @@ public class littlemac : MonoBehaviour
         if(count<2){
             spriteRenderer.sprite = hit1;
             count++;
-        }else if(count < 4){
+        }else if(count < 6){
             spriteRenderer.sprite = hit2;
             count++;
-        }else if (count == 4){
+        }else if (count == 6){
             count = 0;
             spriteRenderer.sprite = normal;
             action = "";

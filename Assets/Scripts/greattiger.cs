@@ -179,6 +179,8 @@ public class greattiger : enemy
                     spriteRenderer.sprite = normalup;
                     temp++;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -222,14 +224,14 @@ public class greattiger : enemy
                 counter = true;
                 hits = 5;
             }
-        }else if (count < 11){
+        }else if (count < 8){
             specialing = false;
             punching = false;
             //counter = false;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 11){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -268,14 +270,14 @@ public class greattiger : enemy
             }else if(lm.blockBroken){
                 lm.health-=7f;
             }
-        }else if (count < 9){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -441,6 +443,7 @@ public class greattiger : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 
@@ -465,6 +468,7 @@ public class greattiger : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);

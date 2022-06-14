@@ -176,6 +176,7 @@ public class baldbull : enemy
                     spriteRenderer.sprite = normal;
                     tempcount = 1;
                 }
+                counter = false;
             }  
              
         }
@@ -214,14 +215,14 @@ public class baldbull : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -262,7 +263,7 @@ public class baldbull : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 11){
+        }else if (count < 8){
             hits = 3;
             specialing = false;
             punching = false;
@@ -270,7 +271,7 @@ public class baldbull : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 11){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -311,7 +312,7 @@ public class baldbull : enemy
                     lm.knockeddown();
                 }
             }
-        }else if (count < 10){
+        }else if (count < 7){
             hits =7;
             specialing = false;
             punching = false;
@@ -319,7 +320,7 @@ public class baldbull : enemy
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -464,6 +465,7 @@ public class baldbull : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 
@@ -491,6 +493,7 @@ public class baldbull : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);

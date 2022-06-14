@@ -157,6 +157,8 @@ public class sodapopinski : enemy
                 }else{
                     spriteRenderer.sprite = normal;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -194,7 +196,7 @@ public class sodapopinski : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             hits = 3;
             specialing = false;
             punching = false;
@@ -202,7 +204,7 @@ public class sodapopinski : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -237,7 +239,7 @@ public class sodapopinski : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 9){
+        }else if (count < 6){
             hits = 5;
             specialing = false;
             punching = false;
@@ -245,7 +247,7 @@ public class sodapopinski : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -285,7 +287,7 @@ public class sodapopinski : enemy
                     lm.knockeddown();
                 }
             }
-        }else if (count < 9){
+        }else if (count < 6){
             hits = 6;
             specialing = false;
             punching = false;
@@ -293,7 +295,7 @@ public class sodapopinski : enemy
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -447,6 +449,7 @@ public class sodapopinski : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 
@@ -471,6 +474,7 @@ public class sodapopinski : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);

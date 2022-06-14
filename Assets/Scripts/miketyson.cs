@@ -180,6 +180,8 @@ public class miketyson : enemy
                 }else{
                     spriteRenderer.sprite = normal;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -212,12 +214,12 @@ public class miketyson : enemy
             }if(lm.blocking){
                 blockinglow = false;
             }
-        }else if (count < 8){
+        }else if (count < 5){
             specialing = false;
             punching = false;
             //counter = true;
             count++;
-        }else if(count == 8){
+        }else if(count == 5){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -247,7 +249,7 @@ public class miketyson : enemy
                 }
                 lm.hit();
             }
-        }else if (count < 9){
+        }else if (count <6){
             hits = 2;
             specialing = false;
             punching = false;
@@ -255,7 +257,7 @@ public class miketyson : enemy
             count++;
             blockinghigh = false;
             blockinglow = true;     
-        }else if(count == 9){
+        }else if(count == 6){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -297,7 +299,7 @@ public class miketyson : enemy
                     lm.knockeddown();
                 }
             }
-        }else if (count < 11){
+        }else if (count < 8){
             hits = 2;
             specialing = false;
             punching = false;
@@ -307,7 +309,7 @@ public class miketyson : enemy
             temp2 = blockinglow;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 11){
+        }else if(count == 8){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -454,6 +456,7 @@ public class miketyson : enemy
             action = "";
             spriteRenderer.sprite = normal;
             hits = 7;
+            counter = false;
             stunned = false;
         }
     }
@@ -482,6 +485,7 @@ public class miketyson : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         var randint = Random.Range(0, 100);
         if(spriteRenderer.sprite == knockdown3&&randint<40){

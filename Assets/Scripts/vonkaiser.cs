@@ -158,6 +158,8 @@ public class vonkaiser : enemy
                     }else{
                         spriteRenderer.sprite = normal;
                     }  
+                    specialing = false;
+                    counter = false;
                 }
                 
             }  
@@ -203,20 +205,20 @@ public class vonkaiser : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 12){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
                 action = "";  
-                blockinghigh = true;
-                blockinglow = true;  
+                blockinghigh = temp1;
+                blockinglow = temp2;  
         }
     }
 
@@ -247,14 +249,14 @@ public class vonkaiser : enemy
                 lm.hit();
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -263,8 +265,8 @@ public class vonkaiser : enemy
                 }else{
                     secondupper = 0;
                 }
-                blockinghigh = true;
-                blockinglow = true;
+                blockinghigh = temp1;
+                blockinglow = temp2;
         }
     }
 
@@ -416,6 +418,7 @@ public class vonkaiser : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
             if(secondupper==1){
                 action = "upper";
             }else{
@@ -445,6 +448,7 @@ public class vonkaiser : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);

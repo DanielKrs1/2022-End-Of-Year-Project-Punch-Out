@@ -173,6 +173,8 @@ public class donflamenco : enemy
                 }else{
                     spriteRenderer.sprite = up1;
                 }
+                specialing = false;
+                counter = false;
             }  
              
         }
@@ -210,14 +212,14 @@ public class donflamenco : enemy
                 lm.action = "hit";
                 lm.rb.position = lm.fp;
             }
-        }else if (count < 10){
+        }else if (count < 7){
             specialing = false;
             punching = false;
             counter = true;
             count++;
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 10){
+        }else if(count == 7){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -268,14 +270,14 @@ public class donflamenco : enemy
             }else{
                 douppers = false;
             }
-        }else if (count < 12){
+        }else if (count < 9){
             specialing = false;
             punching = false;
             counter = true;
             count++;      
             blockinghigh = false;
             blockinglow = true;
-        }else if(count == 12){
+        }else if(count == 9){
                 counter = false;
                 spriteRenderer.sprite = normal;
                 count = 0;
@@ -425,6 +427,7 @@ public class donflamenco : enemy
             spriteRenderer.sprite = normal;
             hits = 7;
             stunned = false;
+            counter = false;
         }
     }
 
@@ -452,6 +455,7 @@ public class donflamenco : enemy
     }
 
     public override void getUp(){
+        specialing = true;
         mar.action = "wait";
         action = "getUp";
         var randint = Random.Range(0, 100);
