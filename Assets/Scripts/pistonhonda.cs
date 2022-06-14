@@ -56,6 +56,11 @@ public class pistonhonda : enemy
     public Timer tim;
     public Health heal;
     public int time;
+    public Transform for1;
+    public Transform for2;
+    public Transform for3;
+    public Transform for4;
+    public Transform for5;
 
     public float moveSpeed = 1f;
     public Rigidbody2D rb;
@@ -87,6 +92,11 @@ public class pistonhonda : enemy
         mar = GameObject.Find("mario").GetComponent("mario") as mario;
         tim = GameObject.Find("canvas").GetComponent("Timer") as Timer;
         heal = GameObject.Find("health2").GetComponent("Health") as Health;
+        for1 = GameObject.Find("one").GetComponent("Transform") as Transform;
+        for2 = GameObject.Find("two").GetComponent("Transform") as Transform;
+        for3 = GameObject.Find("three").GetComponent("Transform") as Transform;
+        for4 = GameObject.Find("four").GetComponent("Transform") as Transform;
+        for5 = GameObject.Find("five").GetComponent("Transform") as Transform;
         blockinglow = true;
         blockinghigh = true;
     }
@@ -120,7 +130,7 @@ public class pistonhonda : enemy
 
         time = tim.getTime();
 
-        if(time == 100|| time == 240||time==320){
+        if(time==10){//time == 100|| time == 240||time==320){
             action = "special";
         }
 
@@ -129,7 +139,7 @@ public class pistonhonda : enemy
                 normalPunch();
             }else if(action.Equals("upper")){
                 upper();
-            }else if (action.Equals("right")){
+            }else if (action.Equals("hook")){
                 hook();
             }else if(action.Equals("special")){
                 specialing = true;
@@ -398,56 +408,72 @@ public class pistonhonda : enemy
     }
 
     void special(){
-        if(count == 1){
-            movement.y = moveSpeed;
+        onehit = false;
+        if(count <= 0){
+            //movement.y = moveSpeed;
+            rb.position = for1.position;
             count++;
-        }else if(count == 2){
-            movement.y = moveSpeed;
+        }else if(count <= 2){
+            //movement.y = moveSpeed;
+            rb.position = for2.position;
             count++;
-        }else if(count == 3){
-            movement.x = moveSpeed;
+        }else if(count <= 4){
+            //movement.x = moveSpeed;
+            spriteRenderer.sprite = forspecial3;
+            rb.position = for3.position;
+            count++;
+        }else if (count <=6){
+            spriteRenderer.sprite = normal;
+            // movement.x = -1*moveSpeed;
+            rb.position = for4.position;
+            spriteRenderer.sprite = forspecial;
+            count++;
+        }else if(count <= 8){
+            spriteRenderer.sprite = normal;
+            //movement.x = moveSpeed;
+            rb.position = for3.position;
+            count++;
+        }else if(count <= 10){
+            spriteRenderer.sprite = normal;
+            // movement.x = -1*moveSpeed;
+            rb.position = for5.position;
             spriteRenderer.sprite = forspecial3;
             count++;
-        }else if (count <=7){
-            spriteRenderer.sprite = normal;
-            movement.x = -1*moveSpeed;
-            if(count ==7){
-                spriteRenderer.sprite = forspecial;
-            }
+        }else if(count <= 12){
+            rb.position = for3.position;
             count++;
-        }else if(count<=10){
-            spriteRenderer.sprite = normal;
-            movement.x = moveSpeed;
-            count++;
-        }else if (count<=12){
+        }else if(count <= 14){
+            rb.position = for2.position;
             onehit = true;
             blockinglow = false;
-            movement.y = -1*moveSpeed;
+            //movement.y = -1*moveSpeed;
             count++;
-        }else if(count ==13){
+        }else if(count == 15){
+            rb.position = for1.position;
             count = 16;
             onehit = false;
             blockinghigh = true;
             blockinglow = true;
             special();
         }
-        if(count==96){
+        if(count==48){
             counter = false;
             specialing = false;
             punching = false;
             blockinglow = true;
+            onehit = false;
             blockinghigh = false;
             spriteRenderer.sprite = normal;
             count = 0;
             action = ""; 
-        }else if(count%16 == 0){
+        }else if(count%8 == 0){
             specialing = false;
             punching = false;
             counter = true;
             blockinglow = false;
             count++; 
             spriteRenderer.sprite = forspecial;
-        }else if (count%16 == 4){
+        }else if (count%8 == 2){
             specialing = true;
             spriteRenderer.sprite = forspecial2;
             count++;
@@ -461,14 +487,14 @@ public class pistonhonda : enemy
                 }
                 lm.hit();
             }
-        }else if (count%16 == 8){
+        }else if (count%8 == 4){
             specialing = false;
             punching = false;
             counter = true;
             blockinglow = false;
             count++; 
             spriteRenderer.sprite = forspecial3;
-        }else if (count%16 == 12){
+        }else if (count%8 == 6){
             spriteRenderer.sprite = forspecial4;
             count++;
             punching = true;
@@ -481,6 +507,8 @@ public class pistonhonda : enemy
                 }
                 lm.hit();
             }
+        }else{
+            count++;
         }
     }
 
@@ -571,40 +599,41 @@ public class pistonhonda : enemy
             counter = false;
             stunned = false;
             if(punchcount == 1){
-                    count = 0;
-                    action = "normalPunch";
-                }else if (punchcount == 2){
-                    punchcount = 0;
-                    var randint = Random.Range(0,100);
-                    if(randint<75){
-                        action = "hook";
-                    }else{
-                        action = "";
-                    }
+                count = 0;
+                action = "normalPunch";
+            }else if (punchcount == 2){
+                punchcount = 0;
+                var randint = Random.Range(0,100);
+                if(randint<75){
+                    action = "hook";
+                }else{
+                    action = "";
                 }
-        }
-        if(hookupper == 1){
-            count = 0;
-            var  randint = Random.Range(0,100);
-            if(randint<75){
-                action = "hook";
-            }else{
-                action = "upper";
-            
             }
-        }else if (hookupper == 2){
-            punchcount = 0;
-            hookupper = 0;
-            var randint = Random.Range(0,100);
-            if(randint<75){
-                action = "";
+            if(hookupper == 1){
+                count = 0;
+                var  randint = Random.Range(0,100);
+                if(randint<75){
+                    action = "hook";
+                }else{
+                    action = "upper";
                 
-            }else if(randint<90){
-                action = "upper";
-            }else{
-                action = "hook";
-            }
                 }
+            }else if (hookupper == 2){
+                punchcount = 0;
+                hookupper = 0;
+                var randint = Random.Range(0,100);
+                if(randint<75){
+                    action = "";
+                    
+                }else if(randint<90){
+                    action = "upper";
+                }else{
+                    action = "hook";
+                }
+            }
+        }
+        
     }
 
     public override void knockDown(){
